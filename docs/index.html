@@ -1,3 +1,457 @@
-<html>
-I am LIM KIAN SENG 
-</html>
+---
+layout: default
+---
+<meta http-equiv="X-UA-Compatible" name="viewport" content="IE=EmulateIE10">
+<meta charset="utf-8">
+<head>
+  <link rel="icon" type="../../potato.js/images/png" href="image/img-p.png">
+  <link rel="stylesheet" href="../../potato.js/css/jquery-ui.css"/>
+  <link rel="stylesheet" href="../../potato.js/css/potato.css"/>
+  <script type="text/javascript" src="../../potato.js/js/Chart.bundle.js"></script>
+  <script type="text/javascript" src="../../potato.js/js/Chart.utils.js"></script>
+  <script type="text/javascript" src="../../potato.js/js/jquery-3.4.1.js"></script>
+  <script type="text/javascript" src="../../potato.js/js/jquery-ui.js"></script>
+  <script type="text/javascript" src="../../potato.js/js/angular.js"></script>
+  <script type="text/javascript" src="../../potato.js/js/potato.1.5.0.js"></script>	
+  <script type="text/javascript" src="../../potato.js/js/enchant.js"></script>		
+</head>
+
+<div style="font-size:18px;font-family:Arial">
+<div>	
+<div class="flipPotato">
+	<div class="back flipItem">
+		<img class="spotlight" aria-busy="true" style="width: 80px; height: 80px;" alt="画像に含まれている可能性があるもの:テキスト" 
+     src="potato.jpg"> 
+	</div>
+	<div class="front flipItem">P</div>
+</div>
+<div class="flipPotato">
+	<div class="back flipItem">
+		<img class="spotlight" aria-busy="true" style="width: 80px; height: 80px;" alt="画像に含まれている可能性があるもの:テキスト" 
+     src="Baked Potatoes.jpg"> 
+	</div>
+	<div class="front flipItem">O</div>
+</div>	
+<div class="flipPotato">
+	<div class="back flipItem">
+		<img class="spotlight" aria-busy="true" style="width: 80px; height: 80px;" alt="画像に含まれている可能性があるもの:テキスト" 
+     src="Croquettes.jpg"> 
+	</div>
+	<div class="front flipItem">T</div>
+</div>	
+<div class="flipPotato">
+	<div class="back flipItem">
+		<img class="spotlight" aria-busy="true" style="width: 80px; height: 80px;" alt="画像に含まれている可能性があるもの:テキスト" 
+     src="maxresdefault.jpg"> 
+	</div>
+	<div class="front flipItem">A</div>
+</div>	
+<div class="flipPotato">
+	<div class="back flipItem">K</div>
+	<div class="front flipItem">T</div>
+</div>	
+<div class="flipPotato">
+	<div class="back flipItem">.</div>
+	<div class="front flipItem">O</div>
+</div>	
+<div class="flipPotato">
+	<div class="back flipItem">S</div>
+	<div class="front flipItem">.</div>
+</div>	
+<div class="flipPotato">
+	<div class="back flipItem">.</div>
+	<div class="front flipItem">J</div>
+</div>	
+<div class="flipPotato">
+	<div class="back flipItem">
+	  <img class="spotlight" aria-busy="true" style="width: 50px; height: 50px;" alt="画像に含まれている可能性があるもの:テキスト" 
+     src="potatoscript-potato.js.png"> 
+	</div>
+	<div class="front flipItem">S</div>
+</div>	
+</div>	
+
+ <!--<audio id="player" controls autoplay loop>
+    <source src="cat.mp3" type="audio/mp3">
+</audio>-->
+<br><br><br><br>
+<p>	
+The JavaScript Library that turn complicated code into something more restful.<br>
+<P>potato javascript is the another way of coding the web application.<br> 
+It extend the HTML code with custom tag and integrated with other library like ChartJS, JQueryJS and AngularJS.<br>
+You code your objects like button, pulldown list, text box, table, menu, chart and so on<br>
+via providing the relevant attribute name and value inside a HTML tag (fill in a blank),<br> 
+which let you write less code and keep code simple to save your time on building thing.</P>
+<P>It is easy to learn, use and master.</P>
+For those people who code with AngularJS, can ng-code inside the potatoJS tag as well, <br>
+For example you can put ng-model inside the tag and bind to other object with ｛｛data｝｝	
+<br><br>	
+</p>
+複雑なコードをより楽しいものに変えるのJavaScriptライブラリです。<br>
+<P>ジャガイモJavaScriptは、カスタムタグでHTMLコードを拡張して、<br>
+Webアプリケーションを作成するのJavaScriptです。<br>
+関連するコードを1つの場所（htmlタグ）にグループ化して、コードの管理<br>
+をはるかに容易にし、コードの記述を減らしてコードをシンプルに保ち、アプリケーションの構築時間を節約します。</P>
+
+<P>習得、使用、習得が簡単です。</P><br>	
+	
+<h2> Getting Started 入門</h2>
+
+<P>The basic syntax of the code is looked like this:</P>
+<P>コードの基本的な構文は次のようになります。</P>	
+<img class="spotlight" aria-busy="false" style="width: 900px; height: 50px;" alt="potato" src="potato-syntax.gif"><br>	
+
+<P>
+<h3>Potato's Objects:</h3>	
+ <ul style="margin-left:50px">
+	<li>■ button - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OButton">OButton</a>
+	 	＜o-button-id＞＜/o-button-id＞
+	 </li>
+	   <potato-button-obutton 		  
+		marginTop=-15px		  
+                value="Click Me"
+	        image="image/img-p.png 21 21"		       
+	        onclick="alert('I am OButton')"
+	      ></potato-button-obutton>
+	<li>■ calendar - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OCalendar">OCalendar</a>
+	 ＜o-calendar-dateid＞＜/o-calendar-dateid＞
+	 </li>
+	  <potato-calendar-ocalendar 		     
+		marginTop=-15px
+		value=potato.today()		     
+	  ></potato-calendar-ocalendar>
+	<li>■ chart - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OChart">OChart</a>
+	 ＜o-chart-chartid＞＜/o-chart-chartid＞
+	 </li>  
+	  <potato-chart-mybar
+    chartType=Bar
+    stacked=true
+    data='[
+		["Menu1","1","3","4","8"],
+		["Menu2","2","5","7","14"],
+		["Menu3","3","1","4","8"],
+		["Menu4","5","7","12","24"]
+	]'		      
+    	border="0px solid black"
+
+    	colorIndex="#e3ff7f,#a1a4ff,yellow,orange,green,grey"
+
+    xLabelData=menu1,menu2,menu3,menu4
+    xLabelAngle=10
+		yAxesLabel="g"
+		y2AxesLabel="calories"
+    data2Label="calories"
+    dataLabel="Protein,Fat,Sugar"
+          	labelFontSize=18
+          	label2FontSize=18
+          	legendDisplay=true
+		legendPosition="bottom"
+          	pointBorderColorIndex="red,blue,yellow,orange,green,grey"
+          	pointBorderWidth="2,2,2"
+          	pointStyle="rect,rectRot,triangle"
+
+          	title="my OChart BAR"
+		titleDisplay=true
+          	height=330px
+          	width=500px
+
+		click='return alert(potato.chartYvalue)'
+	  ></potato-chart-mybar>
+	 <li>■ keypad - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OKeypad">OKeypad</a>
+	 ＜o-keypad-keypadid＞＜/o-keypad-keypadid＞
+	 </li>
+	   <potato-keypad-okeypad 
+              marginTop=-15px					    
+	      value="0"
+              top=-220px
+	      left=-150px			    
+	      htm="htm/keypad.htm"
+	   ></potato-keypad-okeypad>
+	<li>■ list - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OList">OList</a>
+	 ＜o-list-listid＞＜/o-list-listid＞
+	 </li> 
+	 <potato-list-olist
+	   marginTop=-15px
+	   width=180px		    
+	   data='[
+          ["Menu","Image","Calories","Fat"],
+          ["Parmesan Roasted Potato","<img src=\"../../potato.js/images/Parmesan Roasted Potato.jpg\" width=\"150px\" height=\"100px\">","183","13"],
+          ["Mashed Potato","<img src=\"../../potato.js/images/Mashed Potato.jpg\" width=\"150px\" height=\"100px\">","455","55"]
+        ]'	    
+	 ></potato-list-olist>
+	<li>■ menu - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OMenu">OMenu</a>
+	 </li>  
+	<p style="background:transparent;border:0px;">＜potato-menu-menuid/＞</p>
+	<li>■ table - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OTable">OTable</a>
+	 ＜o-table-tableid＞＜o-table-tableid＞<br>
+	try to drag and drop me	
+	 </li> 
+	<o-table-mytable
+	dragdrop='
+		  var t="drag item ( "+potato.dragVal+" ) from ( "+ 
+		  potato.clickRow +" , "+potato.clickCol+" ) to ( "+potato.dropRow+" , "+potato.dropCol+" ) ";
+		  document.getElementById("mytableResult").innerHTML=t;
+		  '		 
+        width=650px
+        height=200px
+        fontSizeTH=18px
+        fontSizeTD=20px
+        fontColorTD=red
+        header="No,Menu,Image,Calories,Fat"
+        data='[
+          ["1","Potato Pie","<img src=\"../../potato.js/images/Sweet Potato Pie.jpg\" width=\"100px\" height=\"60px\">","183","13"],
+          ["2","Mashed Potato","<img src=\"../../potato.js/images/Mashed Potato.jpg\" width=\"100px\" height=\"60px\">","455","55"]
+        ]'
+        click=myTableClick()
+        callback=myTableCallback()
+        editCell="
+	trigger:click;
+        width:80px;
+        tool:default;
+        indexCol:0;
+        editCol:[1,2,3,4];
+        callback:
+          function(newVal,oldVal,targetCol,SelectCol){
+          document.getElementById('mytableResult').innerHTML=oldVal+' <b>→</b> '+newVal;
+        };
+        "
+        multipleSelect='
+          mark:〇;
+          indexCol:1;
+          selectCol:0;
+          callback:function(potato){
+            $("#div_cart").html("");
+            var t="";
+            for(var i=0;i<potato.length;i++){
+               t+=i+1+". "+potato[i]+"<br>";
+            }
+            $("#mytableResult").html(t);
+          };
+        '
+      /></o-table-mytable>
+	<div id="mytableResult"></div>	
+      <br>	
+	 <li>■ text - <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation#OText">OText</a>
+		 ＜potato-text-textid＞＜/potato-text-textid＞
+	</li>
+	  <potato-text-otext1 float=left marginTop=-15px bind=otext2></potato-text-otext1>
+	  <potato-text-otext2 marginTop=-15px bind=otext1></potato-text-otext2>
+	
+	<br>	
+	 <li>■ tab - <a>OTab</a>
+		 ＜potato-tab-tabid /＞
+	</li>
+	<o-tab-mytab
+	    header = 'OButton || OText Box || OMenu'
+	    body = '
+		<potato-button-mybtn1 value="button1"></potato-button-mybtn1>
+		<potato-button-mybtn2 value="button2"></potato-button-mybtn2>
+		<potato-button-mybtn3 value="button3"></potato-button-mybtn3>
+		||
+		<potato-text-mytext value="test"/>
+		||
+		menu content go over here.....
+	    '
+	    background=lightblue
+	    color=blue
+	    tabHeight=23px
+	    tabWidth=100px
+	    fontSize=18px
+	    speed=1000
+	    marginTop=10px
+            height=300px
+	    width=350px	     
+	  ></o-tab-mytab>
+	
+  </ul>	
+</P>
+
+<P>With these you can create some simple application as below:</P>
+<P>これらを使用して、次のような簡単なアプリケーションを作成できます。</P>	
+		
+<img class="spotlight" aria-busy="false" style="width: 900px; height: 350px;" alt="画像に含まれている可能性があるもの:テキスト" src="potatoDemo.gif">
+<br><br>
+
+<h3>Example 01: OButton</h3>		
+<P>	
+Create a button to set the document title to "I am potato button" you just write the following code in html document:
+</P>
+<table>
+<tr>
+<td><img class="spotlight" aria-busy="true" style="width: 390px; height: 510px;" alt="画像に含まれている可能性があるもの:テキスト" src="OButton.png">
+</td>
+<td style="vertical-align:top">
+<img class="spotlight" aria-busy="false" style="width: 170px; height: 170px;" alt="画像に含まれている可能性があるもの:テキスト" src="OButton.gif">
+</td>
+</tr>
+</table>
+<p>※You can use the keyword "potato" or just "o" as the [system name] <br>for example < o-button-mybutton /> also will do.
+I call it <b>OButton</b></p>
+
+<h3>Example 02: OButton with toggle event</h3>
+<p>Create a toggle button</p>
+<table><tr><td style="font-size:15px;text-align:left">
+＜o-button-mybutton<br>
+<span class="tab2">value  = " toggle me "<br>
+<span class="tab2">toggle="<br>
+<span class="tab4">if(potato.toggle['mybutton']=='on'){
+<span class="tab6">document.getElementById('mybutton').innerText='toggle on';
+<span class="tab6">document.getElementById('lightbulb').src='image/lightbulbon.gif';
+<span class="tab4">}else{
+<span class="tab6">document.getElementById('mybutton').innerText='toggle off';
+<span class="tab6">document.getElementById('lightbulb').src='image/lightbulboff.gif';								 
+<span class="tab4">}
+"<br>
+＞＜/o-button-mybutton＞<br>		
+</td>	
+<td style="width:250px;vertical-align:top;padding-top:10px">
+<o-button-mybutton
+value="click me"
+toggle="
+	if(potato.toggle['mybutton']=='on'){
+		document.getElementById('mybutton').innerText='toggle on';
+		document.getElementById('lightbulb').src='image/lightbulbon.gif';
+	}else{
+		document.getElementById('mybutton').innerText='toggle off';
+		document.getElementById('lightbulb').src='image/lightbulboff.gif';								 
+	}
+"
+></o-button-mybutton>	
+<img id="lightbulb" src="image/lightbulboff.gif" style="width:100px;height:150px"/>	
+</td></tr></table><br>	
+
+<h3>Example 03: OKeypad</h3> 	
+<p>Create a text box object with input keypad</p>
+<table>
+<tr>
+<td><img class="spotlight" aria-busy="true" style="width: 510px; height: 129px;" alt="画像に含まれている可能性があるもの:テキスト" src="https://scontent-nrt1-1.xx.fbcdn.net/v/t1.0-9/71716437_124587948941516_4927621055352143872_n.jpg?_nc_cat=100&amp;_nc_oc=AQndzHs7GmhQSZsug_7OMooS9MHYfohtNcmT8ea7wkHeJQjHEt38tOkgXd_G7xdhAEg&amp;_nc_ht=scontent-nrt1-1.xx&amp;oh=cd558a350efe9bd5b6d76e8a2a2dc9ec&amp;oe=5E39201C">
+</td>
+<td style="vertical-align:top">
+<img class="spotlight" aria-busy="false" style="width: 350px; height: 300px;" alt="画像に含まれている可能性があるもの:テキスト" src="OKeypad.gif">
+</td>
+</tr>
+</table>
+
+<p>Example 4: Create a bar Chart object (i.e. <b>OChart</b>)
+<table style="width:1000px">
+<tr>
+<td><img class="spotlight" aria-busy="true" style="width: 610px; height: 510px;" alt="画像に含まれている可能性があるもの:テキスト" 
+	 src="potato-chart-mybar.png">
+</td>
+<td><img class="spotlight" aria-busy="false" style="width: 600px; height: 350px;" alt="写真の説明はありません。" src="OChartDemo.gif">
+</td>
+</tr>
+</table>
+
+<h2> Installing 設定</h2>
+<p style="width:700px">
+    1. Step by step <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/2.-Setup">setup Apache Web Server</a><br> 
+      and editing on the httpd.conf and php.ini to let PHP talk with Apache for fetching data from database.<br>
+    2. Download the relevant libraries from <a target="_blank" href="https://github.com/potatoscript/potato.js">https://github.com/potatoscript/potato.js</a><br>
+      and include them inside your html file<br>	  
+  <img class="spotlight" aria-busy="true" style="margin-left:50px;width: 70px; height: 70px;" alt="画像に含まれている可能性があるもの:テキスト" 
+	 src="potatoscript-potato.js-setup-youtube.png"><br><br>
+</p>
+
+
+<h2> Built With 構築</h2>
+<p style="width:700px">
+1. potato javascript requires <b>jquery-3.4.1.js</b> or later and <b>jquery-ui.js.</b><br>
+<a target="_blank" href="https://jquery.com/download/">https://jquery.com/download/</a> or <br> 
+<a target="_blank" href="https://github.com/potatoscript/potato.js">https://github.com/potatoscript/potato.js</a>
+<br><br>
+2. To create chart object with potato the chart.js was required and the library can be obtained from <br>
+<a target="_blank" href="https://www.chartjs.org/">https://www.chartjs.org/</a> or<br> 
+<a target="_blank" href="https://github.com/potatoscript/potato.js">https://github.com/potatoscript/potato.js</a>
+<br><br>
+</p>
+
+<h2> Contributing 寄稿</h2>
+
+  <div style="float:left;width:300px">
+	1. Potato JavaScript <a target="_blank" href="https://github.com/potatoscript/potato.js/wiki/4.-Documentation">Documentation</a>.
+  </div>		
+  <img class="spotlight" aria-busy="true" style="width: 50px; height: 50px;" alt="画像に含まれている可能性があるもの:テキスト" 
+       src="potatoscript-potato.js-wiki.png"><br>
+  <div style="float:left;width:500px">
+	2. Potato JavaScript <a target="_blank" href="https://www.youtube.com/channel/UCSvc1mfBihTH_qfkAs7Iy4g">Tutorials</a>.<br>
+	   I spent almost 3 hours at StarBucks Yonago Japan with a cup of AMERICANO coffee every night for the following tutorials.  
+  </div>
+  <img class="spotlight" aria-busy="true" style="width: 100px; height: 30px;" alt="画像に含まれている可能性があるもの:テキスト" 
+	 src="youtube.png">
+  <img class="spotlight" aria-busy="true" style="width: 60px; height: 60px;" alt="画像に含まれている可能性があるもの:テキスト" 
+	 src="image/potatoyoutube.png">
+  <br>	
+  <a target="_blank" href="https://www.youtube.com/channel/UCSvc1mfBihTH_qfkAs7Iy4g/about">About</a> <br>
+  <ul style="margin-left:50px">
+	<li>Potato.JavaScript Tutorial 001 - <a target="_blank" href="https://youtu.be/XrzNLFtjt8M">Potato.js Introduction</a></li>
+	<li>Potato.JavaScript Tutorial 002 - <a target="_blank" href="https://youtu.be/Eyj2oz_Uqms">Setup Apache Web Server & install potato.js</a></li>
+	<li>Potato.JavaScript Tutorial 003 - <a target="_blank" href="https://youtu.be/xW5u8SLkLV8">Setup Project & Create Object</a></li>  
+	<li>Potato.JavaScript Tutorial 004 - <a target="_blank" href="https://youtu.be/eKOGr8kPAes">Create OButton & OText</a></li>
+	<li>Potato.JavaScript Tutorial 005 - <a target="_blank" href="https://youtu.be/wVqWpgqnDgw">Potato Object Review & OList</a></li>
+	<li>Potato.JavaScript Tutorial 006 - <a target="_blank" href="https://youtu.be/qWKZCTYYKqY">OList & PostgreSQL part 1 setup PostgreSQL</a></li>
+	<li>Potato.JavaScript Tutorial 007 - <a target="_blank" href="https://youtu.be/EXrKXNtS8ro">OList & PostgreSQL part 2 setup php.ini</a></li> 
+	<li>Potato.JavaScript Tutorial 008 - <a target="_blank" href="https://youtu.be/MoQavWBdQbw">OTable part 1 create HTML table element</a></li> 
+	<li>Potato.JavaScript Tutorial 009 - <a target="_blank" href="https://youtu.be/pdFhtmEl02g">OTable part 2 editCell to edit table data</a></li> 
+	<li>Potato.JavaScript Tutorial 010 - <a target="_blank" href="https://youtu.be/fN3M61iB1n0">OTable part 3 editCell with tool & selectMultiple</a></li> 
+	<li>Potato.JavaScript Tutorial 011 - <a target="_blank" href="https://youtu.be/piGeZEjRXU0">OTable part 4 Drag n Drop</a></li>
+	<li>Potato.JavaScript Tutorial 012 - <a target="_blank" href="https://youtu.be/EeOdHdNGN4s">OTable part 5 Setup MySQL DataBase</a></li>  
+	<li>Potato.JavaScript Tutorial 013 - <a target="_blank" href="https://youtu.be/0_tBYzrtac0">OTable part 6 Drag n Drop with MySQL DataBase & PDO</a></li>    
+	<li>Potato.JavaScript Tutorial 014 - <a target="_blank" href="https://youtu.be/TuU1zqxjSaI">Create HTML Chart Object with OChart</a></li>      
+	  
+  </ul>	  
+
+<h2> Authors 著者</h2>
+<p style="width:900px">
+I am <b id="bruce">BRUCE LIM.K.S. (林 建成)</b> the author live in JAPAN since 2004, <br>	
+I graduated from engineering background (Mechanical Engineering at Coventry University United Kingdom),<br> 
+but my final year's undergraduate project had led me to the world of programming.<br>
+(Developing software to find the natural frequency and damping factor from the input data<br> 
+of some vibration measurement device using MathLab programming language.)<br> 
+It combined the fields of engineering and programming.<br>
+The result was good and encouraged me continue to develop my programming skill until now.
+<div stye="height:100px"><img id="div_bruce" class="spotlight" aria-busy="true" 
+style="display:none;margin-left:50px;width: 70px; height: 100px;" 
+alt="bruce lim" src="image/bruce.jpg"></div>	
+This is my first JavaScript Library, which was developed since year 2010 in JAPAN. <br>
+I call it <b>potato javascript</b> or <b>o</b> script (o = potato, why because its as simple as potato)
+</p>
+
+<h2> Support & Contact 連絡先</h2>
+<img class="spotlight" aria-busy="true" style="margin-left:50px;width: 70px; height: 70px;" alt="potatoscript" src="image/myemail.png"><br>
+
+<h2> License ライセンス</h2>
+
+potato.js is licensed under the terms of the GNU General Public License v3.0.<br>
+<img class="spotlight" aria-busy="true" style="margin-left:50px;width: 70px; height: 70px;" alt="画像に含まれている可能性があるもの:テキスト" 
+	 src="image/potato.js license.png"><br>
+</div>
+
+
+<script>
+	
+   $('.flipItem')
+	.mouseover(
+	  function(){
+	    var $this = $(this);
+	   
+	    $.expand($this,80,80);
+	    $this.css("zIndex",1000);    
+	
+	})
+	.mouseleave(function(){
+	  var $this = $(this);
+	  $.collapse($this,50,50);
+	  $this.css("zIndex",900);  
+	});		
+	
+   $("#bruce")
+   .css("cursor","pointer")
+   .mouseenter(function(){
+      $("#div_bruce").show();
+   })
+   .mouseout(function(){
+      $("#div_bruce").hide();	   
+   })
+</script>	
+
