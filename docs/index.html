@@ -55,6 +55,49 @@ ul, #myUL {
 .active {
   display: block;
 }
+	
+.flipPotato{
+  width:160px;
+  height:260px;
+  text-align:center;
+  vertical-align:center;
+  font-size:35px;
+  float:left;
+  cursor:pointer;	
+  margin-left:15px;
+}
+.flipPotato > .front{
+  position:absolute;
+  transform: perspective(600px) rotateY(0deg);
+  background:#FC0;
+  width:150px;
+  height:250px;
+  backface-visibility:hidden;
+  transition: transform .5s linear 0s;
+  padding:10px;		
+  border:1px solid black;	
+  border-radius:10px;
+  box-shadow:0 0 10px rgba(0,0,0,.5);	
+}	
+.flipPotato > .back{
+  position:absolute;
+  transform: perspective(600px) rotateY(180deg);
+  background:#FFFFFF;
+  width:150px;
+  height:250px;
+  backface-visibility: hidden;
+  transition: transform .5s linear 0s;
+  padding:10px;		
+  border:1px solid black;	
+  border-radius:10px;	
+  box-shadow:0 0 10px rgba(0,0,0,.5);	
+}	
+.flipPotato:hover > .front{
+  transform: perspective(600px) rotateY(-180deg);
+}
+.flipPotato:hover > .back{
+  transform: perspective(600px) rotateY(0deg);
+}v	
 </style>
 
 
