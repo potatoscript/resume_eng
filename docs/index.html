@@ -162,6 +162,7 @@ Skype ID ：live:.cid.131a836ac04cfbc4 <br>
 	for (i = 0; i < toggler.length; i++) {
 	  toggler[i].addEventListener("click", function() {
 	    this.parentElement.querySelector(".nested").classList.toggle("active");
+            this.parentElement.querySelector(".active").classList.toggle("nested")
 	    this.classList.toggle("caret-down");
 	  });
 	}		
