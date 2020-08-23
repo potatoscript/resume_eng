@@ -105,12 +105,11 @@ ul, #myUL {
 <tr>
 <td>
 <div class="flipPotato">
-	<div class="back flipItem">
-		
-	</div>
-	<div class="front flipItem">
-		<img class="spotlight" aria-busy="true" style="width: 220px; height:250px;" alt=""  src="bruce1.jpg"> 
-	</div>
+  <div class="back flipItem">	
+  </div>
+  <div class="front flipItem">
+    <img class="spotlight" aria-busy="true" style="width: 220px; height:230px;" alt=""  src="bruce1.jpg"> 
+  </div>
 </div>
 </td>
 <td style='vertical-align:top'>
@@ -165,10 +164,18 @@ Skype ID ：live:.cid.131a836ac04cfbc4 <br>
   for (i = 0; i < toggler.length; i++) {
     toggler[i].addEventListener("click", function() {
       this.parentElement.querySelector(".nested").classList.toggle("active");
-      //this.parentElement.querySelector(".active").classList.toggle("nested")
       this.classList.toggle("caret-down");
     });
- }		
+ }	
+
+  var toggler2 = document.getElementsByClassName("caret-down");
+  var i;
+  for (i = 0; i < toggler2.length; i++) {
+    toggler2[i].addEventListener("click", function() {
+      this.parentElement.querySelector(".active").classList.toggle("nested");
+      this.classList.toggle("caret");
+    });
+  }	
 	
    $('.flipItem')
 	.mouseover(
