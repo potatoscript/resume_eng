@@ -1,204 +1,105 @@
----
-layout: default
----
+<html>
 <meta http-equiv="X-UA-Compatible" name="viewport" content="IE=EmulateIE10">
 <meta charset="utf-8">
 <head>
   <link rel="icon" type="../../potato.js/images/png" href="image/img-p.png">
   <link rel="stylesheet" href="../../potato.js/css/jquery-ui.css"/>
-  <link rel="stylesheet" href="../../potato.js/css/potato.css"/>
+  <link rel="stylesheet" href="index.css"/>
   <script type="text/javascript" src="../../potato.js/js/Chart.bundle.js"></script>
   <script type="text/javascript" src="../../potato.js/js/Chart.utils.js"></script>
   <script type="text/javascript" src="../../potato.js/js/jquery-3.4.1.js"></script>
   <script type="text/javascript" src="../../potato.js/js/jquery-ui.js"></script>
   <script type="text/javascript" src="../../potato.js/js/angular.js"></script>
   <script type="text/javascript" src="../../potato.js/js/potato.1.5.0.js"></script>	
-  <script type="text/javascript" src="../../potato.js/js/enchant.js"></script>		
+  <script type="text/javascript" src="../../potato.js/js/enchant.js"></script>	
+  <script type="text/javascript" src="index.js"></script>			
 </head>
-<style>
-/* Remove default bullets */
-ul, #myUL {
-  list-style-type: none;
-}
-
-/* Remove margins and padding from the parent ul */
-#myUL {
-  margin: 0;
-  padding: 0;
-}
-
-/* Style the caret/arrow */
-.caret {
-  cursor: pointer;
-  user-select: none; /* Prevent text selection */
-}
-
-/* Create the caret/arrow with a unicode, and style it */
-.caret::before {
-  content: "\25B6";
-  color: black;
-  display: inline-block;
-  margin-right: 6px;
-}
-
-/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
-.caret-down::before {
-  transform: rotate(90deg);
-}
-
-/* Hide the nested list */
-.nested {
-  display: none;
-}
-
-/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
-.active {
-  display: block;
-}
-	
-.flipPotato{
-  width:230px;
-  height:260px;
-  text-align:center;
-  vertical-align:center;
-  font-size:35px;
-  float:left;
-  cursor:pointer;	
-  margin-left:15px;
-}
-.flipPotato > .front{
-  position:absolute;
-  transform: perspective(600px) rotateY(0deg);
-  background:#FFF;
-  width:220px;
-  height:250px;
-  backface-visibility:hidden;
-  transition: transform .5s linear 0s;
-  padding:10px;		
-  border:1px solid black;	
-  border-radius:10px;
-  box-shadow:0 0 10px rgba(0,0,0,.5);	
-}	
-.flipPotato > .back{
-  position:absolute;
-  transform: perspective(600px) rotateY(180deg);
-  background:#FFFFFF;
-  width:220px;
-  height:250px;
-  backface-visibility: hidden;
-  transition: transform .5s linear 0s;
-  padding:10px;		
-  border:1px solid black;	
-  border-radius:10px;	
-  box-shadow:0 0 10px rgba(0,0,0,.5);	
-}	
-.flipPotato:hover > .front{
-  transform: perspective(600px) rotateY(-180deg);
-}
-.flipPotato:hover > .back{
-  transform: perspective(600px) rotateY(0deg);
-}v	
-</style>
 
 
-<table>
-<tr>
-<td>
-<div class="flipPotato">
-  <div class="back flipItem">	
-  </div>
-  <div class="front flipItem">
-    <img class="spotlight" aria-busy="true" style="width: 220px; height:230px;" alt=""  src="bruce1.jpg"> 
-  </div>
-</div>
-</td>
-<td style='vertical-align:top'>
-■基本情報:<br>
-氏名 ：BRUCE LIM（４３歳）<br>
-国際 ：マレーシア（今シンガポールに在住です）<br>
-在日期間 ：１０年以上<br>
-メール ：limksmail@yahoo.co.jp<br>
-Skype ID ：live:.cid.131a836ac04cfbc4 <br>
-</td>
-</tr>
-<tr>
-<td colspan=2 style='vertical-align:top'>
-■最終学歴<br>
-１９９７年０６月：イギリス Coventry University 大学に留学<br>
-１９９９年１０月：一級機械学士優等学位 卒業<br>
-卒業プロジェクト：MATHLAB 言語で振動データから固有振動数を検出のシステムを開発する。<br>
-             （MATHLAB は最初に使ったプログラミング言語です。)<br>
-</td>
-</tr>
-<tr>
-<td colspan=2>
-<ul id="myUL">
-  <li><span class="caret-down">JavaScript</span>
-    <ul class="active">
-      <li>List</li>
-      <li>Button</li>
-    </ul>
-   </li>	  
-   <li><span class="caret">PHP</span>
-	<ul class="nested">
-	  <li>String</li>
-	  <li>Function</li>
-	</ul>	
-    </li>	   
-    <li><span class="caret">SQL</span>
-            <ul class="nested">
-              <li>SELECT</li>
-              <li>SUM</li>
-              <li>AVG</li>
-              <li>LEFT OUTER JOIN</li>
-            </ul>
-          </li>
-</ul>
-</td>
-</tr>
-</table>
-<script>
+<body>
+	<table style="margin-left:10px;margin-top:10px">
+		<tr>
+			<td style='vertical-align:top;'>
+				<div class="flipPotato">
+				  <div class="front flipItem">
+					<img class="spotlight" aria-busy="true" style="width: 160px; height:200px;" alt=""  src="bruce1.jpg"><br> 
+					<font style="font-size:15px">2010年～2020年 日本</font>
+				  </div>	
+				  <div class="back flipItem">	
+					<img class="spotlight" aria-busy="true" style="width: 130px; height:200px;" alt=""  src="bruce2.jpg"><br> 
+					<font style="font-size:15px">2020年4月～ ｼﾝｶﾞﾎﾟｰﾙ</font>
+				  </div>
+				</div>
+			</td>
+			<td style='vertical-align:top;'>
+				<ul id="myUL">
+					<li><span class="caret2">基本情報:</span>
+						<ul id="init" >
+							<table class="table-basic">
+								<tr>
+									<td>氏名 ：</td><td>BRUCE LIM（４３歳）</td>
+								</tr>
+								<tr>
+									<td>国際 ：</td><td>マレーシア（今シンガポールに在住です）</td>
+								</tr>
+								<tr>
+									<td>在日期間 ：</td><td>１０年（鳥取県米子市）</td>
+								</tr>
+								<tr>
+									<td>会社 ：</td><td>NK　Freudenberg　Pte. Ltd.　（在職正社員）</td>
+								</tr>
+								<tr>
+									<td>メール ：</td><td>limksmail@yahoo.co.jp</td>
+								</tr>
+								<tr>
+									<td>Skype ID ：</td><td>live:.cid.131a836ac04cfbc4</td>
+								</tr>
+							</table>
+						</ul>
+				   </li>	
+				   <li><br><span class="caret">最終学歴:</span>
+						<ul class="nested">
+							<table class="table-basic">
+								<tr>
+									<td>１９９７年０６月：</td><td>イギリス Coventry University 大学に留学</td>
+								</tr>
+								<tr>
+									<td>１９９９年１０月：</td><td>一級機械学士優等学位 卒業</td>
+								</tr>
+								<tr>
+									<td>卒業プロジェクト：</td><td>MATHLAB 言語で振動データから固有振動数を検出のシステムを開発する。</td>
+								</tr>
+								<tr>
+									<td></td><td>（MATHLAB は最初に使ったプログラミング言語です。)</td>
+								</tr>
+							</table>
+						</ul>	
+					</li>	   
+					<li><br><span class="caret">経験：</span>
+						<ul class="nested">
+							<table class="table-skill">
+								<tr>
+									<td>JavaScript</td>
+								</tr>
+								<tr>
+									<td>PHP</td>
+								</tr>
+								<tr>
+									<td>PostgreSQL</td>
+								</tr>
+								<tr>
+									<td>C#</td>
+								</tr>
+								<tr>
+									<td>Java</td>
+								</tr>
+							</table>
+						</ul>
+				  </li>
+				</ul>
+			</td>
+		</tr>
+	</table>
 
-  var toggler = document.getElementsByClassName("caret");
-  var i;
-  for (i = 0; i < toggler.length; i++) {
-    toggler[i].addEventListener("click", function() {
-      this.parentElement.querySelector(".nested").classList.toggle("active");
-      this.classList.toggle("caret-down");
-    });
- }	
-
-  var toggler2 = document.getElementsByClassName("caret-down");
-  var i;
-  for (i = 0; i < toggler2.length; i++) {
-    toggler2[i].addEventListener("click", function() {
-      this.parentElement.querySelector(".active").classList.toggle("nested");
-      this.classList.toggle("caret");
-    });
-  }	
-	
-   $('.flipItem')
-	.mouseover(
-	  function(){
-	    var $this = $(this);
-	   
-	    //$.expand($this,80,80);
-	    $this.css("zIndex",1000);    
-	
-	})
-	.mouseleave(function(){
-	  var $this = $(this);
-	  //$.collapse($this,50,50);
-	  $this.css("zIndex",900);  
-	});		
-	
-   $("#bruce")
-   .css("cursor","pointer")
-   .mouseenter(function(){
-      $("#div_bruce").show();
-   })
-   .mouseout(function(){
-      $("#div_bruce").hide();	   
-   })
-</script>	
-
+</body>
+</html>
