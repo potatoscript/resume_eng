@@ -10,7 +10,7 @@ ul, #myUL {
 }
 
 /* Style the caret/arrow */
-.caret,.caret2 {
+.caret,.caretx {
   cursor: pointer;
   color: blue;
   user-select: none; /* Prevent text selection */
@@ -93,6 +93,11 @@ ul, #myUL {
 .flipPotato:hover > .back{
   transform: perspective(600px) rotateY(0deg);
 }
+.table-basic th{
+	border:0px solid black;
+	padding:5px;
+	width:150px;
+}
 .table-basic td{
 	border:0px solid black;
 	padding:5px;
@@ -104,4 +109,9 @@ ul, #myUL {
 	border:1px solid black;
 	padding:5px;
 }
-
+#toggle{
+	width:150px;
+	height:30px;
+	border-radius:5px;
+	margin-left:20px;
+}

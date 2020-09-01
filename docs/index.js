@@ -48,4 +48,22 @@ $( document ).ready(function() {
    })
    
    
+   
 });
+
+
+function openall(){
+	var toggler = document.getElementsByClassName("caret");
+	  var i;
+	  for (i = 0; i < toggler.length; i++) {
+		toggler[i].parentElement.querySelector(".nested").classList.toggle("active");
+		toggler[i].classList.toggle("caret-down");
+
+	 }	
+	
+    var obj = document.getElementById("toggle");
+　　　　if(obj.value=="全て展開"){
+	   obj.value="全て縮小";
+	}else obj.value="全て展開";
+	
+}
