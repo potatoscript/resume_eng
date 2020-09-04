@@ -10,15 +10,19 @@ $( document ).ready(function() {
 	 }	
 	 
 	 
-	 var toggler2 = document.getElementsByClassName("caret2");
+	 var togglerx = document.getElementsByClassName("caretx");
+	 var a = document.getElementsByClassName("nestedx");
 	  var i;
-	  for (i = 0; i < toggler2.length; i++) {
-		toggler2[i].addEventListener("click", function() {
-			var element = document.getElementById("init");
-			element.classList.toggle("nested2");
-		  this.classList.toggle("caret-down2");
+	  var j;
+	  for (i = 0; i < togglerx.length; i++) {
+		togglerx[i].addEventListener("click", function() {
+		  for (j = 0; j  < a.length; j++) {	
+			a[j].classList.toggle("activex");
+		  }
+		  this.classList.toggle("caret-downx");
 		});
 	 }
+
 
 
 
@@ -53,17 +57,35 @@ $( document ).ready(function() {
 
 
 function openall(){
+	
+	var obj = document.getElementById("toggle");
+　　　　if(obj.value=="全て展開"){
+	   obj.value="全て縮小"; 
+	}else{
+		obj.value="全て展開";
+	}
+	
+	
 	var toggler = document.getElementsByClassName("caret");
 	  var i;
 	  for (i = 0; i < toggler.length; i++) {
 		toggler[i].parentElement.querySelector(".nested").classList.toggle("active");
 		toggler[i].classList.toggle("caret-down");
-
 	 }	
-	
-    var obj = document.getElementById("toggle");
-　　　　if(obj.value=="全て展開"){
-	   obj.value="全て縮小";
-	}else obj.value="全て展開";
-	
+	 
+	 
+	 var togglerx = document.getElementsByClassName("caretx");
+	 var a = document.getElementsByClassName("nestedx");
+	  var i;
+	  var j;
+	  for (i = 0; i < togglerx.length; i++) {
+		  for (j = 0; j  < a.length; j++) {	
+			a[j].classList.toggle("activex");
+		  }
+		  togglerx[i].classList.toggle("caret-downx");
+	 }
+
 }
+
+
+
