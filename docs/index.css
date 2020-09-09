@@ -10,7 +10,7 @@ ul, #myUL {
 }
 
 /* Style the caret/arrow */
-.caret,.caretx {
+.caret,.caret2,.caret3,.caretx,.caret-basic {
   cursor: pointer;
   color: blue;
   user-select: none; /* Prevent text selection */
@@ -23,7 +23,21 @@ ul, #myUL {
   display: inline-block;
   margin-right: 6px;
 }
+.caret-basic::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+  transform: rotate(90deg);
+}
 .caret2::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+  transform: rotate(90deg);
+}
+.caret3::before {
   content: "\25B6";
   color: black;
   display: inline-block;
@@ -36,6 +50,12 @@ ul, #myUL {
   transform: rotate(90deg);
 }
 .caret-down2::before {
+  transform: rotate(0deg);
+}
+.caret-down3::before {
+  transform: rotate(0deg);
+}
+.caret-basic-down::before {
   transform: rotate(0deg);
 }
 
@@ -109,9 +129,90 @@ ul, #myUL {
 	border:1px solid black;
 	padding:5px;
 }
-#toggle{
+#table-skill th{
+	border:1px solid black;
+	background:lightblue;
+	padding:5px;
 	width:150px;
+}
+#table-skill td{
+	width:150px;
+	text-align:center;
+	font-family:arial;
+	font-size:16px;
+}
+#table-skill td p{
+	color:red;
+}
+#btn-page1-pdf{
+	width:180px;
 	height:30px;
 	border-radius:5px;
-	margin-left:20px;
+	margin-left:17px;
+}
+
+.tabs,.tabs-2{
+	list-style	:none;
+	overflow	:hidden;
+	padding-left:1px;
+	margin-left	:2px;
+}
+.tabs li,.tabs-2 li{
+	display:inline;
+}
+.tabs li a {
+	display		:block;
+	float		:left;
+	color		:black;
+	border			:1px dashed black;
+	background	:#f8f8f8;
+	margin		:0 0 0 -1px;
+	margin-left	:10px;
+	font-size	:13px;
+	width:150px;
+	height:25px;
+	text-align: center;
+	cursor: pointer;
+	padding		:3px 3px 3px 3px;
+	border-top-left-radius:10px;
+	border-top-right-radius:10px;
+	opacity: 0.5;
+}
+.tabs li a.current{/*current selected tab*/
+	background		:white;
+	border			:1px solid black;
+	top				:2px;
+	border-bottom	:0px solid white;
+	position		:relative;
+	z-index			:2000;
+	opacity: 1;
+}
+.box-wrapper{
+	background:white;
+	border:1px solid black;
+	border-radius:10px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+	margin:-1px;
+	box-shadow:0 0 5px rgba(0,0,0,.5);
+	margin-left:10px;
+	margin-top:-18px;
+	position:relative;
+	width	:350px;
+	height:240px;
+}
+.content-box{
+	overflow:auto;
+	position:absolute;
+	padding-top:10px;
+	padding-left:15px;
+	top:1px;
+	left:1px;
+}
+.current{
+	z-index:1000000;
+}
+.col-one{
+	float:left;
+	position:relative;
 }

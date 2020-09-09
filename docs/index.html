@@ -17,227 +17,389 @@
 
 
 <body>
+
 	<table style="margin-left:10px;margin-top:10px">
 		<tr>
 			<td style='vertical-align:top;'>
-				<div class="flipPotato">
-				  <div class="front flipItem">
-					<img class="spotlight" aria-busy="true" style="width: 160px; height:200px;" alt=""  src="bruce1.jpg"><br> 
-					<font style="font-size:15px">2010年～2020年 日本</font>
-				  </div>	
-				  <div class="back flipItem">	
-					<img class="spotlight" aria-busy="true" style="width: 130px; height:200px;" alt=""  src="bruce2.jpg"><br> 
-					<font style="font-size:15px">2020年4月～ ｼﾝｶﾞﾎﾟｰﾙ</font>
-				  </div>
-				</div>
-				<br>
-				<input type="button" id="toggle" value="全て展開" style="cursor:pointer;margin-top:30px" onclick="openall()"/>
+				<table>
+					<tr>
+						<td>
+							<div class="flipPotato">
+							  <div class="front flipItem">
+								<img class="spotlight" aria-busy="true" style="width: 160px; height:200px;" alt=""  src="bruce1.jpg"><br> 
+								<font style="font-size:15px">2010年～2020年 日本</font>
+							  </div>	
+							  <div class="back flipItem">	
+								<img class="spotlight" aria-busy="true" style="width: 130px; height:200px;" alt=""  src="bruce2.jpg"><br> 
+								<font style="font-size:15px">2020年4月～ ｼﾝｶﾞﾎﾟｰﾙ</font>
+							  </div>
+							</div>
+						</td>
+					</tr>
+					<tr>	
+						<td>
+							<br>
+							<o-button-pdf
+								value = "　職務経歴書.pdf"
+								image = "img-download.png 28 28"
+								width = "180px"
+								height= "38px"
+								marginLeft="15px"
+								paddingLeft="5px"
+							></o-button-pdf>
+						</td>
+					</tr>
+					<tr>
+						<td style="font-family:arial;font-size:13px">
+						<br>
+						<p>現職は約２０年間在籍しております。</p>
+						<p>最初の１０年間は機械・製品設計開発を担当していましたが、</p>
+						<p>後の１０年間は自社情報管理システム開発者として勤務しています。</p>
+						<p>自分で作ったJavaScriptライブラリ<br>
+						http://potatoscript.github.io/homepage</p>
+
+						</td>
+					</tr>
+				</table>	
 			</td>
 			<td style='vertical-align:top;'>
-				<ul id="myUL">
-					<li><span class="caret2">基本情報:</span>
-						<ul id="init" >
-							<table class="table-basic">
-								<tr>
-									<th>氏名 ：</th><td>BRUCE LIM（４３歳）</td>
-								</tr>
-								<tr>
-									<th>国際 ：</th><td>マレーシア（今シンガポールに在住です）</td>
-								</tr>
-								<tr>
-									<th>在日期間 ：</th><td>１０年（鳥取県米子市）</td>
-								</tr>
-								<tr>
-									<th>会社 ：</th><td>Freudenberg　Pte. Ltd.　（在職正社員）</td>
-								</tr>
-								<tr>
-									<th>メール ：</th><td>limksmail@yahoo.co.jp</td>
-								</tr>
-								<tr>
-									<th>Skype ID ：</th><td>live:.cid.131a836ac04cfbc4</td>
-								</tr>
-							</table>
-						</ul>
-				   </li>	
-				   <li><br><span class="caret">最終学歴:</span>
-						<ul class="nested">
-							<table class="table-basic">
-								<tr>
-									<th>1997年06月：</th><td>イギリス Coventry University 大学に留学</td>
-								</tr>
-								<tr>
-									<th>1999年11月：</th><td>一級機械学士優等学位 卒業</td>
-								</tr>
-								<tr>
-									<th>卒業ﾌﾟﾛｼﾞｪｸﾄ：</th><td>MATLAB 言語で振動データから固有振動数を検出のシステムを開発する。</td>
-								</tr>
-								<tr>
-									<th>使用ツール：</th><td>ANSYS、MATLAB、AutoCAD、Microsoft Word・Excel・PowerPoint</td>
-								</tr>
-							</table>
-						</ul>	
-					</li>	   
-					<li><br><span class="caretx">職務経歴：</span>
-						<ul class="nestedx">
-							<span class="caret">2000 年 4 月～2003 年：</span>
-								<ul class="nested">
-									<table class="table-basic">
-										<tr>
-											<td>■ ｼﾝｶﾞﾎﾟｰﾙ拠点に入社して、３年間製品設計・開発を担当してきました。<br>
-											      <font style="padding-left:10px">生産工程設計・不適合対策・VBAを使って図面管理システムの作成も担当する。
-											</td>
-										</tr>
-										<tr>
-											<td>■ 使用ツール：AutoCAD、Inventor、solidEdge、Excel VBA</td>
-										</tr>
-										<tr>
-											<td>■ Working Group 人数：20人（工場作業員200人）</td>
-										</tr>
-										<tr>
-											<td>■ 部署：製品設計部（治工具設計含む）</td>
-										</tr>
-										<tr>
-											<td>■ 年収：300 万円++</td>
-										</tr>
-									</table>
+				<div id="menu_tabs">
+					<ul class="tabs">
+						<li><a onclick="hrefClick('one')">履歴書・職務経歴書</a></li>
+						<li><a onclick="hrefClick('two')">スキルシート</a></li>
+						<li><a onclick="hrefClick('three')">作品</a></li>
+					</ul>
+					<div class="box-wrapper">
+						<div id="one" class="content-box">
+							<div class="col-one col">
+								<ul id="myUL">
+									<li><span id="caret-basic" class="caret2">基本情報:</span>
+										<ul class="active" >
+											<table class="table-basic">
+												<tr>
+													<th>氏名 ：</th><td>BRUCE LIM（４３歳）</td>
+												</tr>
+												<tr>
+													<th>国際 ：</th><td>マレーシア（今シンガポールに在住です）</td>
+												</tr>
+												<tr>
+													<th>在日期間 ：</th><td>１０年（鳥取県米子市）</td>
+												</tr>
+												<tr>
+													<th>会社 ：</th><td>Freudenberg　Pte. Ltd.　（在職正社員）</td>
+												</tr>
+												<tr>
+													<th>メール ：</th><td>limksmail@yahoo.co.jp</td>
+												</tr>
+												<tr>
+													<th>Skype ID ：</th><td>live:.cid.131a836ac04cfbc4</td>
+												</tr>
+											</table>
+										</ul>
+								   </li>	
+								   <li><br><span id="caret2" class="caret2">最終学歴:</span>
+										<ul class="active2">
+											<table class="table-basic">
+												<tr>
+													<th>1997年06月：</th><td>イギリス Coventry University 大学に留学</td>
+												</tr>
+												<tr>
+													<th>1999年11月：</th><td>一級機械学士優等学位 卒業</td>
+												</tr>
+												<tr>
+													<th>卒業ﾌﾟﾛｼﾞｪｸﾄ：</th><td>MATLAB 言語で振動データから固有振動数を検出のシステムを開発する。</td>
+												</tr>
+												<tr>
+													<th>使用ツール：</th><td>ANSYS、MATLAB、AutoCAD、Microsoft Word・Excel・PowerPoint</td>
+												</tr>
+											</table>
+										</ul>	
+									</li>	   
+									<li><br><span id="caret3" class="caret3">職務経歴：</span>
+										<ul class="nested3">
+											<span class="caretx">2000 年 4 月～2003 年： ｼﾝｶﾞﾎﾟｰﾙ</span>
+												<ul class="nestedx">
+													<table class="table-basic">
+														<tr>
+															<td>■ ｼﾝｶﾞﾎﾟｰﾙ拠点に入社して、３年間製品設計・開発を担当してきました。<br>
+																  <font style="padding-left:10px">生産工程設計・不適合対策・VBAを使って図面管理システムの作成も担当する。
+															</td>
+														</tr>
+														<tr>
+															<td>■ 使用ツール：AutoCAD、Inventor、solidEdge、Excel VBA</td>
+														</tr>
+														<tr>
+															<td>■ Working Group 人数：20人（工場作業員200人）</td>
+														</tr>
+														<tr>
+															<td>■ 部署：製品設計部（治工具設計含む）</td>
+														</tr>
+														<tr>
+															<td>■ 年収：300 万円++</td>
+														</tr>
+													</table>
+												</ul>
+										</ul>
+										<ul class="nested3">
+											<span class="caretx">2003 年 6 月～2006 年： 日本</span>
+												<ul class="nestedx"> 
+													<table class="table-basic">
+														<tr>
+															<td>■ 日本拠点に出向して、３年間製品設計・開発を研修してきました。（日本語勉強）</td>
+														</tr>
+														<tr>
+															<td>■ 使用ツール：CadCeus、solidWork</td>
+														</tr>
+														<tr>
+															<td>■ Working Group 人数：16人（工場作業員300人）</td>
+														</tr>
+														<tr>
+															<td>■ 部署：製品設計部,品質管理部、試作課等</td>
+														</tr>
+														<tr>
+															<td>■ 年収：400 万円++</td>
+														</tr>
+													</table>
+												</ul>
+										</ul>
+										<ul class="nested3">
+											<span class="caretx">2007 年 1 月～2010 年： タイ</span>
+												<ul class="nestedx">
+													<table class="table-basic">
+														<tr>
+															<td>■ タイ拠点に出向して、３年間Project Managerとして原価削減活動を担当してきました。</td>
+														</tr>
+														<tr>
+															<td>■ 使用ツール：VBA、Inventor</td>
+														</tr>
+														<tr>
+															<td>■ Working Group 人数：15人（工場作業員500人）</td>
+														</tr>
+														<tr>
+															<td>■ 部署：製品設計部</td>
+														</tr>
+														<tr>
+															<td>■ 年収：500 万円++</td>
+														</tr>
+													</table>
+												</ul>
+										</ul>
+										<ul class="nested3">
+											<span class="caretx">2010 年 6 月～2020 年： 日本</span>
+												<ul class="nestedx">
+													<table class="table-basic">
+														<tr>
+															<td>■ 日本拠点に出向して、１０年間工場情報管理システム開発を担当してきました。</td>
+														</tr>
+														<tr>
+															<td>■ 使用ツール：JavaScript、PHP、PostgreSQL、C#、Java、Apache Web Server</td>
+														</tr>
+														<tr>
+															<td>■ Working Group 人数：19人（工場作業員300人）</td>
+														</tr>
+														<tr>
+															<td>■ 部署：生産技術部</td>
+														</tr>
+														<tr>
+															<td>■ 年収：600～700 万円++</td>
+														</tr>
+													</table>
+												</ul>
+										</ul>
+										<ul class="nested3">
+											<span class="caret">2020 年 4 月～ 　　　： ｼﾝｶﾞﾎﾟｰﾙ</span>
+												<ul class="nestedx">
+													<table class="table-basic">
+														<tr>
+															<td>■ インドネシア拠点に出向して、工場情報管理システム開発を担当する。
+															<font style="padding-left:10px">CORONAの影響で今シンガポールからリモート従業する。
+															</td>
+														</tr>
+														<tr>
+															<td>■ 使用ツール：JavaScript、C#, ASP.NET</td>
+														</tr>
+														<tr>
+															<td>■ Working Group 人数：5人（工場作業員200人）</td>
+														</tr>
+														<tr>
+															<td>■ 部署：IT部</td>
+														</tr>
+														<tr>
+															<td>■ 年収：750 万円++</td>
+														</tr>
+													</table>
+												</ul>
+										</ul>
+								  </li>
+								  
 								</ul>
-						</ul>
-						<ul class="nestedx">
-							<span class="caret">2003 年 6 月～2006 年：</span>
-								<ul class="nested"> 
-									<table class="table-basic">
-										<tr>
-											<td>■ 日本拠点に出向して、３年間製品設計・開発を研修してきました。（日本語勉強）</td>
-										</tr>
-										<tr>
-											<td>■ 使用ツール：CadCeus、solidWork</td>
-										</tr>
-										<tr>
-											<td>■ Working Group 人数：16人（工場作業員300人）</td>
-										</tr>
-										<tr>
-											<td>■ 部署：製品設計部,品質管理部、試作課等</td>
-										</tr>
-										<tr>
-											<td>■ 年収：400 万円++</td>
-										</tr>
-									</table>
-								</ul>
-						</ul>
-						<ul class="nestedx">
-							<span class="caret">2007 年 1 月～2010 年：</span>
-								<ul class="nested">
-									<table class="table-basic">
-										<tr>
-											<td>■ タイ拠点に出向して、３年間Project Managerとして原価削減活動を担当してきました。</td>
-										</tr>
-										<tr>
-											<td>■ 使用ツール：VBA、Inventor</td>
-										</tr>
-										<tr>
-											<td>■ Working Group 人数：15人（工場作業員500人）</td>
-										</tr>
-										<tr>
-											<td>■ 部署：製品設計部</td>
-										</tr>
-										<tr>
-											<td>■ 年収：500 万円++</td>
-										</tr>
-									</table>
-								</ul>
-						</ul>
-						<ul class="nestedx">
-							<span class="caret">2010 年 6 月～2020 年：</span>
-								<ul class="nested">
-									<table class="table-basic">
-										<tr>
-											<td>■ 日本拠点に出向して、１０年間工場情報管理システム開発を担当してきました。</td>
-										</tr>
-										<tr>
-											<td>■ 使用ツール：JavaScript、PHP、PostgreSQL、C#、Java、Apache Web Server</td>
-										</tr>
-										<tr>
-											<td>■ Working Group 人数：19人（工場作業員300人）</td>
-										</tr>
-										<tr>
-											<td>■ 部署：生産技術部</td>
-										</tr>
-										<tr>
-											<td>■ 年収：600～700 万円++</td>
-										</tr>
-									</table>
-								</ul>
-						</ul>
-						<ul class="nestedx">
-							<span class="caret">2020 年 4 月～ ：</span>
-								<ul class="nested">
-									<table class="table-basic">
-										<tr>
-											<td>■ インドネシア拠点に出向して、工場情報管理システム開発を担当する。
-											<font style="padding-left:10px">CORONAの影響で今シンガポールからリモート従業する。
-											</td>
-										</tr>
-										<tr>
-											<td>■ 使用ツール：JavaScript、C#, ASP.NET</td>
-										</tr>
-										<tr>
-											<td>■ Working Group 人数：5人（工場作業員200人）</td>
-										</tr>
-										<tr>
-											<td>■ 部署：IT部</td>
-										</tr>
-										<tr>
-											<td>■ 年収：750 万円++</td>
-										</tr>
-									</table>
-								</ul>
-						</ul>
-				  </li>
-				  <li><br><span class="caretx">スキルシート：</span>
-						<ul class="nestedx">
-							<span class="caret">AutoCAD：</span>
-								<ul class="nested">
-
-								</ul>
-						</ul>
-						<ul class="nestedx">
-							<span class="caret">Inventor：</span>
-								<ul class="nested">
-
-								</ul>
-						</ul>
-						<ul class="nestedx">
-							<span class="caret">JavaScript：</span>
-								<ul class="nested">
-
-								</ul>
-						</ul>
-						<ul class="nestedx">
-							<span class="caret">PHP：</span>
-								<ul class="nested">
-
-								</ul>
-						</ul>
-						<ul class="nestedx">
-							<span class="caret">PostgreSQL：</span>
-								<ul class="nested">
-
-								</ul>
-						</ul>
-						<ul class="nestedx">
-							<span class="caret">C＃：</span>
-								<ul class="nested">
-
-								</ul>
-						</ul>
-						<ul class="nestedx">
-							<span class="caret">Java：</span>
-								<ul class="nested">
-
-								</ul>
-						</ul>
-				  </li>
-				</ul>
+							</div>
+						</div>
+						<div id="two" class="content-box">
+							<div class="col-one col">
+								技術経験　　　　　　　<font style="font-size:17px;color:red">◎</font>：実務経験多い ／ <font style="font-size:27px;color:red">○</font>：実務経験有り ／ <font style="font-size:17px;color:red">△</font>：知識有り
+							    <table id="table-skill" class="table-skill">
+									<tr>
+										<th>CAD</th>
+										<td>AutoCAD</td>
+										<td><p>◎</p></td>
+										<td>Inventor</td>
+										<td><p>◎</p></td>
+										<td>SolidWork</td>
+										<td><p>◎</p></td>
+										<td>SolidEdge</td>
+										<td><p>△</p></td>
+										<td>CadCam</td>
+										<td><p>△</p></td>
+									</tr>	
+									<tr><td colspan=12 style="border:0px solid black"></td></tr>
+									<tr>
+										<th rowspan=2>ＯＳ</th>
+										<td>Windows</td>
+										<td><p>◎</p></td>
+										<td>Android</td>
+										<td><p>△</p></td>
+										<td>IOS</td>
+										<td><p>-</p></td>
+										<td>Unix</td>
+										<td><p>-</p></td>
+										<td>Linux</td>
+										<td><p>-</p></td>
+									</tr>	
+									<tr>
+										<td>Mac</td>
+										<td><p>-</p></td>
+										<td>BSD</td>
+										<td><p>-</p></td>
+										<td>Solaris</td>
+										<td><p>-</p></td>
+										<td>ﾘｱﾙﾀｲﾑOS</td>
+										<td><p>-</p></td>
+									</tr>
+									<tr><td colspan=12 style="border:0px solid black"></td></tr>
+									<tr>
+										<th rowspan=6>言語</th>
+										<td>C言語</td>
+										<td><p>△</p></td>
+										<td>Perl</td>
+										<td><p>-</p></td>
+										<td>Objective-C</td>
+										<td><p>-</p></td>
+										<td></td>
+										<td><p></p></td>
+										<td></td>
+										<td><p></p></td>
+									</tr>	
+									<tr>
+										<td>C++</td>
+										<td><p>△</p></td>
+										<td>Ruby</td>
+										<td><p>-</p></td>
+										<td>C#</td>
+										<td><p>◎</p></td>
+										<td></td>
+										<td><p></p></td>
+									</tr>	
+									<tr>
+										<td>Go言語</td>
+										<td><p>-</p></td>
+										<td>JavaScript</td>
+										<td><p>◎</p></td>
+										<td>Kotlin</td>
+										<td><p>-</p></td>
+										<td></td>
+										<td><p></p></td>
+									</tr>	
+									<tr>
+										<td>COBOL</td>
+										<td><p>-</p></td>
+										<td>PL/SQL</td>
+										<td><p>-</p></td>
+										<td>Android</td>
+										<td><p>△</p></td>
+										<td></td>
+										<td><p></p></td>
+									</tr>
+									<tr>
+										<td>Java</td>
+										<td><p>〇</p></td>
+										<td>VB.NET</td>
+										<td><p>△</p></td>
+										<td>Swift</td>
+										<td><p>-</p></td>
+										<td></td>
+										<td><p></p></td>
+									</tr>
+									<tr>
+										<td>PHP</td>
+										<td><p>◎</p></td>
+										<td>ASP.NET</td>
+										<td><p>◎</p></td>
+										<td>SAS</td>
+										<td><p>-</p></td>
+										<td></td>
+										<td><p></p></td>
+									</tr>
+									<tr><td colspan=12 style="border:0px solid black"></td></tr>
+									<tr>
+										<th rowspan=2>DataBase</th>
+										<td>MySQL</td>
+										<td><p>〇</p></td>
+										<td>PostgreSQL</td>
+										<td><p>◎</p></td>
+										<td>NoSQL</td>
+										<td><p>-</p></td>
+										<td>SQL Server</td>
+										<td><p>-</p></td>
+										<td>Access</td>
+										<td><p>〇</p></td>
+									</tr>	
+									<tr>
+										<td>Oracle</td>
+										<td><p>-</p></td>
+										<td>Sybase</td>
+										<td><p>-</p></td>
+										<td>DB2</td>
+										<td><p>-</p></td>
+										<td>SQLite</td>
+										<td><p>-</p></td>
+									</tr>
+									<tr><td colspan=12 style="border:0px solid black"></td></tr>
+									<tr>
+										<th rowspan=2>FrameWork / Library</th>
+										<td>Angular</td>
+										<td><p>△</p></td>
+										<td>React</td>
+										<td><p>△</p></td>
+										<td>Potato</td>
+										<td><p>◎</p></td>
+										<td>ChartJS</td>
+										<td><p>〇</p></td>
+										<td>JQuery</td>
+										<td><p>◎</p></td>
+									</tr>	
+									<tr>
+										<td>Laravel</td>
+										<td><p>-</p></td>
+										<td>CakePHP</td>
+										<td><p>-</p></td>
+										<td>Rails</td>
+										<td><p>-</p></td>
+										<td>Struts</td>
+										<td><p>-</p></td>
+									</tr>
+								</table>	
+								
+							</div>
+						</div>
+						<div id="three" class="content-box">
+							<div class="col-one col">
+								http://potatoscript.github.io/homepage
+							</div>
+						</div>
+					</div>
+				</div>
+				
 			</td>
 		</tr>
 	</table>
