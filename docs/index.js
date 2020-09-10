@@ -108,7 +108,7 @@ $( document ).ready(function() {
     $(".tabs li:first-child a, .content-box:first").addClass("current");
     $(".box-wrapper .current .col").css("top",100);
 	$('.col-one').css({
-      'top':-window.innerHeight-1000+'px'
+      'top':-1000+'px'
     });
     $(".box-wrapper .current .col-one").css("top",0);
 
