@@ -92,15 +92,15 @@ $( document ).ready(function() {
    var allTabs          = $(".tabs li a");
 
 	$(".box-wrapper").css({
-		"width":window.innerWidth-340+"px",
-		"height":window.innerHeight-90+"px"
+		"width":760+"px",
+		"height":600+"px"
    });
    $("#table-skill").css({
-		"width":window.innerWidth-380+"px"
+		"width":750+"px"
    });
    $(".content-box,.col-one col").css({
-		"width":window.innerWidth-350+"px",
-		"height":window.innerHeight-100+"px",
+		"width":750+"px",
+		"height":590+"px",
 		"overflow":"auto"
    });
 

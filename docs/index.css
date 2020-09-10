@@ -116,7 +116,7 @@ ul, #myUL {
 .table-basic th{
 	border:0px solid black;
 	padding:5px;
-	width:150px;
+	width:130px;
 }
 .table-basic td{
 	border:0px solid black;
@@ -127,19 +127,20 @@ ul, #myUL {
 }
 .table-skill td{
 	border:1px solid black;
-	padding:5px;
+	padding:1px;
 }
 #table-skill th{
 	border:1px solid black;
 	background:lightblue;
-	padding:5px;
-	width:150px;
+	padding:0px;
+	width:100px;
+	font-size:14px;
 }
 #table-skill td{
-	width:150px;
+	width:100px;
 	text-align:center;
 	font-family:arial;
-	font-size:16px;
+	font-size:14px;
 }
 #table-skill td p{
 	color:red;
@@ -195,7 +196,7 @@ ul, #myUL {
 	border-top-right-radius: 2px;
 	margin:-1px;
 	box-shadow:0 0 5px rgba(0,0,0,.5);
-	margin-left:10px;
+	margin-left:5px;
 	margin-top:-18px;
 	position:relative;
 	width	:350px;
@@ -204,8 +205,8 @@ ul, #myUL {
 .content-box{
 	overflow:auto;
 	position:absolute;
-	padding-top:10px;
-	padding-left:15px;
+	padding-top:5px;
+	padding-left:5px;
 	top:1px;
 	left:1px;
 }
