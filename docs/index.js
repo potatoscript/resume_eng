@@ -104,6 +104,25 @@ $( document ).ready(function() {
 		"overflow":"auto"
    });
 
+try{
+	
+	$(".box-wrapper").css({
+	"width":window.innerWidth-280+"px",
+	"height":window.innerHeight-90+"px"
+   });
+   $("#table-skill").css({
+		"width":750+"px"
+   });
+   $(".content-box,.col-one col").css({
+		"width":window.innerWidth-290+"px",
+		"height":window.innerHeight-100+"px",
+		"overflow":"auto"
+   });
+	
+}catch(err){
+}
+
+
 
     $(".tabs li:first-child a, .content-box:first").addClass("current");
     $(".box-wrapper .current .col").css("top",100);
