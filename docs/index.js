@@ -107,14 +107,14 @@ $( document ).ready(function() {
 try{
 	
 	$(".box-wrapper").css({
-	"width":window.innerWidth-280+"px",
+	"width":window.innerWidth-300+"px",
 	"height":window.innerHeight-90+"px"
    });
    $("#table-skill").css({
 		"width":750+"px"
    });
    $(".content-box,.col-one col").css({
-		"width":window.innerWidth-290+"px",
+		"width":window.innerWidth-310+"px",
 		"height":window.innerHeight-100+"px",
 		"overflow":"auto"
    });
@@ -127,7 +127,7 @@ try{
     $(".tabs li:first-child a, .content-box:first").addClass("current");
     $(".box-wrapper .current .col").css("top",100);
 	$('.col-one').css({
-      'top':-1000+'px'
+      'top':-2000+'px'
     });
     $(".box-wrapper .current .col-one").css("top",0);
 
@@ -158,11 +158,64 @@ try{
     })
    
    
+   $('#system1')
+      .mouseenter(
+      function(){
+        var $this = $(this);
+          $.expand($this,200,250);
+          $('#system1_arrow').html("△");
+      })
+      .mouseleave(
+      function(){
+        var $this = $(this);
+        $.collapse($this,150,60);
+        $('#system1_arrow').html("▽");
+      }
+    );
+	$('#system2')
+      .mouseenter(
+      function(){
+        var $this = $(this);
+          $.expand($this,200,250);
+          $('#system2_arrow').html("△");
+      })
+      .mouseleave(
+      function(){
+        var $this = $(this);
+        $.collapse($this,150,60);
+        $('#system2_arrow').html("▽");
+      }
+    );
+	$('#system3')
+      .mouseenter(
+      function(){
+        var $this = $(this);
+          $.expand($this,200,250);
+          $('#system3_arrow').html("△");
+      })
+      .mouseleave(
+      function(){
+        var $this = $(this);
+        $.collapse($this,150,60);
+        $('#system3_arrow').html("▽");
+      }
+    );
+
+   
+   doughnutLocation();
+   
+   
 });
 
 
 function hrefClick(a){ //to select the tab id
   	hrefSelector=a;
+	if(a=="one"){
+		doughnutLocation();
+	}
+	if(a=="two"){
+		radarSkill();
+	}
 };
 function ifReadyThenReset(){
     columnReadyCounter++;
@@ -196,8 +249,150 @@ function openall(){
 		  t2=1;  
 	}
 
+}
+
+function doughnutLocation(){
+	
+	var config = {
+			type: 'doughnut',
+			data: {
+				datasets: [{
+					data: [
+						21,
+						2,
+						5,
+						2,
+						13,
+					],
+					backgroundColor: [
+						window.chartColors.grey,
+						window.chartColors.blue,
+						window.chartColors.green,
+						window.chartColors.yellow,
+						window.chartColors.red,
+					],
+					label: 'Dataset 1'
+				}],
+				labels: [
+					'ﾏﾚｰｼｱ',
+					'ｲｷﾞﾘｽ',
+					'ｼﾝｶﾞﾎﾟｰﾙ',
+					'ﾀｲ',
+					'日本'
+				]
+			},
+			options: {
+				responsive: true,
+				legend: {
+					display:false,
+					position: 'bottom',
+				},
+				title: {
+					display: false,
+					text: '在住年数'
+				},
+				animation: {
+					animateScale: true,
+					animateRotate: true
+				},
+				plugins: { ////by adding the plugin chartjs-plugin-labels.js
+				  labels: {
+					render: function (args) {
+					  return args.label +" "+ args.value+"年";
+					},
+					arc: false,
+					fontSize: 12,
+					fontColor: 'blue',
+					position: 'outside'
+				  }
+				}
+
+			}
+		};
+
+	var ctx = document.getElementById('locationChart').getContext('2d');
+
+	var myDoughnutChart = new Chart(ctx, config);
 
 }
 
 
+function radarSkill(){
+	
+	var marksData = {
+	  labels: ["Listening", "Speaking", "Reading", "Writing", "Typing"],
+	  datasets: [{
+		label: "英語 (日常会話レベル TOIEC 820)",
+		backgroundColor: "transparent",
+		borderColor: "rgba(200,0,0,0.6)",
+		fill: false,
+		radius: 6,
+		pointRadius: 6,
+		pointBorderWidth: 3,
+		pointBackgroundColor: "orange",
+		pointBorderColor: "rgba(200,0,0,0.6)",
+		pointHoverRadius: 10,
+		data: [70, 60, 70, 70, 70]
+	  }, {
+		label: "日本語 (日常会話レベル N2)",
+		backgroundColor: "transparent",
+		borderColor: "rgba(0,0,200,0.6)",
+		fill: false,
+		radius: 6,
+		pointRadius: 6,
+		pointBorderWidth: 3,
+		pointBackgroundColor: "cornflowerblue",
+		pointBorderColor: "rgba(0,0,200,0.6)",
+		pointHoverRadius: 10,
+		data: [70, 60, 60, 30, 60]
+	  }, {
+		label: "中国語 (日常会話レベル)",
+		backgroundColor: "transparent",
+		borderColor: "Green",
+		fill: false,
+		radius: 6,
+		pointRadius: 6,
+		pointBorderWidth: 3,
+		pointBackgroundColor: "lightgreen",
+		pointBorderColor: "Green",
+		pointHoverRadius: 10,
+		data: [90, 80, 70, 30, 30]
+	  }, {
+		label: "マレーシア語 (日常会話レベル)",
+		backgroundColor: "transparent",
+		borderColor: "Black",
+		fill: false,
+		radius: 6,
+		pointRadius: 6,
+		pointBorderWidth: 3,
+		pointBackgroundColor: "White",
+		pointBorderColor: "Black",
+		pointHoverRadius: 10,
+		data: [70, 40, 50, 30, 30]
+	  }]
+	};
+	 
+	var chartOptions = {
+	  scale: {
+		ticks: {
+		  beginAtZero: true,
+		  min: 0,
+		  max: 100,
+		  stepSize: 20
+		},
+		pointLabels: {
+		  fontSize: 18
+		}
+	  },
+	  legend: {
+		position: 'left'
+	  }
+	};
+	var radarChart = new Chart(skillChart, {
+		type: 'radar',
+		data: marksData,
+		options: chartOptions
+	});
+
+}
 

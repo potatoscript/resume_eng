@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="en-US">
+<html>
+<meta http-equiv="X-UA-Compatible" name="viewport" content="IE=EmulateIE10">
 <meta charset="utf-8">
 <head>
   <link rel="icon" type="../../potato.js/images/png" href="image/img-p.png">
@@ -12,10 +12,11 @@
   <script type="text/javascript" src="../../potato.js/js/angular.js"></script>
   <script type="text/javascript" src="../../potato.js/js/potato.1.5.0.js"></script>	
   <script type="text/javascript" src="../../potato.js/js/enchant.js"></script>	
-  <script type="text/javascript" src="chartjs-plugin-labels.js"></script>			
-  <script type="text/javascript" src="index.js"></script>	
+  <script type="text/javascript" src="index.js"></script>			
 </head>
-  <body>
+
+
+<body>
 
 	<table style="margin-left:10px;margin-top:10px">
 		<tr>
@@ -25,15 +26,14 @@
 						<td>
 							<div class="flipPotato">
 							  <div class="front flipItem">
-								<img class="spotlight" aria-busy="true" style="width: 160px; height:200px;" alt=""  src="bruce1.jpg">
-								<p style="font-size:13px;margin-top:-5px">2010年～2020年 日本</p>
+								<img class="spotlight" aria-busy="true" style="width: 160px; height:200px;" alt=""  src="bruce1.jpg"><br> 
+								<font style="font-size:15px">2010年～2020年 日本</font>
 							  </div>	
 							  <div class="back flipItem">	
-								<img class="spotlight" aria-busy="true" style="width: 130px; height:200px;" alt=""  src="bruce2.jpg">
-								<p style="font-size:13px;margin-top:-5px">2020年4月～ ｼﾝｶﾞﾎﾟｰﾙ</p>
+								<img class="spotlight" aria-busy="true" style="width: 130px; height:200px;" alt=""  src="bruce2.jpg"><br> 
+								<font style="font-size:15px">2020年4月～ ｼﾝｶﾞﾎﾟｰﾙ</font>
 							  </div>
 							</div>
-							<br>
 						</td>
 					</tr>
 					<tr>	
@@ -41,23 +41,23 @@
 							<br>
 							<o-button-pdf
 								value = "　職務経歴書.pdf"
-								image = "img-download.png 25 25"
+								image = "img-download.png 28 28"
 								width = "180px"
-								height= "40px"
+								height= "38px"
+								marginLeft="15px"
 								paddingLeft="5px"
-								fontSize="13px"
 							></o-button-pdf>
 						</td>
 					</tr>
 					<tr>
-						<td style="font-family:arial;font-size:13px;width:150px">
+						<td style="font-family:arial;font-size:13px">
 						<br>
 						<p>現職は約２０年間在籍しております。</p>
 						<p>最初の１０年間は機械・製品設計開発を担当していましたが、</p>
 						<p>後の１０年間は自社情報管理システム開発者として勤務しています。</p>
 						<p>自分で作ったJavaScriptライブラリ<br>
-						<a href="http://potatoscript.github.io/homepage" target="_blank">http://potatoscript.github.io/homepage</a>
-						</p>
+						http://potatoscript.github.io/homepage</p>
+
 						</td>
 					</tr>
 				</table>	
@@ -75,36 +75,24 @@
 								<ul id="myUL">
 									<li><span id="caret-basic" class="caret2">基本情報:</span>
 										<ul class="active" >
-											<table>
+											<table class="table-basic">
 												<tr>
-													<td>
-														<table class="table-basic">
-															<tr>
-																<th>氏名 ：</th><td>LIM　KS （ﾘﾑ　ｷｬﾝｾﾝ）</td>
-															</tr>
-															<tr>
-																<th>年齢 ：</th><td>43歳</td>
-															</tr>
-															<tr>
-																<th>国際 ：</th><td>ﾏﾚｰｼｱ（今ｼﾝｶﾞﾎﾟｰﾙに在住）</td>
-															</tr>
-															<tr>
-																<th>在日期間 ：</th><td>１０年（鳥取県）</td>
-															</tr>
-															<tr>
-																<th>会社 ：</th><td>Freudenberg Group (在職正社員)</td>
-															</tr>
-															<tr>
-																<th>メール ：</th><td>limksmail@yahoo.co.jp</td>
-															</tr>
-															<tr>
-																<th>Skype ID ：</th><td>live:.cid.131a836ac04cfbc4</td>
-															</tr>
-														</table>
-													</td>
-													<td>
-														<canvas id="locationChart" width="350" height="220"></canvas>
-													</td>
+													<th>氏名 ：</th><td>BRUCE LIM（４３歳）</td>
+												</tr>
+												<tr>
+													<th>国際 ：</th><td>マレーシア（今シンガポールに在住です）</td>
+												</tr>
+												<tr>
+													<th>在日期間 ：</th><td>１０年（鳥取県米子市）</td>
+												</tr>
+												<tr>
+													<th>会社 ：</th><td>Freudenberg　Pte. Ltd.　（在職正社員）</td>
+												</tr>
+												<tr>
+													<th>メール ：</th><td>limksmail@yahoo.co.jp</td>
+												</tr>
+												<tr>
+													<th>Skype ID ：</th><td>live:.cid.131a836ac04cfbc4</td>
 												</tr>
 											</table>
 										</ul>
@@ -197,7 +185,7 @@
 												</ul>
 										</ul>
 										<ul class="nested3">
-											<span class="caretx"><font class="blinkFont">2010 年 6 月～2020 年： 日本</font></span>
+											<span class="caretx">2010 年 6 月～2020 年： 日本</span>
 												<ul class="nestedx">
 													<table class="table-basic">
 														<tr>
@@ -219,7 +207,7 @@
 												</ul>
 										</ul>
 										<ul class="nested3">
-											<span class="caretx">2020 年 4 月～ 　　　： ｼﾝｶﾞﾎﾟｰﾙ</span>
+											<span class="caret">2020 年 4 月～ 　　　： ｼﾝｶﾞﾎﾟｰﾙ</span>
 												<ul class="nestedx">
 													<table class="table-basic">
 														<tr>
@@ -249,7 +237,7 @@
 						</div>
 						<div id="two" class="content-box">
 							<div class="col-one col">
-								技術経験　　　　　　　<font style="font-size:17px;color:red">◎</font>：実務経験多い ／ <font style="font-size:20px;color:red">○</font>：実務経験有り ／ <font style="font-size:17px;color:red">△</font>：知識有り
+								技術経験　　　　　　　<font style="font-size:17px;color:red">◎</font>：実務経験多い ／ <font style="font-size:27px;color:red">○</font>：実務経験有り ／ <font style="font-size:17px;color:red">△</font>：知識有り
 							    <table id="table-skill" class="table-skill">
 									<tr>
 										<th>CAD</th>
@@ -287,8 +275,6 @@
 										<td><p>-</p></td>
 										<td>ﾘｱﾙﾀｲﾑOS</td>
 										<td><p>-</p></td>
-										<td></td>
-										<td></td>
 									</tr>
 									<tr><td colspan=12 style="border:0px solid black"></td></tr>
 									<tr>
@@ -313,8 +299,6 @@
 										<td><p>◎</p></td>
 										<td></td>
 										<td><p></p></td>
-										<td></td>
-										<td></td>
 									</tr>	
 									<tr>
 										<td>Go言語</td>
@@ -325,8 +309,6 @@
 										<td><p>-</p></td>
 										<td></td>
 										<td><p></p></td>
-										<td></td>
-										<td></td>
 									</tr>	
 									<tr>
 										<td>COBOL</td>
@@ -337,8 +319,6 @@
 										<td><p>△</p></td>
 										<td></td>
 										<td><p></p></td>
-										<td></td>
-										<td></td>
 									</tr>
 									<tr>
 										<td>Java</td>
@@ -349,8 +329,6 @@
 										<td><p>-</p></td>
 										<td></td>
 										<td><p></p></td>
-										<td></td>
-										<td></td>
 									</tr>
 									<tr>
 										<td>PHP</td>
@@ -361,8 +339,6 @@
 										<td><p>-</p></td>
 										<td></td>
 										<td><p></p></td>
-										<td></td>
-										<td></td>
 									</tr>
 									<tr><td colspan=12 style="border:0px solid black"></td></tr>
 									<tr>
@@ -387,8 +363,6 @@
 										<td><p>-</p></td>
 										<td>SQLite</td>
 										<td><p>-</p></td>
-										<td></td>
-										<td></td>
 									</tr>
 									<tr><td colspan=12 style="border:0px solid black"></td></tr>
 									<tr>
@@ -413,115 +387,14 @@
 										<td><p>-</p></td>
 										<td>Struts</td>
 										<td><p>-</p></td>
-										<td></td>
-										<td></td>
 									</tr>
 								</table>	
-								<br>
-								<canvas id="skillChart" width="500" height="300"></canvas>
+								
 							</div>
 						</div>
 						<div id="three" class="content-box">
 							<div class="col-one col">
-							
-							
-								<table id="table_menu" >
-									<tr>
-										<td>
-											<div class="item" id="system1" >
-												<a class="link" >
-													
-													<span id="menu_03" >
-														システム０１
-													</span>
-													<font id="system1_arrow">▽</font>
-												</a>
-												<div style="width:500px">
-													<br>
-													<table style="width:600px">
-														<tr>
-															<td style="padding-top:20px">
-																<a class="button orangeC" id="sisaku_data">
-																	<div class="light"></div>
-																	<span>
-																	<img src="img-defect.png" style="vertical-align:bottom;width:25px;height:20px">
-																	品質管理
-																	</span>
-																</a>
-															</td>
-														</tr>
-														<tr>
-															<td style="padding-top:10px">
-																<a class="button yellowC" id="sisaku_data_2020" style="margin-top:-5px">
-																	<div class="light"></div>
-																	<span>
-																	<img src="img-ForkTruck.png" style="vertical-align:bottom;width:25px;height:20px">
-																	棚卸し
-																	</span>
-																</a>
-															</td>
-														</tr>
-													</table>
-												</div>
-											</div>
-										</td>
-										<td>
-											<div class="item" id="system2" >
-												<a class="link" >
-													
-													<span id="menu_03" >
-														システム０２
-	
-													<font id="system2_arrow">▽</font>
-												</a>
-												<div style="width:500px">
-													<br>
-													<table style="width:600px">
-														<tr>
-															<td style="padding-top:50px">
-																<a class="button blueC" id="toolinfo" style="margin-top:-10px">
-																	<div class="light"></div>
-																	<span>
-																	<img src="img-check.png" style="vertical-align:bottom;width:25px;height:20px">
-																	治工具情報
-																	</span>
-																</a>
-															</td>
-														</tr>
-														<tr>
-															<td style="padding-top:15px">
-																<a class="button greenC" id="sisakuplan" style="margin-top:-10px">
-																	<div class="light"></div>
-																	<span>
-																	<img src="img-delivery.png" style="vertical-align:bottom;width:25px;height:20px">
-																	試作予定表
-																	</span>
-																</a>
-															</td>
-														</tr>
-													</table>
-
-												</div>
-											</div>
-										</td>
-										<td>
-											<div class="item" id="system3" >
-												<a class="link" >
-													
-													<span id="menu_03" >
-														システム０３
-	
-													<font id="system3_arrow">▽</font>
-												</a>
-												<div style="width:500px">
-													<br>
-
-												</div>
-											</div>
-										</td>
-									</tr>
-								</table>	
-
+								http://potatoscript.github.io/homepage
 							</div>
 						</div>
 					</div>
@@ -530,15 +403,23 @@
 			</td>
 		</tr>
 	</table>
+</body>
 
 
-	
-	
-	
-	
-  </body>
-  
-  
+<script>
+   $(".box-wrapper").css({
+		"width":window.innerWidth-290+"px",
+		"height":window.innerHeight-60+"px"
+   });
+   $("#table-skill").css({
+		"width":window.innerWidth-330+"px"
+   });
+   $(".content-box,.col-one col").css({
+		"width":window.innerWidth-300+"px",
+		"height":window.innerHeight-70+"px",
+		"overflow":"auto"
+   });
+</script>
 
-  
+
 </html>
