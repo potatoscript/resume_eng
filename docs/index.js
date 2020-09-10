@@ -93,14 +93,14 @@ $( document ).ready(function() {
 
 	$(".box-wrapper").css({
 		"width":760+"px",
-		"height":600+"px"
+		"height":1600+"px"
    });
    $("#table-skill").css({
 		"width":750+"px"
    });
    $(".content-box,.col-one col").css({
 		"width":750+"px",
-		"height":590+"px",
+		"height":1590+"px",
 		"overflow":"auto"
    });
 
