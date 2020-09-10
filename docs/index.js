@@ -90,22 +90,25 @@ $( document ).ready(function() {
    /******* Tab Menu Setting ****************/
    var allContentBoxes  = $(".content-box");
    var allTabs          = $(".tabs li a");
-   $(".box-wrapper").css({
-		"width":window.innerWidth-290+"px",
-		"height":window.innerHeight-60+"px"
+
+	$(".box-wrapper").css({
+		"width":window.innerWidth-340+"px",
+		"height":window.innerHeight-90+"px"
    });
    $("#table-skill").css({
-		"width":window.innerWidth-330+"px"
+		"width":window.innerWidth-380+"px"
    });
    $(".content-box,.col-one col").css({
-		"width":window.innerWidth-300+"px",
-		"height":window.innerHeight-70+"px",
+		"width":window.innerWidth-350+"px",
+		"height":window.innerHeight-100+"px",
 		"overflow":"auto"
    });
+
+
     $(".tabs li:first-child a, .content-box:first").addClass("current");
     $(".box-wrapper .current .col").css("top",100);
 	$('.col-one').css({
-      'top':-window.innerHeight+'px'
+      'top':-window.innerHeight-1000+'px'
     });
     $(".box-wrapper .current .col-one").css("top",0);
 
