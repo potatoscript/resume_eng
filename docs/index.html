@@ -46,7 +46,9 @@
 								height= "40px"
 								paddingLeft="5px"
 								fontSize="13px"
+								onclick="docDownload()"
 							></o-button-pdf>
+							<a id="doc_iframe" target="_blank"></a>
 						</td>
 					</tr>
 					<tr>
@@ -207,13 +209,50 @@
 															<td>■ 使用ツール：JavaScript、PHP、PostgreSQL、C#、Java、Apache Web Server</td>
 														</tr>
 														<tr>
-															<td>■ Working Group 人数：19人（工場作業員300人）</td>
+															<td>■ Working Group 人数：3人（工場作業員300人）</td>
 														</tr>
 														<tr>
 															<td>■ 部署：生産技術部</td>
 														</tr>
 														<tr>
 															<td>■ 年収：600～700 万円++</td>
+														</tr>
+													</table>
+													<table class="table-work">
+														<tr>
+															<th>勤務年</th>
+															<th style="width:500px">内容</th>
+														</tr>
+														<tr>
+															<th>2010～2012年</th>
+															<td>■ ＰＩＭＳ（工場情報管理システム）を提案して、開発を始まる。<br>
+																■ 第一世代のＰＩＭＳをリリースして、本番運用を始まる。
+																■ 使用ツール：JavaScript,PHP,PostgreSQL
+															</td>
+														</tr>
+														<tr>
+															<th>2013～2014年</th>
+															<td>
+																■ 使用ツール：JavaScript,PHP,PostgreSQL,JQuery
+															</td>
+														</tr>
+														<tr>
+															<th>2015～2017年</th>
+															<td>
+																■ 使用ツール：JavaScript,PHP,PostgreSQL,JQuery,C# WinForm
+															</td>
+														</tr>
+														<tr>
+															<th>2017～2019年</th>
+															<td>
+																■ 使用ツール：C# WPF, Java
+															</td>
+														</tr>
+														<tr>
+															<th>2020年</th>
+															<td>
+																■ 使用ツール：Java
+															</td>
 														</tr>
 													</table>
 												</ul>
@@ -425,20 +464,19 @@
 							<div class="col-one col">
 							
 							
-								<table id="table_menu" >
+								<table id="table_menu" style="margin-left:10px">
 									<tr>
 										<td>
 											<div class="item" id="system1" >
 												<a class="link" >
-													
-													<span id="menu_03" >
-														システム０１
+													<span>
+														C# WinForm
 													</span>
-													<font id="system1_arrow">▽</font>
+													<font class="system_arrow">▽</font>
 												</a>
-												<div style="width:500px">
+												<div>
 													<br>
-													<table style="width:600px">
+													<table>
 														<tr>
 															<td style="padding-top:20px">
 																<a class="button orangeC" id="sisaku_data">
@@ -468,15 +506,14 @@
 										<td>
 											<div class="item" id="system2" >
 												<a class="link" >
-													
-													<span id="menu_03" >
-														システム０２
-	
-													<font id="system2_arrow">▽</font>
+													<span>
+														C# WPF
+													</span>	
+													<font class="system_arrow">▽</font>
 												</a>
-												<div style="width:500px">
+												<div>
 													<br>
-													<table style="width:600px">
+													<table>
 														<tr>
 															<td style="padding-top:50px">
 																<a class="button blueC" id="toolinfo" style="margin-top:-10px">
@@ -507,13 +544,59 @@
 										<td>
 											<div class="item" id="system3" >
 												<a class="link" >
-													
-													<span id="menu_03" >
-														システム０３
-	
-													<font id="system3_arrow">▽</font>
+													<span>
+														C# ASP.NET
+													</span>
+													<font class="system_arrow">▽</font>
 												</a>
-												<div style="width:500px">
+												<div>
+													<br>
+
+												</div>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td style="padding-top:110px"></td>
+									</tr>
+									<tr>
+										<td>
+											<div class="item" id="system4" >
+												<a class="link" >
+													<span>
+														JavaScript+PHP
+													</span>
+													<font class="system_arrow">▽</font>
+												</a>
+												<div>
+													<br>
+
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="item" id="system5" >
+												<a class="link" >
+													<span>
+														Java
+													</span>
+													<font class="system_arrow">▽</font>
+												</a>
+												<div>
+													<br>
+
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="item" id="system6" >
+												<a class="link" >
+													<span>
+														VBA
+													</span>
+													<font class="system_arrow">▽</font>
+												</a>
+												<div>
 													<br>
 
 												</div>

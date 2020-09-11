@@ -158,48 +158,21 @@ try{
     })
    
    
-   $('#system1')
+   $('.item')
       .mouseenter(
       function(){
         var $this = $(this);
-          $.expand($this,200,250);
-          $('#system1_arrow').html("△");
+          $.expand($this,200,230);
+          //$('.system_arrow').html("△");
       })
       .mouseleave(
       function(){
         var $this = $(this);
-        $.collapse($this,150,60);
-        $('#system1_arrow').html("▽");
+        $.collapse($this,180,60);
+        //$('#system1_arrow').html("▽");
       }
     );
-	$('#system2')
-      .mouseenter(
-      function(){
-        var $this = $(this);
-          $.expand($this,200,250);
-          $('#system2_arrow').html("△");
-      })
-      .mouseleave(
-      function(){
-        var $this = $(this);
-        $.collapse($this,150,60);
-        $('#system2_arrow').html("▽");
-      }
-    );
-	$('#system3')
-      .mouseenter(
-      function(){
-        var $this = $(this);
-          $.expand($this,200,250);
-          $('#system3_arrow').html("△");
-      })
-      .mouseleave(
-      function(){
-        var $this = $(this);
-        $.collapse($this,150,60);
-        $('#system3_arrow').html("▽");
-      }
-    );
+
 
    
    doughnutLocation();
@@ -207,6 +180,12 @@ try{
    
 });
 
+function docDownload(){
+	var d = document.getElementById("doc_iframe");
+	d.style.display="block";
+	d.href = "履歴書・職務経歴書_20200911.pdf";
+	d.click();
+}
 
 function hrefClick(a){ //to select the tab id
   	hrefSelector=a;
@@ -224,7 +203,6 @@ function ifReadyThenReset(){
   		columnReadyCounter = 0;
   	}
 }
-
 
 
 function openall(){
