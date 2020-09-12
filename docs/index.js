@@ -173,10 +173,20 @@ try{
       }
     );
 
-
+	$('#table-btn td p')
+      .mouseenter(
+      function(){
+        $(this).css("paddingTop","0px");
+      })
+      .mouseleave(
+      function(){
+        $(this).css("paddingTop","10px");
+      }
+    );
    
    doughnutLocation();
    
+   setNode();
    
 });
 
@@ -204,6 +214,12 @@ function ifReadyThenReset(){
   	}
 }
 
+function linkToLocation(){
+	var d = document.getElementById("doc_iframe");
+	d.style.display="block";
+	d.href = "https://en.wikipedia.org/wiki/Malaysia";
+	d.click();
+}
 
 function openall(){
 	
@@ -294,7 +310,6 @@ function doughnutLocation(){
 
 }
 
-
 function radarSkill(){
 	
 	var marksData = {
@@ -374,3 +389,121 @@ function radarSkill(){
 
 }
 
+
+
+
+var level = new Array();
+var level_2 = new Array();
+var level_3 = new Array();
+var level_4 = new Array();
+var level_5 = new Array();
+var d2 = new Array();
+var d3 = new Array();
+var d4 = new Array();
+var d5 = new Array();
+var d6 = new Array();
+var datascource = new Array();
+var senior = "20";//ceo id
+var visibleLevel = 3;
+var oc;
+function setNode(){
+	
+	datasource = {
+              'id': [1,2,3],
+              'name': ["bruce","kslim","LIM"],
+              'title': ["Mr","Dr","san"],
+              'levels':["Manager","Enginner","CEO"],
+              'tel': ["","",""],
+              'email': ["","",""],
+              'english': ["","",""],
+              'ip': ["","",""],
+              'job': ["","",""],
+              'stage': ["","",""],
+              'senior': ["","",""],
+              'department':["","",""],
+              'departmentParent':["","",""],
+              'children': ["","",""],
+              'staffid':["","",""]
+            };
+
+	
+	oc = $('#chart-container').orgchart({
+      'zoom': true,
+      'pan': true,
+      'data' : datasource,
+      'visibleLevel': 1,
+      'nodeContent': 'title',
+      'nodeID': 'id',
+      'createNode': function($node, data) {
+
+        var secondMenuIcon = $('<i>', {
+          'class': 'fa fa-info-circle second-menu-icon',
+          click: function() {
+  					if(document.getElementById("edit_data").checked==false){
+            	$(this).siblings('.second-menu').toggle();
+  					}
+          },
+          mouseover:function(){
+
+          },
+  				mouseleave:function(){
+  					$(this).siblings('.second-menu').hide();
+  				}
+        });
+
+
+
+        var level= '<div class="levels" style="display:none">'+data.levels+'</div>';
+        var department= '<div class="department" style="display:none">'+data.department+'</div>';
+        var departmentParent= '<div class="departmentParent" style="display:none">'+data.departmentParent+'</div>';
+        var id = '<div class="id" style="display:none">'+data.id+'</div>';
+  			var tel = '<div class="tel" style="display:none">'+data.tel+'</div>';
+  			var email = '<div class="email" style="display:none">'+data.email+'</div>';
+  			var english = '<div class="english" style="display:none">'+data.english+'</div>';
+  			var ip = '<div class="ip" style="display:none">'+data.ip+'</div>';
+        var job ='<div class="job" style="display:none">'+data.job+'</div>';
+        var stage ='<div class="stage" style="display:none">'+data.stage+'</div>';
+        var senior ='<div class="senior" style="display:none">'+data.senior+'</div>';
+        var staffid ='<div class="staffid" style="display:none">'+data.staffid+'</div>';
+
+        var secondMenu = '<div class="second-menu"><img id="img2_'+data.id+'" class="avatar" src="' + dir_pims+photo_folder2+data.name+'.jpg"></div>';
+
+        $node[0].style.cursor="pointer";
+  			$node[0].style.marginTop = "-3px";
+
+        if(String(data.title).indexOf("object")==-1 ){
+          $node
+          .append(secondMenuIcon)
+          .append(secondMenu)
+          .append(id)
+          .append(department)
+          .append(level)
+          .append(tel)
+          .append(email)
+          .append(english)
+          .append(ip)
+          .append(job)
+          .append(stage)
+          .append(senior)
+          .append(staffid)
+          .append(departmentParent);
+        }else{
+          $node[0].innerText = String($node[0].innerText).split("object").slice(0,1);
+          $node[0].style.border = "1px solid black";
+          $node[0].style.height = "30px";
+  				$node[0].style.width = "120px";
+  				$node[0].style.marginTop = "1px";
+  				$node[0].style.borderRadius = "10px";
+  				$node[0].style.fontWeight="bold";
+  				$node[0].style.boxShadow="0 0 10px rgba(0,0,0,.5)";
+  				var name = '<div class="title" style="display:none">'+$node[0].innerText+'</div>';
+  				var department = '<div class="department" style="display:none">object</div>';
+          var departmentParent = '<div class="departmentParent" style="display:none">'+data.departmentParent+'</div>';
+          $node.append(id).append(name).append(department).append(departmentParent);
+
+  				//$node.append(id);
+        }
+
+      }
+    });
+}

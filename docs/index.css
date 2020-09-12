@@ -609,6 +609,13 @@ ul, #myUL {
 
 }
 
+#btn-hover{
+	border:1px solid black;
+	box-shadow:0 0 10px rgba(0,0,0,.5);
+	border-radius:5px;
+	display:none;
+}
+
 #table_menu{
 	border-collapse:separate;
 	margin-top:1px;

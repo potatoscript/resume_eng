@@ -13,6 +13,9 @@
   <script type="text/javascript" src="../../potato.js/js/potato.1.5.0.js"></script>	
   <script type="text/javascript" src="../../potato.js/js/enchant.js"></script>	
   <script type="text/javascript" src="chartjs-plugin-labels.js"></script>			
+  <script type="text/javascript" src="jquery.mousewheel.js"></script>	
+  <script type="text/javascript" src="jquery.orgchart.js"></script>	
+  <script type="text/javascript" src="jquery.panzoom.js"></script>	
   <script type="text/javascript" src="index.js"></script>	
 </head>
   <body>
@@ -36,13 +39,16 @@
 							<br>
 						</td>
 					</tr>
+				</table>
+				<table id="table-btn">	
 					<tr>	
 						<td>
-							<br>
+							<p style="padding-top:10px">
 							<o-button-pdf
-								value = "　職務経歴書.pdf"
+								hoverId = "btn-hover"
+								hoverText="職務経歴書.pdf"
 								image = "img-download.png 25 25"
-								width = "180px"
+								width = "45px"
 								height= "40px"
 								paddingLeft="5px"
 								fontSize="13px"
@@ -50,19 +56,69 @@
 							></o-button-pdf>
 							<a id="doc_iframe" target="_blank"></a>
 						</td>
-					</tr>
-					<tr>
-						<td style="font-family:arial;font-size:13px;width:150px">
-						<br>
-						<p>現職は約２０年間在籍しております。</p>
-						<p>最初の１０年間は機械・製品設計開発を担当していましたが、</p>
-						<p>後の１０年間は自社情報管理システム開発者として勤務しています。</p>
-						<p>自分で作ったJavaScriptライブラリ<br>
-						<a href="http://potatoscript.github.io/homepage" target="_blank">http://potatoscript.github.io/homepage</a>
-						</p>
+						<td>
+							<p style="padding-top:10px">
+							<o-button-line
+								hoverId = "btn-hover"
+								hoverText="toggle me "
+								image = "line-me.png 30 30"
+								width = "45px"
+								height= "40px"
+								paddingLeft="3px"
+								fontSize="13px"
+								toggle="
+									if(potato.toggle['line']=='on'){
+										document.getElementById('div_lineOff').style.display='none';
+										document.getElementById('div_lineOn').style.display='block';
+									}else{
+										document.getElementById('div_lineOff').style.display='block';
+										document.getElementById('div_lineOn').style.display='none';							 
+									}
+								"
+							></o-button-pdf>
+							<a id="doc_iframe" target="_blank"></a>
+						</td>
+						<td>
+							<p style="padding-top:10px">
+							<o-button-facebook
+								hoverId = "btn-hover"
+								hoverText="My FaceBook"
+								image = "facebook.png 30 30"
+								width = "45px"
+								height= "40px"
+								paddingLeft="3px"
+								fontSize="13px"
+								onclick="linkToFaceBook()"
+							></o-button-pdf>
+							<a id="doc_iframe" target="_blank"></a>
+						</td>
+						<td>
+							<p style="padding-top:10px">
+							<o-button-location
+								hoverId = "btn-hover"
+								hoverText="My Home"
+								image = "location.png 25 30"
+								width = "45px"
+								height= "40px"
+								paddingLeft="5px"
+								fontSize="13px"
+								onclick="linkToLocation()"
+							></o-button-pdf>
+							<a id="doc_iframe" target="_blank"></a>
 						</td>
 					</tr>
-				</table>	
+				</table>
+				<div id="div_lineOff" style="font-family:arial;font-size:13px;width:230px">
+					<p>現職は約２０年間在籍しております。</p>
+					<p>最初の１０年間は機械・製品設計開発を担当していましたが、</p>
+					<p>後の１０年間は自社情報管理システム開発者として勤務しています。</p>
+					<p>自分で作ったJavaScriptライブラリ<br>
+					<a href="http://potatoscript.github.io/homepage" target="_blank">http://potatoscript.github.io/homepage</a>
+					</p>
+				</div>	
+				<div id="div_lineOn" style="display:none;padding-left:10px">
+					<img class="spotlight" aria-busy="true" style="width: 200px; height:200px;" alt=""  src="myLineQR.png">
+				</div>
 			</td>
 			<td style='vertical-align:top;'>
 				<div id="menu_tabs">
@@ -97,10 +153,10 @@
 																<th>会社 ：</th><td>Freudenberg Group (在職正社員)</td>
 															</tr>
 															<tr>
-																<th>メール ：</th><td>limksmail@yahoo.co.jp</td>
+																<th>メール ：</th><td><font class="blinkFont">limksmail@yahoo.co.jp</font></td>
 															</tr>
 															<tr>
-																<th>Skype ID ：</th><td>live:.cid.131a836ac04cfbc4</td>
+																<th>Skype ID ：</th><td><font class="blinkFont">live:.cid.131a836ac04cfbc4</font></td>
 															</tr>
 														</table>
 													</td>
@@ -226,7 +282,7 @@
 														<tr>
 															<th>2010～2012年</th>
 															<td>■ ＰＩＭＳ（工場情報管理システム）を提案して、開発を始まる。<br>
-																■ 第一世代のＰＩＭＳをリリースして、本番運用を始まる。
+																■ 第一世代のＰＩＭＳをリリースして、本番運用を始まる。<br>
 																■ 使用ツール：JavaScript,PHP,PostgreSQL
 															</td>
 														</tr>
@@ -350,8 +406,8 @@
 										<td><p>-</p></td>
 										<td>C#</td>
 										<td><p>◎</p></td>
-										<td></td>
-										<td><p></p></td>
+										<td>VBA</td>
+										<td><p>◎</p></td>
 										<td></td>
 										<td></td>
 									</tr>	
@@ -464,13 +520,17 @@
 							<div class="col-one col">
 							
 							
-								<table id="table_menu" style="margin-left:10px">
+								<div id="chart-container"></div>
+							
+							
+								
+								<table id="table_menu" style="margin-left:10px">	
 									<tr>
 										<td>
 											<div class="item" id="system1" >
 												<a class="link" >
 													<span>
-														C# WinForm
+														Menu 01
 													</span>
 													<font class="system_arrow">▽</font>
 												</a>
@@ -507,7 +567,7 @@
 											<div class="item" id="system2" >
 												<a class="link" >
 													<span>
-														C# WPF
+														Menu 02
 													</span>	
 													<font class="system_arrow">▽</font>
 												</a>
@@ -545,7 +605,7 @@
 											<div class="item" id="system3" >
 												<a class="link" >
 													<span>
-														C# ASP.NET
+														Menu 03
 													</span>
 													<font class="system_arrow">▽</font>
 												</a>
@@ -556,55 +616,22 @@
 											</div>
 										</td>
 									</tr>
-									<tr>
-										<td style="padding-top:110px"></td>
-									</tr>
+
+								</table>	
+
+								<br><br>
+								<table style="margin-left:10px">
 									<tr>
 										<td>
-											<div class="item" id="system4" >
-												<a class="link" >
-													<span>
-														JavaScript+PHP
-													</span>
-													<font class="system_arrow">▽</font>
-												</a>
-												<div>
-													<br>
-
-												</div>
-											</div>
+											<img class="spotlight" aria-busy="false" style="width: 300px; height: 300px;" alt="" src="OKeypad.gif">
 										</td>
 										<td>
-											<div class="item" id="system5" >
-												<a class="link" >
-													<span>
-														Java
-													</span>
-													<font class="system_arrow">▽</font>
-												</a>
-												<div>
-													<br>
-
-												</div>
-											</div>
-										</td>
-										<td>
-											<div class="item" id="system6" >
-												<a class="link" >
-													<span>
-														VBA
-													</span>
-													<font class="system_arrow">▽</font>
-												</a>
-												<div>
-													<br>
-
-												</div>
-											</div>
+											<br>
+											<img class="spotlight" aria-busy="false" style="width: 500px; height: 300px;" alt="" src="OChartDemo.gif">
 										</td>
 									</tr>
 								</table>	
-
+								
 							</div>
 						</div>
 					</div>
@@ -615,7 +642,7 @@
 	</table>
 
 
-	
+	<div id="btn-hover"></div>
 	
 	
 	
