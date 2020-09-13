@@ -1,3 +1,6 @@
+@import 
+url('https://fonts.googleapis.com/css?family=Pirata+One|Rubik:900');
+
 /* Remove default bullets */
 ul, #myUL {
   list-style-type: none;
@@ -679,6 +682,7 @@ ul, #myUL {
 #div_pims{
 	margin-left:50px;
 }
+
 #div_pims h1 {
 	margin-left:50px;
 text-transform: Uppercase;
@@ -718,8 +722,8 @@ mix-blend-mode: multiply; }
   height: 100px;
   width: 100px;
   position:absolute;
-  top:-60px;
-  left:100px;
+  top:-70px;
+  left:85px;
 }
 .item-hints .hint {
   width: 60px;
@@ -869,7 +873,7 @@ mix-blend-mode: multiply; }
   width: 300px;
   position: absolute;
   z-index: 5;
-  padding: 12px 0;
+  padding: -5px 0;/*content gap*/
   opacity: 0;
   visibility: hidden;
   -webkit-transition: opacity .7s ease,visibility .7s ease;
@@ -884,7 +888,7 @@ mix-blend-mode: multiply; }
   width: 300px;
   position: absolute;
   z-index: 5;
-  padding: 12px 0;
+  padding: -5px 0;/*content gap*/
   opacity: 1;
   visibility: visible !important;
   -webkit-transition: opacity .7s ease,visibility .7s ease;
