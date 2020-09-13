@@ -183,6 +183,16 @@ try{
         $(this).css("paddingTop","10px");
       }
     );
+	$('#table-btn2 td p')
+      .mouseenter(
+      function(){
+        $(this).css("paddingTop","0px");
+      })
+      .mouseleave(
+      function(){
+        $(this).css("paddingTop","10px");
+      }
+    );
    
    doughnutLocation();
    
@@ -193,7 +203,7 @@ try{
 function docDownload(){
 	var d = document.getElementById("doc_iframe");
 	d.style.display="block";
-	d.href = "履歴書・職務経歴書_20200911.pdf";
+	d.href = "../files/履歴書・職務経歴書_20200911.pdf";
 	d.click();
 }
 
@@ -214,10 +224,34 @@ function ifReadyThenReset(){
   	}
 }
 
-function linkToLocation(){
+function linkToEducation(){
+	var d = document.getElementById("doc_iframe");
+	d.style.display="block";
+	d.href = "../files/Education.pdf";
+	d.click();
+}
+
+function linkToEnglishLevel(){
+	var d = document.getElementById("doc_iframe");
+	d.style.display="block";
+	d.href = "../files/TOEIC.jpg";
+	d.click();
+}
+
+function linkToFaceBook(){
+	/*
 	var d = document.getElementById("doc_iframe");
 	d.style.display="block";
 	d.href = "https://en.wikipedia.org/wiki/Malaysia";
+	d.click();
+	*/
+	alert("Under Construction");
+}
+
+function linkToSaveDriving(){
+	var d = document.getElementById("doc_iframe");
+	d.style.display="block";
+	d.href = "../files/DrivingResult.jpg";
 	d.click();
 }
 

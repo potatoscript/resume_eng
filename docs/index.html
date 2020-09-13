@@ -28,11 +28,11 @@
 						<td>
 							<div class="flipPotato">
 							  <div class="front flipItem">
-								<img class="spotlight" aria-busy="true" style="width: 160px; height:200px;" alt=""  src="bruce1.jpg">
+								<img class="spotlight" aria-busy="true" style="width: 160px; height:200px;" alt=""  src="../images/bruce1.jpg">
 								<p style="font-size:13px;margin-top:-5px">2010年～2020年 日本</p>
 							  </div>	
 							  <div class="back flipItem">	
-								<img class="spotlight" aria-busy="true" style="width: 130px; height:200px;" alt=""  src="bruce2.jpg">
+								<img class="spotlight" aria-busy="true" style="width: 130px; height:200px;" alt=""  src="../images/bruce2.jpg">
 								<p style="font-size:13px;margin-top:-5px">2020年4月～ ｼﾝｶﾞﾎﾟｰﾙ</p>
 							  </div>
 							</div>
@@ -47,7 +47,7 @@
 							<o-button-pdf
 								hoverId = "btn-hover"
 								hoverText="職務経歴書.pdf"
-								image = "img-download.png 25 25"
+								image = "../images/img-download.png 25 25"
 								width = "45px"
 								height= "40px"
 								paddingLeft="5px"
@@ -60,8 +60,8 @@
 							<p style="padding-top:10px">
 							<o-button-line
 								hoverId = "btn-hover"
-								hoverText="toggle me "
-								image = "line-me.png 30 30"
+								hoverText="Chat with me "
+								image = "../images/line-me.png 30 30"
 								width = "45px"
 								height= "40px"
 								paddingLeft="3px"
@@ -76,35 +76,80 @@
 									}
 								"
 							></o-button-pdf>
-							<a id="doc_iframe" target="_blank"></a>
+						</td>
+						<td>
+							<p style="padding-top:10px">
+							<o-button-education
+								hoverId = "btn-hover"
+								hoverText="卒業証明書"
+								image = "../images/img-education.png 30 30"
+								width = "45px"
+								height= "40px"
+								paddingLeft="3px"
+								fontSize="13px"
+								onclick="linkToEducation()"
+							></o-button-education>
 						</td>
 						<td>
 							<p style="padding-top:10px">
 							<o-button-facebook
 								hoverId = "btn-hover"
-								hoverText="My FaceBook"
-								image = "facebook.png 30 30"
-								width = "45px"
-								height= "40px"
-								paddingLeft="3px"
-								fontSize="13px"
-								onclick="linkToFaceBook()"
-							></o-button-pdf>
-							<a id="doc_iframe" target="_blank"></a>
-						</td>
-						<td>
-							<p style="padding-top:10px">
-							<o-button-location
-								hoverId = "btn-hover"
-								hoverText="My Home"
-								image = "location.png 25 30"
+								hoverText="More about me　"
+								image = "../images/facebook.png 25 30"
 								width = "45px"
 								height= "40px"
 								paddingLeft="5px"
 								fontSize="13px"
-								onclick="linkToLocation()"
-							></o-button-pdf>
-							<a id="doc_iframe" target="_blank"></a>
+								onclick="linkToFaceBook()"
+							></o-button-facebook>
+						</td>
+					</tr>
+				</table>
+				<table id="table-btn2" style="margin-top:-45px">		
+					<tr>
+						<td>
+							<p style="padding-top:10px">
+							<o-button-savedriving
+								hoverId = "btn-hover"
+								hoverText="安全運転　"
+								image = "../images/savedriving.png 30 30"
+								width = "45px"
+								height= "40px"
+								paddingLeft="5px"
+								fontSize="13px"
+								onclick="linkToSaveDriving()"
+							></o-button-savedriving>
+						</td>
+						<td>
+							<p style="padding-top:10px">
+							<o-button-englishlevel
+								hoverId = "btn-hover"
+								hoverText="TOEIC試験結果　"
+								image = "../images/english.png 30 30"
+								width = "45px"
+								height= "40px"
+								paddingLeft="5px"
+								fontSize="13px"
+								onclick="linkToEnglishLevel()"
+							></o-button-englishlevel>
+						</td>
+						<td>
+							<p style="padding-top:10px">
+							<o-button-dummy2
+								width = "45px"
+								height= "40px"
+								paddingLeft="5px"
+								fontSize="13px"
+							></o-button-dummy2>
+						</td>
+						<td>
+							<p style="padding-top:10px">
+							<o-button-dummy3
+								width = "45px"
+								height= "40px"
+								paddingLeft="5px"
+								fontSize="13px"
+							></o-button-dummy3>
 						</td>
 					</tr>
 				</table>
@@ -117,7 +162,7 @@
 					</p>
 				</div>	
 				<div id="div_lineOn" style="display:none;padding-left:10px">
-					<img class="spotlight" aria-busy="true" style="width: 200px; height:200px;" alt=""  src="myLineQR.png">
+					<img class="spotlight" aria-busy="true" style="width: 200px; height:200px;" alt=""  src="../images/myLineQR.png">
 				</div>
 			</td>
 			<td style='vertical-align:top;'>
@@ -126,6 +171,7 @@
 						<li><a onclick="hrefClick('one')">履歴書・職務経歴書</a></li>
 						<li><a onclick="hrefClick('two')">スキルシート</a></li>
 						<li><a onclick="hrefClick('three')">作品</a></li>
+						<li><a onclick="hrefClick('four')">Ｑ＆Ａ</a></li>
 					</ul>
 					<div class="box-wrapper">
 						<div id="one" class="content-box">
@@ -144,7 +190,7 @@
 																<th>年齢 ：</th><td>43歳</td>
 															</tr>
 															<tr>
-																<th>国際 ：</th><td>ﾏﾚｰｼｱ（今ｼﾝｶﾞﾎﾟｰﾙに在住）</td>
+																<th>国際 ：</th><td><a target="_blank" href="https://en.wikipedia.org/wiki/Malaysia">ﾏﾚｰｼｱ</a>（今ｼﾝｶﾞﾎﾟｰﾙに在住）</td>
 															</tr>
 															<tr>
 																<th>在日期間 ：</th><td>１０年（鳥取県）</td>
@@ -169,12 +215,12 @@
 								   </li>	
 								   <li><br><span id="caret2" class="caret2">最終学歴:</span>
 										<ul class="active2">
-											<table class="table-basic">
+											<table id="table_education" class="table-basic">
 												<tr>
-													<th>1997年06月：</th><td>イギリス Coventry University 大学に留学</td>
+													<th>1997年06月：</th><td>イギリス <a target="_blank" href="https://www.coventry.ac.uk/">Coventry University</a> 大学に留学</td>
 												</tr>
 												<tr>
-													<th>1999年11月：</th><td>一級機械学士優等学位 卒業</td>
+													<th>1999年07月：</th><td>一級機械学士優等学位 卒業</td>
 												</tr>
 												<tr>
 													<th>卒業ﾌﾟﾛｼﾞｪｸﾄ：</th><td>MATLAB 言語で振動データから固有振動数を検出のシステムを開発する。</td>
@@ -495,7 +541,7 @@
 										<td>Potato</td>
 										<td><p>◎</p></td>
 										<td>ChartJS</td>
-										<td><p>〇</p></td>
+										<td><p>◎</p></td>
 										<td>JQuery</td>
 										<td><p>◎</p></td>
 									</tr>	
@@ -520,7 +566,26 @@
 							<div class="col-one col">
 							
 							
+								<div id="div_pims">
+									<h1 data-text="P I M S">P I M S</h1>
+								</div>
+							
+							
 								<div id="chart-container"></div>
+								
+								
+								
+								<div class="item-hints">
+								  <div class="hint" data-position="4"><!-- is-hint -->
+									<span class="hint-radius"></span>
+									<span class="hint-dot"></span>
+									<div class="hint-content do--split-children">
+									  <p>日報情報管理システム</p>
+									</div>
+								  </div>
+								</div>
+								
+								
 							
 							
 								
@@ -542,7 +607,7 @@
 																<a class="button orangeC" id="sisaku_data">
 																	<div class="light"></div>
 																	<span>
-																	<img src="img-defect.png" style="vertical-align:bottom;width:25px;height:20px">
+																	<img src="../images/img-defect.png" style="vertical-align:bottom;width:25px;height:20px">
 																	品質管理
 																	</span>
 																</a>
@@ -553,7 +618,7 @@
 																<a class="button yellowC" id="sisaku_data_2020" style="margin-top:-5px">
 																	<div class="light"></div>
 																	<span>
-																	<img src="img-ForkTruck.png" style="vertical-align:bottom;width:25px;height:20px">
+																	<img src="../images/img-ForkTruck.png" style="vertical-align:bottom;width:25px;height:20px">
 																	棚卸し
 																	</span>
 																</a>
@@ -579,7 +644,7 @@
 																<a class="button blueC" id="toolinfo" style="margin-top:-10px">
 																	<div class="light"></div>
 																	<span>
-																	<img src="img-check.png" style="vertical-align:bottom;width:25px;height:20px">
+																	<img src="../images/img-check.png" style="vertical-align:bottom;width:25px;height:20px">
 																	治工具情報
 																	</span>
 																</a>
@@ -590,7 +655,7 @@
 																<a class="button greenC" id="sisakuplan" style="margin-top:-10px">
 																	<div class="light"></div>
 																	<span>
-																	<img src="img-delivery.png" style="vertical-align:bottom;width:25px;height:20px">
+																	<img src="../images/img-delivery.png" style="vertical-align:bottom;width:25px;height:20px">
 																	試作予定表
 																	</span>
 																</a>
@@ -623,17 +688,66 @@
 								<table style="margin-left:10px">
 									<tr>
 										<td>
-											<img class="spotlight" aria-busy="false" style="width: 300px; height: 300px;" alt="" src="OKeypad.gif">
+											<img class="spotlight" aria-busy="false" style="width: 300px; height: 300px;" alt="" src="../../homepage/docs/OKeypad.gif">
 										</td>
 										<td>
 											<br>
-											<img class="spotlight" aria-busy="false" style="width: 500px; height: 300px;" alt="" src="OChartDemo.gif">
+											<img class="spotlight" aria-busy="false" style="width: 500px; height: 300px;" alt="" src="../../homepage/docs/OChartDemo.gif">
 										</td>
 									</tr>
 								</table>	
 								
 							</div>
 						</div>
+						<div id="four" class="content-box">
+							<div class="col-one col" style="padding-left:20px;font-size:13px">
+								<p>
+								Ｑ１．それでは、自己紹介、お願いします。<br>
+								<font style="color:blue">Ａ１．はい、マレーシアから参りましたリムと申します。<br>
+								<span style="padding-left:50px">今はシンガポール車部品製造会社に20年に働いています。<br>
+								<span style="padding-left:50px">2010年日本に来て10年間社内システム開発を担当してきました。<br>
+								<span style="padding-left:50px">よろしくお願いいたします。
+								</font>
+								</p>
+								<p>
+								Ｑ２．どうして日本で転職していますか。<br>
+								<font style="color:blue">Ａ２．はい、僕は学校時代から日本のＩＴ技術に興味も持ち。（ゲーム）<br>
+								<span style="padding-left:50px">そして将来ﾌﾟﾛｸﾞﾗﾐﾝｸﾞスキルを向上したいので日本に転職活動をしています。<br>
+								<span style="padding-left:50px">
+								</font>
+								</p>
+								<p>
+								Ｑ３．では、この会社を志望した理由を教えてください。<br>
+								<font style="color:blue">Ａ３．<br>
+								<span style="padding-left:50px">
+								<br>Point: <br>
+								<I>
+								■ どうしてこの会社で働きたいのか<br>
+								■ この会社で何をやりたいのか、<br>
+								■ この会社の何に興味を持って志望したのかを話してください。
+								</I>
+								</font>
+								</p>
+								Ｑ４．それでは長所を教えてください。<br>
+								<font style="color:blue">Ａ４．私は目標に向かって努力(doryoku)し続けることができます<br>
+								<span style="padding-left:50px">昨年まで20件システムが出来上がりました。<br>
+								<span style="padding-left:50px">問題解決するために毎日深夜まで新し技術を勉強し続けて<br>
+								<span style="padding-left:50px">解決することができました。<br>
+								<br>Point: <br>
+								<I>
+								■ あなたにはどういういいところがあって<br>
+								　　それを活かして今までどんな結果があったのかを言うべきです。<br>
+								■ 自分の長所を活かしてどんないい結果があったのかまで話す。
+								</I>
+								</font>
+								</p>
+								<p>
+								Ｑ５．どんなところが自分の短所だと思いますか。<br>
+								<font style="color:blue">Ａ５．<br>
+								</font>
+								</p>
+							</div>
+						</div>	
 					</div>
 				</div>
 				
