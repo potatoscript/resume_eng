@@ -4,6 +4,7 @@
 <head>
   <link rel="icon" type="../../potato.js/images/png" href="image/img-p.png">
   <link rel="stylesheet" href="../../potato.js/css/jquery-ui.css"/>
+  <link rel="stylesheet" href="../../potato.js/css/potato.css"/>
   <link rel="stylesheet" href="index.css"/>
   <script type="text/javascript" src="../../potato.js/js/Chart.bundle.js"></script>
   <script type="text/javascript" src="../../potato.js/js/Chart.utils.js"></script>
@@ -105,7 +106,7 @@
 						</td>
 					</tr>
 				</table>
-				<table id="table-btn2" style="margin-top:-45px">		
+				<table id="table-btn2" style="margin-top:-15px">		
 					<tr>
 						<td>
 							<p style="padding-top:10px">
@@ -153,7 +154,7 @@
 						</td>
 					</tr>
 				</table>
-				<div id="div_lineOff" style="font-family:arial;font-size:13px;width:230px">
+				<div id="div_lineOff" style="margin-top:5px;font-family:arial;font-size:13px;width:230px">
 					<p>現職は約２０年間在籍しております。</p>
 					<p>最初の１０年間は機械・製品設計開発を担当していましたが、</p>
 					<p>後の１０年間は自社情報管理システム開発者として勤務しています。</p>
@@ -167,15 +168,15 @@
 			</td>
 			<td style='vertical-align:top;'>
 				<div id="menu_tabs">
-					<ul class="tabs">
+					<ul class="tabs-menu">
 						<li><a onclick="hrefClick('one')">履歴書・職務経歴書</a></li>
 						<li><a onclick="hrefClick('two')">スキルシート</a></li>
 						<li><a onclick="hrefClick('three')">作品</a></li>
 						<li><a onclick="hrefClick('four')">Ｑ＆Ａ</a></li>
 					</ul>
-					<div class="box-wrapper">
-						<div id="one" class="content-box">
-							<div class="col-one col">
+					<div class="box-wrapper-menu">
+						<div id="one" class="content-box-menu">
+							<div class="col-one-menu col">
 								<ul id="myUL">
 									<li><span id="caret-basic" class="caret2">基本情報:</span>
 										<ul class="active" >
@@ -364,7 +365,7 @@
 												<ul class="nestedx">
 													<table class="table-basic">
 														<tr>
-															<td>■ インドネシア拠点に出向して、工場情報管理システム開発を担当する。
+															<td>■ インドネシア拠点に出向して、工場情報管理システム開発を担当する。<br>
 															<font style="padding-left:10px">CORONAの影響で今シンガポールからリモート従業する。
 															</td>
 														</tr>
@@ -388,8 +389,8 @@
 								</ul>
 							</div>
 						</div>
-						<div id="two" class="content-box">
-							<div class="col-one col">
+						<div id="two" class="content-box-menu">
+							<div class="col-one-menu col">
 								技術経験　　　　　　　<font style="font-size:17px;color:red">◎</font>：実務経験多い ／ <font style="font-size:20px;color:red">○</font>：実務経験有り ／ <font style="font-size:17px;color:red">△</font>：知識有り
 							    <table id="table-skill" class="table-skill">
 									<tr>
@@ -559,11 +560,11 @@
 									</tr>
 								</table>	
 								<br>
-								<canvas id="skillChart" width="500" height="300"></canvas>
+								<canvas id="skillChart" width="350" height="220"></canvas>
 							</div>
 						</div>
-						<div id="three" class="content-box">
-							<div class="col-one col">
+						<div id="three" class="content-box-menu">
+							<div class="col-one-menu col">
 							
 							
 								<div id="div_pims">
@@ -585,54 +586,40 @@
 								  </div>
 								</div>
 								
+								<div class="item-hints-i">
+								  <div class="hint" data-position="4"><!-- is-hint -->
+									<span class="hint-radius"></span>
+									<span class="hint-dot"></span>
+									<div class="hint-content do--split-children">
+									  <p style="margin-left:-100px;">情報</p>
+									</div>
+								  </div>
+								</div>
 								
-							
-							
-								
+								<span style="margin-left:15px">■ 基本な機能・オブジェクト：（対応可能な言語：JavaScript,C#,Java）</span>
 								<table id="table_menu" style="margin-left:10px">	
 									<tr>
 										<td>
-											<div class="item" id="system1" >
+											<div class="item2" id="system1" >
 												<a class="link" >
 													<span>
-														Menu 01
+														データ入力
 													</span>
 													<font class="system_arrow">▽</font>
 												</a>
 												<div>
-													<br>
-													<table>
-														<tr>
-															<td style="padding-top:20px">
-																<a class="button orangeC" id="sisaku_data">
-																	<div class="light"></div>
-																	<span>
-																	<img src="images/img-defect.png" style="vertical-align:bottom;width:25px;height:20px">
-																	品質管理
-																	</span>
-																</a>
-															</td>
-														</tr>
-														<tr>
-															<td style="padding-top:10px">
-																<a class="button yellowC" id="sisaku_data_2020" style="margin-top:-5px">
-																	<div class="light"></div>
-																	<span>
-																	<img src="images/img-ForkTruck.png" style="vertical-align:bottom;width:25px;height:20px">
-																	棚卸し
-																	</span>
-																</a>
-															</td>
-														</tr>
-													</table>
+													<img class="spotlight" aria-busy="false" style="margin-top:50px;width: 250px; height: 250px;" alt="" src="../../homepage/OKeypad.gif">
 												</div>
+											</div>
+											<div style="margin-top:100px">
+											・JavaScript
 											</div>
 										</td>
 										<td>
 											<div class="item" id="system2" >
 												<a class="link" >
 													<span>
-														Menu 02
+														ボタン
 													</span>	
 													<font class="system_arrow">▽</font>
 												</a>
@@ -656,7 +643,7 @@
 																	<div class="light"></div>
 																	<span>
 																	<img src="images/img-delivery.png" style="vertical-align:bottom;width:25px;height:20px">
-																	試作予定表
+																	棚卸し
 																	</span>
 																</a>
 															</td>
@@ -665,74 +652,119 @@
 
 												</div>
 											</div>
+											<div style="margin-top:100px">
+											・CSS
+											</div>
 										</td>
 										<td>
-											<div class="item" id="system3" >
+											<div class="item2" id="system3" >
 												<a class="link" >
 													<span>
-														Menu 03
+														グラフ
 													</span>
 													<font class="system_arrow">▽</font>
 												</a>
 												<div>
-													<br>
-
+													<img class="spotlight" aria-busy="false" style="margin-top:50px;width: 280px; height: 250px;" alt="" src="../../homepage/OChartDemo.gif">
 												</div>
+											</div>
+											<div style="margin-top:100px">
+											・Chart.js<br>
+											・C# WinForm<br>
+											・C# ASP.NET<br>
 											</div>
 										</td>
 									</tr>
-
-								</table>	
-
-								<br><br>
-								<table style="margin-left:10px">
 									<tr>
-										<td>
-											<img class="spotlight" aria-busy="false" style="width: 300px; height: 300px;" alt="" src="../../homepage/OKeypad.gif">
-										</td>
-										<td>
-											<br>
-											<img class="spotlight" aria-busy="false" style="width: 500px; height: 300px;" alt="" src="../../homepage/OChartDemo.gif">
+										<td colspan=3>
+											<p>Table　（Drag & Drop, Multiple Select）</p>
+											<o-table-mytable
+											dragdrop='
+												  var t="drag item ( "+potato.dragVal+" ) from ( "+ 
+												  potato.clickRow +" , "+potato.clickCol+" ) to ( "+potato.dropRow+" , "+potato.dropCol+" ) ";
+												  document.getElementById("mytableResult").innerHTML=t;
+												  '		 
+												width=650px
+												height=200px
+												fontSizeTH=18px
+												fontSizeTD=20px
+												fontColorTD=red
+												header="No,Menu,Image,Calories,Fat"
+												data='[
+												  ["1","Potato Pie","<img src=\"../../potato.js/images/Sweet Potato Pie.jpg\" width=\"100px\" height=\"60px\">","183","13"],
+												  ["2","Mashed Potato","<img src=\"../../potato.js/images/Mashed Potato.jpg\" width=\"100px\" height=\"60px\">","455","55"]
+												]'
+												click=myTableClick()
+												callback=myTableCallback()
+												editCell="
+											    trigger:click;
+												width:80px;
+												tool:default;
+												indexCol:0;
+												editCol:[1,2,3,4];
+												callback:
+												  function(newVal,oldVal,targetCol,SelectCol){
+												  document.getElementById('mytableResult').innerHTML=oldVal+' <b>→</b> '+newVal;
+												};
+												"
+												multipleSelect='
+												  mark:〇;
+												  indexCol:1;
+												  selectCol:0;
+												  callback:function(potato){
+													$("#div_cart").html("");
+													var t="";
+													for(var i=0;i<potato.length;i++){
+													   t+=i+1+". "+potato[i]+"<br>";
+													}
+													$("#mytableResult").html(t);
+												  };
+												'
+											  /></o-table-mytable>
+											<div id="mytableResult"></div>	
 										</td>
 									</tr>
+
 								</table>	
+
+
 								
 							</div>
 						</div>
-						<div id="four" class="content-box">
-							<div class="col-one col" style="padding-left:20px;font-size:13px">
+						<div id="four" class="content-box-menu">
+							<div class="col-one-menu col" style="padding-left:20px;font-size:13px">
 								<p>
-								Ｑ１．それでは、自己紹介、お願いします。<br>
+								<span class="span-q">Ｑ１．それでは、自己紹介、お願いします。</span><br>
 								<font style="color:blue">Ａ１．はい、マレーシアから参りましたリムと申します。<br>
-								<span style="padding-left:50px">今はシンガポール車部品製造会社に20年に働いています。<br>
-								<span style="padding-left:50px">2010年日本に来て10年間社内システム開発を担当してきました。<br>
-								<span style="padding-left:50px">よろしくお願いいたします。
+								<span style="padding-left:40px">今はシンガポール車部品製造会社に20年に働いています。<br>
+								<span style="padding-left:40px">2010年日本に来て10年間社内システム開発を担当してきました。<br>
+								<span style="padding-left:40px">よろしくお願いいたします。
 								</font>
 								</p>
 								<p>
-								Ｑ２．どうして日本で転職していますか。<br>
+								<span class="span-q">Ｑ２．どうして日本で転職していますか。</span><br>
 								<font style="color:blue">Ａ２．はい、僕は学校時代から日本のＩＴ技術に興味も持ち。（ゲーム）<br>
-								<span style="padding-left:50px">そして将来ﾌﾟﾛｸﾞﾗﾐﾝｸﾞスキルを向上したいので日本に転職活動をしています。<br>
-								<span style="padding-left:50px">
+								<span style="padding-left:40px">そして将来ﾌﾟﾛｸﾞﾗﾐﾝｸﾞスキルを向上したいので日本に転職活動をしています。<br>
+								
 								</font>
 								</p>
 								<p>
-								Ｑ３．では、この会社を志望した理由を教えてください。<br>
-								<font style="color:blue">Ａ３．<br>
-								<span style="padding-left:50px">
+								<span class="span-q">Ｑ３．では、この会社を志望した理由を教えてください。</span><br>
+								<font style="color:blue">Ａ３．</font><br>
+								<span style="padding-left:40px">
 								<br>Point: <br>
 								<I>
 								■ どうしてこの会社で働きたいのか<br>
 								■ この会社で何をやりたいのか、<br>
 								■ この会社の何に興味を持って志望したのかを話してください。
 								</I>
-								</font>
 								</p>
-								Ｑ４．それでは長所を教えてください。<br>
+								<span class="span-q">Ｑ４．それでは長所を教えてください。</span><br>
 								<font style="color:blue">Ａ４．私は目標に向かって努力(doryoku)し続けることができます<br>
-								<span style="padding-left:50px">昨年まで20件システムが出来上がりました。<br>
-								<span style="padding-left:50px">問題解決するために毎日深夜まで新し技術を勉強し続けて<br>
-								<span style="padding-left:50px">解決することができました。<br>
+								<span style="padding-left:40px">昨年まで20件システムが出来上がりました。<br>
+								<span style="padding-left:40px">問題解決するために毎日深夜まで新し技術を勉強し続けて<br>
+								<span style="padding-left:40px">解決することができました。<br>
+								</font>
 								<br>Point: <br>
 								<I>
 								■ あなたにはどういういいところがあって<br>
@@ -742,7 +774,7 @@
 								</font>
 								</p>
 								<p>
-								Ｑ５．どんなところが自分の短所だと思いますか。<br>
+								<span class="span-q">Ｑ５．どんなところが自分の短所だと思いますか。</span><br>
 								<font style="color:blue">Ａ５．<br>
 								</font>
 								</p>
