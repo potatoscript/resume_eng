@@ -168,7 +168,7 @@
 			</td>
 			<td style='vertical-align:top;'>
 				<div id="menu_tabs">
-					<ul class="tabs-menu">
+					<ul class="tabs-menu" >
 						<li><a onclick="hrefClick('one')">履歴書・職務経歴書</a></li>
 						<li><a onclick="hrefClick('two')">スキルシート</a></li>
 						<li><a onclick="hrefClick('three')">作品</a></li>
@@ -391,7 +391,7 @@
 						</div>
 						<div id="two" class="content-box-menu">
 							<div class="col-one-menu col">
-								技術経験　　　　　　　<font style="font-size:17px;color:red">◎</font>：実務経験多い ／ <font style="font-size:20px;color:red">○</font>：実務経験有り ／ <font style="font-size:17px;color:red">△</font>：知識有り
+								技術経験<span style="font-size:14px">　　　　　　　<font style="font-size:17px;color:red">◎</font>：実務経験多い ／ <font style="font-size:20px;color:red">○</font>：実務経験有り ／ <font style="font-size:17px;color:red">△</font>：知識有り</span>
 							    <table id="table-skill" class="table-skill">
 									<tr>
 										<th>CAD</th>
@@ -406,7 +406,7 @@
 										<td>CadCam</td>
 										<td><p>△</p></td>
 									</tr>	
-									<tr><td colspan=12 style="border:0px solid black"></td></tr>
+									<tr><td colspan=12 style="height:1px;border:0px solid black"></td></tr>
 									<tr>
 										<th rowspan=2>ＯＳ</th>
 										<td>Windows</td>
@@ -432,7 +432,7 @@
 										<td></td>
 										<td></td>
 									</tr>
-									<tr><td colspan=12 style="border:0px solid black"></td></tr>
+									<tr><td colspan=12 style="height:1px;border:0px solid black"></td></tr>
 									<tr>
 										<th rowspan=6>言語</th>
 										<td>C言語</td>
@@ -506,7 +506,7 @@
 										<td></td>
 										<td></td>
 									</tr>
-									<tr><td colspan=12 style="border:0px solid black"></td></tr>
+									<tr><td colspan=12 style="height:1px;border:0px solid black"></td></tr>
 									<tr>
 										<th rowspan=2>DataBase</th>
 										<td>MySQL</td>
@@ -532,7 +532,7 @@
 										<td></td>
 										<td></td>
 									</tr>
-									<tr><td colspan=12 style="border:0px solid black"></td></tr>
+									<tr><td colspan=12 style="height:1px;border:0px solid black"></td></tr>
 									<tr>
 										<th rowspan=2>FrameWork / Library</th>
 										<td>Angular</td>
@@ -560,7 +560,7 @@
 									</tr>
 								</table>	
 								<br>
-								<canvas id="skillChart" width="350" height="220"></canvas>
+								<canvas id="skillChart" width="650px" height="300px"></canvas>
 							</div>
 						</div>
 						<div id="three" class="content-box-menu">
@@ -732,52 +732,84 @@
 							</div>
 						</div>
 						<div id="four" class="content-box-menu">
-							<div class="col-one-menu col" style="padding-left:20px;font-size:13px">
-								<p>
-								<span class="span-q">Ｑ１．それでは、自己紹介、お願いします。</span><br>
-								<font style="color:blue">Ａ１．はい、マレーシアから参りましたリムと申します。<br>
-								<span style="padding-left:40px">今はシンガポール車部品製造会社に20年に働いています。<br>
-								<span style="padding-left:40px">2010年日本に来て10年間社内システム開発を担当してきました。<br>
-								<span style="padding-left:40px">よろしくお願いいたします。
-								</font>
-								</p>
-								<p>
-								<span class="span-q">Ｑ２．どうして日本で転職していますか。</span><br>
-								<font style="color:blue">Ａ２．はい、僕は学校時代から日本のＩＴ技術に興味も持ち。（ゲーム）<br>
-								<span style="padding-left:40px">そして将来ﾌﾟﾛｸﾞﾗﾐﾝｸﾞスキルを向上したいので日本に転職活動をしています。<br>
+							<div class="col-one-menu col" style="padding-left:0px;font-size:13px">
+								<table>
+									<tr>
+										<td style="width:150px;vertical-align:top">
+											<div class="menu-current">個人</div>
+											<div class="menu" style="margin-top:60px">技術</div>
+										</td>
+										<td>
+											<div id="menu-1" class="menu-show">
+												<p>
+												<span class="span-q">Ｑ１．それでは、自己紹介、お願いします。</span><br>
+												<font style="color:blue">Ａ１．はい、マレーシアから参りましたリムと申します。<br>
+												<span style="padding-left:40px">今はシンガポール車部品製造会社に20年に働いています。<br>
+												<span style="padding-left:40px">2010年日本に来て10年間社内システム開発を担当してきました。<br>
+												<span style="padding-left:40px">よろしくお願いいたします。
+												</font>
+												</p>
+												<p>
+												<span class="span-q">Ｑ２．どうして日本で転職していますか。</span><br>
+												<font style="color:blue">Ａ２．はい、僕は学校時代から日本のＩＴ技術に興味も持ち。（ゲーム）<br>
+												<span style="padding-left:40px">そして将来ﾌﾟﾛｸﾞﾗﾐﾝｸﾞスキルを向上したいので日本に転職活動をしています。<br>
+												
+												</font>
+												</p>
+												<p>
+												<span class="span-q">Ｑ３．では、この会社を志望した理由を教えてください。</span><br>
+												<font style="color:blue">Ａ３．</font><br>
+												
+												Point: <br>
+												<I>
+												■ どうしてこの会社で働きたいのか<br>
+												■ この会社で何をやりたいのか、<br>
+												■ この会社の何に興味を持って志望したのかを話してください。
+												</I>
+												</p><br>
+												<span class="span-q">Ｑ４．それでは長所を教えてください。</span><br>
+												<font style="color:blue">Ａ４．私は目標に向かって努力(doryoku)し続けることができます<br>
+												<span style="padding-left:40px">昨年まで20件システムが出来上がりました。<br>
+												<span style="padding-left:40px">問題解決するために毎日深夜まで新し技術を勉強し続けて<br>
+												<span style="padding-left:40px">解決することができました。<br>
+												</font>
+												Point: <br>
+												<I>
+												■ あなたにはどういういいところがあって<br>
+												　　それを活かして今までどんな結果があったのかを言うべきです。<br>
+												■ 自分の長所を活かしてどんないい結果があったのかまで話す。
+												</I>
+												</font>
+												</p>
+												<p><br>
+												<span class="span-q">Ｑ５．どんなところが自分の短所だと思いますか。</span><br>
+												<font style="color:blue">Ａ５．<br>
+												</font>
+												</p>
+											</div>
+											
+											<div id="menu-2" class="menu-hide">
+											<p>
+											var m=[];
+											var oneTo100 = function(n){
+											  if(n>100){
+												return console.log(m);
+											  }
+											  else if(n%3==0){
+												m.push("Fizz");
+											  }
+											  else{
+												m.push(n);
+											  }
+											  oneTo100(n+1);
+											}
+											oneTo100(1);
+											</p>
+											</div>
+										</td>
+									</tr>
+								</table>	
 								
-								</font>
-								</p>
-								<p>
-								<span class="span-q">Ｑ３．では、この会社を志望した理由を教えてください。</span><br>
-								<font style="color:blue">Ａ３．</font><br>
-								<span style="padding-left:40px">
-								<br>Point: <br>
-								<I>
-								■ どうしてこの会社で働きたいのか<br>
-								■ この会社で何をやりたいのか、<br>
-								■ この会社の何に興味を持って志望したのかを話してください。
-								</I>
-								</p>
-								<span class="span-q">Ｑ４．それでは長所を教えてください。</span><br>
-								<font style="color:blue">Ａ４．私は目標に向かって努力(doryoku)し続けることができます<br>
-								<span style="padding-left:40px">昨年まで20件システムが出来上がりました。<br>
-								<span style="padding-left:40px">問題解決するために毎日深夜まで新し技術を勉強し続けて<br>
-								<span style="padding-left:40px">解決することができました。<br>
-								</font>
-								<br>Point: <br>
-								<I>
-								■ あなたにはどういういいところがあって<br>
-								　　それを活かして今までどんな結果があったのかを言うべきです。<br>
-								■ 自分の長所を活かしてどんないい結果があったのかまで話す。
-								</I>
-								</font>
-								</p>
-								<p>
-								<span class="span-q">Ｑ５．どんなところが自分の短所だと思いますか。</span><br>
-								<font style="color:blue">Ａ５．<br>
-								</font>
-								</p>
 							</div>
 						</div>	
 					</div>

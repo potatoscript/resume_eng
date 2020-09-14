@@ -66,7 +66,9 @@ ul, #myUL {
 .nested,.nested2,.nestedx{
   display: none;
 }
-
+.nested3{
+	margin-left:20px;
+}
 
 /* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
 .active,.active2,.activex{
@@ -118,7 +120,7 @@ ul, #myUL {
 }
 
 .span-q{
-	background-image: linear-gradient(to right, lightblue,lightgreen,yellow,lightyellow);
+	background-image: linear-gradient(to right, lightblue,yellow,lightyellow);
 }
 
 .table-work{
@@ -143,6 +145,7 @@ ul, #myUL {
 	border-collapse: collapse;
 	font-size:15px;
 	font-family:arial;
+	margin-left:10px;
 }
 .table-basic th{
 	border:0px solid black;
@@ -152,26 +155,34 @@ ul, #myUL {
 .table-basic td{
 	border:0px solid black;
 	padding:5px;
+	font-size:15px;
 }
 .table-skill{
 	border-collapse: collapse;
+	font-family:arial;
+}
+.table-skill th{
+	border:1px solid black;
+	font-size:15px;
 }
 .table-skill td{
 	border:1px solid black;
-	padding:1px;
+	font-size:15px;
 }
 #table-skill th{
 	border:1px solid black;
 	background:lightblue;
-	padding:0px;
-	width:100px;
-	font-size:14px;
+	padding:2px;
+	width:110px;
+	font-size:15px;
 }
 #table-skill td{
 	width:100px;
+	height:40px;
 	text-align:center;
 	font-family:arial;
-	font-size:14px;
+	font-size:15px;
+	padding:2px;
 }
 #table-skill td p{
 	color:red;
@@ -200,7 +211,7 @@ ul, #myUL {
 	background	:#f8f8f8;
 	margin		:0 0 0 -1px;
 	margin-left	:10px;
-	font-size	:13px;
+	font-size	:15px;
 	width:150px;
 	height:25px;
 	text-align: center;
@@ -591,6 +602,7 @@ ul, #myUL {
   border-radius: 10px;
   padding:3px 3px 3px 3px;
 }
+
 .item,.item2{
 	height			:50px;
 	width			:160px;	
@@ -611,7 +623,7 @@ ul, #myUL {
   box-shadow		:0 0 15px rgba(0,0,0,.5);
 	transition: border-radius 0.5s ease-in-out;
 }
-.item span,.item2 span{
+.item span,.item2 span,.menu span{
 	text-shadow: -1px -1px 1px #fff, 1px 1px 1px grey;
 }
 
@@ -619,8 +631,49 @@ ul, #myUL {
 	border-radius: 20px;
 	/*background		:#f0ffda;*/
   background: #ffffdc;
-
 }
+
+.menu,.menu-current{
+	height			:40px;
+	width			:100px;	
+	border-radius	:7px;
+	border			:0px solid black;
+	border-bottom	:1px solid black;
+	border-right	:1px solid black;
+	background		:#fff;
+	text-align		:left;	
+	padding-top	:10px;
+	padding-left	:10px;
+	font-size		:17px;
+	font-weight		:normal;
+  position		:absolute;
+  overflow		:hidden;
+	z-index			:100;
+  box-shadow		:0 0 15px rgba(0,0,0,.5);
+	transition: border-radius 0.5s ease-in-out;
+}
+.menu-current{
+	width			:130px;	
+	border-top-right-radius: 18px;
+	border-bottom-right-radius: 18px;
+	background		:#f0ffda;
+	cursor:pointer;
+}
+.menu:hover{
+	border-top-right-radius: 18px;
+	border-bottom-right-radius: 18px;
+	background: #ffffdc;
+	background		:#f0ffda;
+	
+	cursor:pointer;
+}
+.menu-show{
+	display:block;
+}
+.menu-hide{
+	display:none;
+}
+
 
 #btn-hover{
 	border:1px solid black;

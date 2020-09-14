@@ -166,6 +166,50 @@ $( document ).ready(function() {
         //$('#system1_arrow').html("▽");
       }
     );
+	
+	$('.menu')
+      .mouseenter(
+      function(){
+        var $this = $(this);
+          $.expand($this,130,40);
+		  $.collapse($('.menu-current'),100,40);
+      })
+      .mouseleave(
+      function(){
+        var $this = $(this);
+        $.collapse($this,100,40);
+		
+        $('.menu-current').css({
+			"border-top-right-radius": "18px",
+			"border-bottom-right-radius": "18px",
+			"background":"#f0ffda",
+		})
+		$.expand($('.menu-current'),130,40);
+		
+      }
+    );
+	
+	$('.menu-current')
+      .mouseenter(
+      function(){
+        var $this = $(this);
+          $.expand($this,130,40);
+      })
+      .mouseleave(
+      function(){
+        var $this = $(this);
+		if($('.menu-current').width>100){
+			$.collapse($this,100,40);
+			$(this).css({
+				"border-top-right-radius": "7px",
+				"border-bottom-right-radius": "7px",
+				"background":"white"
+			})
+		}
+        
+		
+      }
+    );
 
 	$('#table-btn td p')
       .mouseenter(
@@ -414,7 +458,8 @@ function radarSkill(){
 	  },
 	  legend: {
 		position: 'left'
-	  }
+	  },
+	  responsive: false
 	};
 	var radarChart = new Chart(skillChart, {
 		type: 'radar',
