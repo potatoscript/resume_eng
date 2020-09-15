@@ -177,8 +177,8 @@ $( document ).ready(function() {
 		  })
 		  $.expand($(this),130,40);
 		  $(this).css({
-			"border-top-right-radius": "18px",
-			"border-bottom-right-radius": "18px",  
+			"border-top-right-radius": "20px",
+			"border-bottom-right-radius": "20px",  
 			"background":"#f0ffda"
 		  })
 		  
@@ -193,8 +193,8 @@ $( document ).ready(function() {
 		  
 		  $.expand($('.menu-current'),130,40);
 		  $(".menu-current").css({
-			"border-top-right-radius": "18px",
-			"border-bottom-right-radius": "18px",  
+			"border-top-right-radius": "20px",
+			"border-bottom-right-radius": "20px",  
 			"background":"#f0ffda"
 		  })  
 		  
@@ -216,8 +216,8 @@ $( document ).ready(function() {
 		  })
 		  $.expand($(this),130,40);
 		  $(this).css({
-			"border-top-right-radius": "18px",
-			"border-bottom-right-radius": "18px",  
+			"border-top-right-radius": "20px",
+			"border-bottom-right-radius": "20px",  
 			"background":"#f0ffda"
 		  })
 		  

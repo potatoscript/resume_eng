@@ -155,7 +155,7 @@ ul, #myUL {
 .span-s2{
 	font-size:16px;
 	font-family:arial;
-	background-image: linear-gradient(to right, lightyellow,white);
+	background-image: linear-gradient(to right, lightgreen,lightyellow,white);
 }
 
 .table-work{
@@ -689,8 +689,8 @@ ul, #myUL {
 }
 .menu-current{
 	width			:130px;	
-	border-top-right-radius: 18px;
-	border-bottom-right-radius: 18px;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
 	background		:#f0ffda;
 	cursor:pointer;
 }
@@ -939,7 +939,7 @@ mix-blend-mode: multiply; }
 .item-hints-i .hint-content::before {
   width: 0px;
   bottom: 0;
-  left: -100px;/***the starting point of the horizontal line***/
+  left: -150px;/***the starting point of the horizontal line***/
   content: '';
   background-color: #000;/*the horizontal line color*/
   height: 1px;
@@ -947,7 +947,7 @@ mix-blend-mode: multiply; }
   transition: -width 0.4s;
 }
 .item-hints-i .hint:hover .hint-content::before {
-  width: 100px;/***the length of the horizontal line***/
+  width: 150px;/***the length of the horizontal line***/
   height:1.5px;/**the thickness of the line****/
   transition: -width 0.4s;
 }

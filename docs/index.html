@@ -441,8 +441,8 @@
 										<td><p>-</p></td>
 										<td>Objective-C</td>
 										<td><p>-</p></td>
-										<td></td>
-										<td><p></p></td>
+										<td>Kotlin</td>
+										<td><p>-</p></td>
 										<td></td>
 										<td><p></p></td>
 									</tr>	
@@ -463,10 +463,10 @@
 										<td><p>-</p></td>
 										<td>JavaScript</td>
 										<td><p>◎</p></td>
-										<td>Kotlin</td>
-										<td><p>-</p></td>
-										<td></td>
-										<td><p></p></td>
+										<td>CSS</td>
+										<td><p>◎</p></td>
+										<td>HTML</td>
+										<td><p>◎</p></td>
 										<td></td>
 										<td></td>
 									</tr>	
@@ -558,6 +558,32 @@
 										<td></td>
 										<td></td>
 									</tr>
+									<tr><td colspan=2 style="height:1px;border:0px solid black"></td></tr>
+									<tr>
+										<th rowspan=2>サーバー</th>
+										<td>Apache</td>
+										<td><p>◎</p></td>
+										<td>IIS</td>
+										<td><p>〇</p></td>
+										<td>Nginx</td>
+										<td><p>-</p></td>
+										<td>LiteSpeed</td>
+										<td><p>-</p></td>
+										<td>Lighttpd</td>
+										<td><p>-</p></td>
+									</tr>	
+									<tr>
+										<td>Node.js</td>
+										<td><p>△</p></td>
+										<td></td>
+										<td><p></p></td>
+										<td></td>
+										<td><p></p></td>
+										<td></td>
+										<td><p></p></td>
+										<td></td>
+										<td></td>
+									</tr>
 								</table>	
 								<br>
 								<canvas id="skillChart" width="650px" height="300px"></canvas>
@@ -568,14 +594,26 @@
 
 								<span class="span-s1">１．工場情報管理システム</span><br>
 								<div id="div_pims">
-									<h1 data-text="P I M S">P I M S</h1>
+									<table>
+										<tr>
+											<td>
+												<h1 data-text="P I M S">P I M S</h1>
+											</td>
+											<td style="padding-left:60px;vertical-align:top;font-size:15px">
+											    <font style="color:blue" >目的：</font><br>	
+												生産進捗や品質状況等の情報<br>	
+												を的確に把握することができる<br>	
+												システムをつくる。<br>	
+											</td>
+										</tr>
+									</table>		
 								</div>
 								<div class="item-hints">
 								  <div class="hint" data-position="4"><!-- is-hint -->
 									<span class="hint-radius"></span>
 									<span class="hint-dot"></span>
 									<div class="hint-content do--split-children">
-									  <p>工場 Production</p>
+									  <p>Production 製造</p>
 									</div>
 								  </div>
 								</div>
@@ -585,7 +623,7 @@
 									<span class="hint-radius"></span>
 									<span class="hint-dot"></span>
 									<div class="hint-content do--split-children">
-									  <p style="margin-left:-100px;">情報 Information</p>
+									  <p style="margin-left:-150px;">Information　情報</p>
 									</div>
 								  </div>
 								</div>
@@ -602,69 +640,209 @@
 															<img class="img-s" src="images/pims-ver1.png">
 														</th>
 														<td>
-															<p>□ 言語：JavaScript,PHP</p><br>
-															<p>□ Data Structure: XML</p>
+															<p>□ 言語：JavaScript,PHP</p>
+															<p>□ オブジェクト表記構文: XML</p>
+															<p>□ データ登録方法: 有線バーコードリーダー</p>
 														</td>
 													</tr>
 												</table>	
 											</div>
 											<div class="div-s">
-												■ 第二世代：２０１２～２０１４年<br>
+												■ 第二世代：２０１２～２０１３年<br>
+												<table class="table-s">
+													<tr>
+														<th>
+															<img class="img-s" src="../../homepage/OKeypad.gif">
+														</th>
+														<td>
+															<p>□ 言語：JavaScript,PHP</p>
+															<p>□ オブジェクト表記構文: JSON(JavaScript Object Notation)</p>
+															<p>□ ＡＪＡＸ(Asynchronous JavaScript and XML)を追加する</p>
+															<p>□ タッチスクリーンキーパッドを追加する</p>
+															<p>□ JQuery, FusionChart.jsを使用する</p>
+														</td>
+													</tr>
+												</table>
 											</div>
 											<div class="div-s">
-												■ 第三世代：２０１５～２０１７年<br>
+												■ 第三世代：２０１４～２０１５年<br>
+												<table class="table-s">
+													<tr>
+														<th>
+															 <potato-chart-mybar
+																chartType=Bar
+																stacked=true
+																data='[
+																	["2018年","1","3","4","8"],
+																	["2019年","2","5","7","14"],
+																	["2020年","3","1","4","8"]
+																]'		      
+																	border="0px solid black"
+
+																	colorIndex="#e3ff7f,#a1a4ff,yellow,orange,green,grey"
+
+																xLabelData=menu1,menu2,menu3
+																xLabelAngle=10
+																	yAxesLabel=""
+																	
+																
+																dataLabel="製造1課,製造2課,製造３課"
+																		labelFontSize=18
+																		label2FontSize=1
+																		legendDisplay=true
+																	legendPosition="bottom"
+																		pointBorderColorIndex="red,blue,yellow,orange,green,grey"
+																		pointBorderWidth="0,0,0"
+																		pointStyle="rect,rectRot,triangle"
+
+																		title="生産実績"
+																	titleDisplay=true
+																		height=330px
+																		width=400px
+
+																	click='return alert(potato.chartYvalue)'
+																  ></potato-chart-mybar>
+														</th>
+														<td>
+															<p>□ FusionChart.js→Chart.jsに変更する</p>
+														</td>
+													</tr>
+												</table>
+											</div>
+											<div class="div-s">
+												■ 第四世代：２０１５～２０１７年<br>
+												<table class="table-s">
+													<tr>
+														<th>
+															<img class="img-s" style="width:400px" src="images/chart-c.png">
+														</th>
+														<td>
+															<p>□ JavaScript→C#に変更する。</p>
+														</td>
+													</tr>
+												</table>
+											</div>
+											
+										</td>
+									</tr>
+									<tr><td><br><br></td></tr>
+									<tr>
+										<td>
+											<span class="span-s2">１．２　製造工程進捗表管理システム。</span>
+											<div class="div-s">
+												■ 第一世代：２０１５～２０１７年<br>
+												<table class="table-s">
+													<tr>
+														<th>
+															<o-table-mytable
+																dragdrop='
+																	  var t="drag item ( "+potato.dragVal+" ) from ( "+ 
+																	  potato.clickRow +" , "+potato.clickCol+" ) to ( "+potato.dropRow+" , "+potato.dropCol+" ) ";
+																	  document.getElementById("mytableResult").innerHTML=t;
+																	  '		 
+																	width=300px
+																	height=200px
+																	fontSizeTH=15px
+																	fontSizeTD=18px
+																	fontColorTD=red
+																	header="品名,3月,4月,5月"
+																	data='[
+																	  ["商品１","組立","","出荷"],
+																	  ["商品２","検査","梱包",""]
+																	]'
+																	click=myTableClick()
+																	callback=myTableCallback()
+
+																	multipleSelect='
+																	  mark:〇;
+																	  indexCol:1;
+																	  selectCol:0;
+																	  callback:function(potato){
+																		$("#div_cart").html("");
+																		var t="";
+																		for(var i=0;i<potato.length;i++){
+																		   t+=i+1+". "+potato[i]+"<br>";
+																		}
+																		$("#mytableResult").html(t);
+																	  };
+																	'
+																  /></o-table-mytable>
+																  please try to drag and drop me
+																<div id="mytableResult"></div>
+														</th>
+														<td>
+															<p>□ 言語：JavaScript,PHP</p>
+															<p>□ AJAX、JSON、JQuery</p>
+															<p>□ ドラッグアンドドロップ機能付き</p>
+														</td>
+													</tr>
+												</table>	
+											</div>
+										</td>
+									</tr>	
+									<tr><td><br><br></td></tr>
+									<tr>
+										<td>
+											<span class="span-s2">１．３　工程仕様管理システム。</span>
+											<div class="div-s">
+												■ 第一世代：２０１４～２０１６年<br>
+											</div>
+										</td>
+									</tr>
+									<tr><td><br><br></td></tr>
+									<tr>
+										<td>
+											<span class="span-s2">１．４　棚卸管理システム。</span>
+											<div class="div-s">
+												■ 第一世代：２０１７～２０１９年　　□ 言語：C# WinForm<br>
+												<table class="table-s">
+													<tr>
+														<th>
+															<img class="img-s" style="width:500px" src="images/system1-4.png">
+														</th>
+														<td>
+															
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+									</tr>
+									<tr><td><br><br></td></tr>
+									<tr>
+										<td>
+											<span class="span-s2">１．５　日常点検システム。</span>
+											<div class="div-s">
+												■ 第一世代：２０１４～２０１５年　　□ 言語：JavaScript with Enchant.js (animation)<br>
+												<table class="table-s">
+													<tr>
+														<th>
+															<img class="img-s" style="width:500px" src="images/system1-5.png">
+														</th>
+														<td>
+															
+														</td>
+													</tr>
+												</table>
+											</div>
+										</td>
+									</tr>
+									<tr><td><br><br></td></tr>
+									<tr>
+										<td>
+											<span class="span-s2">１．６　品質保全システム。</span>
+											<div class="div-s">
+												■ 第一世代：２０１８～２０２０年<br>
 											</div>
 										</td>
 									</tr>
 								</table>			
 								
-								<div id="chart-container"></div>
-
-											<p>Table　（Drag & Drop, Multiple Select）</p>
-											<o-table-mytable
-											dragdrop='
-												  var t="drag item ( "+potato.dragVal+" ) from ( "+ 
-												  potato.clickRow +" , "+potato.clickCol+" ) to ( "+potato.dropRow+" , "+potato.dropCol+" ) ";
-												  document.getElementById("mytableResult").innerHTML=t;
-												  '		 
-												width=650px
-												height=200px
-												fontSizeTH=18px
-												fontSizeTD=20px
-												fontColorTD=red
-												header="No,Menu,Image,Calories,Fat"
-												data='[
-												  ["1","Potato Pie","<img src=\"../../potato.js/images/Sweet Potato Pie.jpg\" width=\"100px\" height=\"60px\">","183","13"],
-												  ["2","Mashed Potato","<img src=\"../../potato.js/images/Mashed Potato.jpg\" width=\"100px\" height=\"60px\">","455","55"]
-												]'
-												click=myTableClick()
-												callback=myTableCallback()
-												editCell="
-											    trigger:click;
-												width:80px;
-												tool:default;
-												indexCol:0;
-												editCol:[1,2,3,4];
-												callback:
-												  function(newVal,oldVal,targetCol,SelectCol){
-												  document.getElementById('mytableResult').innerHTML=oldVal+' <b>→</b> '+newVal;
-												};
-												"
-												multipleSelect='
-												  mark:〇;
-												  indexCol:1;
-												  selectCol:0;
-												  callback:function(potato){
-													$("#div_cart").html("");
-													var t="";
-													for(var i=0;i<potato.length;i++){
-													   t+=i+1+". "+potato[i]+"<br>";
-													}
-													$("#mytableResult").html(t);
-												  };
-												'
-											  /></o-table-mytable>
-											<div id="mytableResult"></div>	
+								<br><br>
+								
+								
+								<span class="span-s1">２．組織図管理システム</span><br>
+								
 	
 
 
@@ -704,7 +882,7 @@
 												</p>
 												<p>
 												<span class="span-q">問３．では、この会社を志望した理由を教えてください。</span><br>
-												<font style="color:blue">答３．ﾌﾟﾛｸﾞﾗﾐﾝｸﾞスキルを向上が出来ますと思います。</font><br>
+												<font style="color:blue">答３．</font><br>
 												
 												Point: <br>
 												<I>
