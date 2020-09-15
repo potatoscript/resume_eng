@@ -145,6 +145,8 @@ ul, #myUL {
 }
 
 .span-q{
+	font-size:14px;
+	font-family:arial;
 	background-image: linear-gradient(to right, lightblue,yellow,lightyellow);
 }
 .span-s1{
