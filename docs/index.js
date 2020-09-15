@@ -168,48 +168,84 @@ $( document ).ready(function() {
     );
 	
 	$('.menu')
-      .mouseenter(
-      function(){
-        var $this = $(this);
-          $.expand($this,130,40);
-		  $.collapse($('.menu-current'),100,40);
-      })
-      .mouseleave(
-      function(){
-        var $this = $(this);
-        $.collapse($this,100,40);
-		
-        $('.menu-current').css({
+      .mouseenter(function(){ 
+          $.collapse($('.menu-current'),100,40);
+		  $('.menu-current').css({
+			"border-top-right-radius": "7px",
+			"border-bottom-right-radius": "7px",  
+			"background":"white"
+		  })
+		  $.expand($(this),130,40);
+		  $(this).css({
 			"border-top-right-radius": "18px",
-			"border-bottom-right-radius": "18px",
-			"background":"#f0ffda",
-		})
-		$.expand($('.menu-current'),130,40);
-		
-      }
-    );
-	
-	$('.menu-current')
-      .mouseenter(
-      function(){
-        var $this = $(this);
-          $.expand($this,130,40);
+			"border-bottom-right-radius": "18px",  
+			"background":"#f0ffda"
+		  })
+		  
       })
-      .mouseleave(
-      function(){
-        var $this = $(this);
+      .mouseleave(function(){
+        $.collapse($(this),100,40);
+		$(this).css({
+			"border-top-right-radius": "7px",
+			"border-bottom-right-radius": "7px",  
+			"background":"white"
+		  })
+		  
+		  $.expand($('.menu-current'),130,40);
+		  $(".menu-current").css({
+			"border-top-right-radius": "18px",
+			"border-bottom-right-radius": "18px",  
+			"background":"#f0ffda"
+		  })  
+		  
+      })
+	  .click(function(){
+		  $('#menu div').removeClass("menu-current");
+		  $(this).addClass("menu-current");
+		  $('.menu-current').css({
+			"border-top-right-radius": "7px",
+			"border-bottom-right-radius": "7px",  
+			"background":"white"
+		  })
+		  
+		  $.collapse($('.menu'),100,40);
+		  $(".menu").css({
+			"border-top-right-radius": "7px",
+			"border-bottom-right-radius": "7px",  
+			"background":"white"
+		  })
+		  $.expand($(this),130,40);
+		  $(this).css({
+			"border-top-right-radius": "18px",
+			"border-bottom-right-radius": "18px",  
+			"background":"#f0ffda"
+		  })
+		  
+		  $(".menu-show").hide();
+		  $(".menu-hide").hide();
+		  $("#div-"+this.id).show();
+		  
+	  })
+	
+	/*
+	$('.menu-current')
+      .mouseenter(function(){
+          $.expand($(this),130,40);
+      })
+      .mouseleave(function(){
+		  /*
 		if($('.menu-current').width>100){
-			$.collapse($this,100,40);
-			$(this).css({
+			$.collapse($(this),100,40);
+			$('.menu').css({
 				"border-top-right-radius": "7px",
 				"border-bottom-right-radius": "7px",
 				"background":"white"
 			})
 		}
-        
 		
-      }
-    );
+      })
+	 */ 
+	
 
 	$('#table-btn td p')
       .mouseenter(
