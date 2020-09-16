@@ -1,1 +1,647 @@
-var _0x187b=['top','borderRadius','green','Under\x20Construction','<div\x20class=\x22title\x22\x20style=\x22display:none\x22>','<div\x20class=\x22senior\x22\x20style=\x22display:none\x22>','classList','.nested3','caret-down','fontWeight','current','files/Education.pdf','LIM','マレーシア語\x20(日常会話レベル)','left','<div\x20class=\x22email\x22\x20style=\x22display:none\x22>','.item2','pointer','Listening','\x22\x20class=\x22avatar\x22\x20src=\x22','stage','english','kslim','border','caret2','files/履歴書・職務経歴書_20200911.pdf','#div-','doc_iframe','departmentParent','one','onresize','href','</div>','Dataset\x201','CEO','ｲｷﾞﾘｽ','中国語\x20(日常会話レベル)','style','width','yellow','在住年数','Black','files/DrivingResult.jpg','#bruce','animate','.flipItem','.tabs-menu\x20li:first-child\x20a,\x20.content-box-menu:first','show','.active','.active2','日本語\x20(日常会話レベル\x20N2)','outside','doughnut','auto','slice','levels','20px','<div\x20class=\x22id\x22\x20style=\x22display:none\x22>','radar','click','not','toggle','<div\x20class=\x22stage\x22\x20style=\x22display:none\x22>','#menu_tabs','30px','1px','getElementById','orgchart','Manager','7px','Writing','.box-wrapper-menu','#div_bruce','.box-wrapper-menu\x20.current\x20.col','caret-basic','object','siblings',':animated','全て縮小','split','blue','#table-skill','display','floor','innerText','marginTop','<div\x20class=\x22departmentParent\x22\x20style=\x22display:none\x22>','random','rgba(0,0,200,0.6)','caret-down2','caret-basic-down','mouseleave','innerWidth','<div\x20class=\x22ip\x22\x20style=\x22display:none\x22>','bold','<div\x20class=\x22staffid\x22\x20style=\x22display:none\x22>','全て展開','tel','ﾏﾚｰｼｱ','paddingTop','.content-box-menu','addClass','delegate','<div\x20class=\x22levels\x22\x20style=\x22display:none\x22>','getContext','active','<div\x20class=\x22english\x22\x20style=\x22display:none\x22>','Green','removeClass','innerHeight','senior','#table-btn\x20td\x20p','append','hide','10px','height','.box-wrapper-menu\x20.current\x20.col-one-menu','getElementsByClassName','ready','expand','mouseout','#chart-container','chartColors','.col','bruce','caret-down3','Enginner','hasClass','collapse','1px\x20solid\x20black','.menu','two','menu-current','length','block','mouseover','zIndex','<div\x20class=\x22job\x22\x20style=\x22display:none\x22>','css','locationChart','<div\x20class=\x22second-menu\x22><img\x20id=\x22img2_','addEventListener','0px','value','#table-btn2\x20td\x20p','san','.menu-hide','#f0ffda','name','transparent','.item','.nestedx','mouseenter','<div\x20class=\x22department\x22\x20style=\x22display:none\x22>object</div>','.second-menu','querySelector','lightgreen','email','orange','Typing','cursor','ｼﾝｶﾞﾎﾟｰﾙ','white','rgba(200,0,0,0.6)','cornflowerblue','bottom','fa\x20fa-info-circle\x20second-menu-icon','.menu-current','.col-one-menu','.content-box-menu,.col-one-menu\x20col','title'];(function(_0x3093fb,_0x187bd9){var _0x1186ad=function(_0x55549c){while(--_0x55549c){_0x3093fb['push'](_0x3093fb['shift']());}};_0x1186ad(++_0x187bd9);}(_0x187b,0x70));var _0x1186=function(_0x3093fb,_0x187bd9){_0x3093fb=_0x3093fb-0x0;var _0x1186ad=_0x187b[_0x3093fb];return _0x1186ad;};var hrefSelector='',el='',colOne='',columnReadyCounter=0x0,speedOne=0x3e8,target_tab=0x1,columnReadyCounter=0x0,t=0x0,t2=0x0,t3=0x0;$(document)[_0x1186('0x6')](function(){document[_0x1186('0x7d')](_0x1186('0x85'))[_0x1186('0x1d')](_0x1186('0x76'),function(){t==0x0?($(_0x1186('0x6b'))[_0x1186('0x1')](),t=0x1):($('.active')[_0x1186('0x6a')](),t=0x0),this['classList']['toggle'](_0x1186('0x95'));}),document[_0x1186('0x7d')](_0x1186('0x53'))['addEventListener'](_0x1186('0x76'),function(){t2==0x0?($(_0x1186('0x6c'))[_0x1186('0x1')](),t2=0x1):($('.active2')[_0x1186('0x6a')](),t2=0x0),this[_0x1186('0x41')][_0x1186('0x78')](_0x1186('0x94'));}),document[_0x1186('0x7d')]('caret3')[_0x1186('0x1d')]('click',function(){t3==0x0?($('.nested3')[_0x1186('0x1')](),t3=0x1):($(_0x1186('0x42'))[_0x1186('0x6a')](),t3=0x0),this[_0x1186('0x41')][_0x1186('0x78')](_0x1186('0xd'));});var _0x55549c=document[_0x1186('0x5')]('caretx'),_0x35541c;for(_0x35541c=0x0;_0x35541c<_0x55549c[_0x1186('0x15')];_0x35541c++){_0x55549c[_0x35541c][_0x1186('0x1d')](_0x1186('0x76'),function(){this['parentElement'][_0x1186('0x2b')](_0x1186('0x27'))[_0x1186('0x41')][_0x1186('0x78')](_0x1186('0xa4')),this['classList'][_0x1186('0x78')](_0x1186('0x43'));});}$(_0x1186('0x68'))[_0x1186('0x17')](function(){var _0x5f530d=$(this);_0x5f530d[_0x1186('0x1a')](_0x1186('0x18'),0x3e8);})[_0x1186('0x96')](function(){var _0x3320f4=$(this);_0x3320f4[_0x1186('0x1a')](_0x1186('0x18'),0x384);}),$(_0x1186('0x66'))['css'](_0x1186('0x30'),_0x1186('0x4c'))[_0x1186('0x28')](function(){$(_0x1186('0x83'))[_0x1186('0x6a')]();})[_0x1186('0x8')](function(){$('#div_bruce')[_0x1186('0x1')]();});var _0x165ab5=$(_0x1186('0x9f')),_0x1f0c42=$('.tabs-menu\x20li\x20a');$(_0x1186('0x82'))['css']({'width':0x2f8+'px','height':0x640+'px'}),$(_0x1186('0x8c'))['css']({'width':0x2ee+'px'}),$('.content-box-menu,.col-one-menu\x20col')[_0x1186('0x1a')]({'width':0x2ee+'px','height':0x636+'px','overflow':_0x1186('0x70')}),setMenuSize(),$(_0x1186('0x69'))[_0x1186('0xa0')](_0x1186('0x45')),$(_0x1186('0x84'))[_0x1186('0x1a')]('top',0x64),$(_0x1186('0x38'))['css']({'top':-0xbb8+'px'}),$(_0x1186('0x4'))[_0x1186('0x1a')]('top',0x0),$(_0x1186('0x7a'))[_0x1186('0xa1')]('.tabs-menu\x20a',_0x1186('0x76'),function(){el=$(this),!el[_0x1186('0xf')](_0x1186('0x45'))&&$(_0x1186('0x88'))[_0x1186('0x15')]==0x0&&(_0x1f0c42[_0x1186('0xa7')](_0x1186('0x45')),el[_0x1186('0xa0')](_0x1186('0x45')),speedOne=Math[_0x1186('0x8e')](Math[_0x1186('0x92')]()*0x3e8)+0x1f4,colOne=$(_0x1186('0x4')),colOne[_0x1186('0x67')]({'top':-0xbb8},speedOne),_0x165ab5[_0x1186('0xa7')]('current'),$('#'+hrefSelector)[_0x1186('0xa0')](_0x1186('0x45')),$(_0x1186('0x4'))[_0x1186('0x67')]({'top':0xa+'px'},speedOne,function(){ifReadyThenReset();}));}),$(_0x1186('0x26'))[_0x1186('0x28')](function(){var _0x3f1dfd=$(this);$[_0x1186('0x7')](_0x3f1dfd,0xc8,0xe6);})[_0x1186('0x96')](function(){var _0x2469c6=$(this);$[_0x1186('0x10')](_0x2469c6,0xa0,0x32);}),$(_0x1186('0x4b'))[_0x1186('0x28')](function(){var _0x5105c3=$(this);$[_0x1186('0x7')](_0x5105c3,0x136,0x136);})[_0x1186('0x96')](function(){var _0x44799a=$(this);$['collapse'](_0x44799a,0xa0,0x32);}),$(_0x1186('0x12'))[_0x1186('0x28')](function(){$[_0x1186('0x10')]($(_0x1186('0x37')),0x64,0x28),$(_0x1186('0x37'))[_0x1186('0x1a')]({'border-top-right-radius':'7px','border-bottom-right-radius':'7px','background':_0x1186('0x32')}),$[_0x1186('0x7')]($(this),0x82,0x28),$(this)['css']({'border-top-right-radius':_0x1186('0x73'),'border-bottom-right-radius':_0x1186('0x73'),'background':_0x1186('0x23')});})[_0x1186('0x96')](function(){$['collapse']($(this),0x64,0x28),$(this)[_0x1186('0x1a')]({'border-top-right-radius':_0x1186('0x80'),'border-bottom-right-radius':'7px','background':_0x1186('0x32')}),$[_0x1186('0x7')]($(_0x1186('0x37')),0x82,0x28),$(_0x1186('0x37'))[_0x1186('0x1a')]({'border-top-right-radius':_0x1186('0x73'),'border-bottom-right-radius':_0x1186('0x73'),'background':_0x1186('0x23')});})[_0x1186('0x76')](function(){$('#menu\x20div')[_0x1186('0xa7')](_0x1186('0x14')),$(this)[_0x1186('0xa0')](_0x1186('0x14')),$(_0x1186('0x37'))[_0x1186('0x1a')]({'border-top-right-radius':_0x1186('0x80'),'border-bottom-right-radius':_0x1186('0x80'),'background':'white'}),$[_0x1186('0x10')]($(_0x1186('0x12')),0x64,0x28),$(_0x1186('0x12'))[_0x1186('0x1a')]({'border-top-right-radius':_0x1186('0x80'),'border-bottom-right-radius':_0x1186('0x80'),'background':_0x1186('0x32')}),$['expand']($(this),0x82,0x28),$(this)[_0x1186('0x1a')]({'border-top-right-radius':'20px','border-bottom-right-radius':_0x1186('0x73'),'background':_0x1186('0x23')}),$('.menu-show')[_0x1186('0x1')](),$(_0x1186('0x22'))[_0x1186('0x1')](),$(_0x1186('0x55')+this['id'])[_0x1186('0x6a')]();}),$(_0x1186('0xaa'))['mouseenter'](function(){$(this)[_0x1186('0x1a')](_0x1186('0x9e'),_0x1186('0x1e'));})['mouseleave'](function(){$(this)[_0x1186('0x1a')](_0x1186('0x9e'),'10px');}),$(_0x1186('0x20'))[_0x1186('0x28')](function(){$(this)[_0x1186('0x1a')]('paddingTop',_0x1186('0x1e'));})[_0x1186('0x96')](function(){$(this)[_0x1186('0x1a')]('paddingTop','10px');}),window[_0x1186('0x59')]=function(_0x5464c1){setMenuSize();},doughnutLocation(),setNode();});function docDownload(){var _0x6b6453=document[_0x1186('0x7d')](_0x1186('0x56'));_0x6b6453[_0x1186('0x60')][_0x1186('0x8d')]='block',_0x6b6453[_0x1186('0x5a')]=_0x1186('0x54'),_0x6b6453[_0x1186('0x76')]();}function hrefClick(_0x5c027e){hrefSelector=_0x5c027e,_0x5c027e==_0x1186('0x58')&&doughnutLocation(),_0x5c027e==_0x1186('0x13')&&radarSkill();};function ifReadyThenReset(){columnReadyCounter++,columnReadyCounter==0x3&&($(_0x1186('0xb'))[_0x1186('0x77')]('.current\x20.col')[_0x1186('0x1a')](_0x1186('0x3b'),window['innerHeight']-0x32+'px'),columnReadyCounter=0x0);}function linkToEducation(){var _0x4b3659=document[_0x1186('0x7d')](_0x1186('0x56'));_0x4b3659[_0x1186('0x60')]['display']=_0x1186('0x16'),_0x4b3659[_0x1186('0x5a')]=_0x1186('0x46'),_0x4b3659[_0x1186('0x76')]();}function linkToEnglishLevel(){var _0x48b83f=document['getElementById']('doc_iframe');_0x48b83f[_0x1186('0x60')][_0x1186('0x8d')]=_0x1186('0x16'),_0x48b83f[_0x1186('0x5a')]='files/TOEIC.jpg',_0x48b83f[_0x1186('0x76')]();}function linkToFaceBook(){alert(_0x1186('0x3e'));}function linkToSaveDriving(){var _0x4d0525=document[_0x1186('0x7d')](_0x1186('0x56'));_0x4d0525[_0x1186('0x60')][_0x1186('0x8d')]=_0x1186('0x16'),_0x4d0525[_0x1186('0x5a')]=_0x1186('0x65'),_0x4d0525[_0x1186('0x76')]();}function openall(){var _0x46d34c=document[_0x1186('0x7d')](_0x1186('0x78'));_0x46d34c[_0x1186('0x1f')]==_0x1186('0x9b')?(_0x46d34c[_0x1186('0x1f')]=_0x1186('0x89'),$('.active')[_0x1186('0x6a')](),t=0x0,document['getElementById']('caret-basic')[_0x1186('0x41')]['toggle'](_0x1186('0x95')),$(_0x1186('0x6c'))[_0x1186('0x6a')](),t2=0x0,document[_0x1186('0x7d')]('caret2')[_0x1186('0x41')][_0x1186('0x78')](_0x1186('0x94'))):(_0x46d34c[_0x1186('0x1f')]=_0x1186('0x9b'),$(_0x1186('0x6b'))[_0x1186('0x1')](),t=0x1,$(_0x1186('0x6c'))['hide'](),t2=0x1);}function doughnutLocation(){var _0x1355fe={'type':_0x1186('0x6f'),'data':{'datasets':[{'data':[0x15,0x2,0x5,0x2,0xd],'backgroundColor':[window['chartColors']['grey'],window[_0x1186('0xa')]['blue'],window[_0x1186('0xa')][_0x1186('0x3d')],window[_0x1186('0xa')][_0x1186('0x62')],window[_0x1186('0xa')]['red']],'label':_0x1186('0x5c')}],'labels':[_0x1186('0x9d'),_0x1186('0x5e'),_0x1186('0x31'),'ﾀｲ','日本']},'options':{'responsive':!![],'legend':{'display':![],'position':_0x1186('0x35')},'title':{'display':![],'text':_0x1186('0x63')},'animation':{'animateScale':!![],'animateRotate':!![]},'plugins':{'labels':{'render':function(_0x21a040){return _0x21a040['label']+'\x20'+_0x21a040['value']+'年';},'arc':![],'fontSize':0xc,'fontColor':_0x1186('0x8b'),'position':_0x1186('0x6e')}}}},_0x223cb3=document['getElementById'](_0x1186('0x1b'))[_0x1186('0xa3')]('2d'),_0x1d94b8=new Chart(_0x223cb3,_0x1355fe);}function radarSkill(){var _0x222961={'labels':[_0x1186('0x4d'),'Speaking','Reading',_0x1186('0x81'),_0x1186('0x2f')],'datasets':[{'label':'英語\x20(日常会話レベル\x20TOIEC\x20820)','backgroundColor':_0x1186('0x25'),'borderColor':_0x1186('0x33'),'fill':![],'radius':0x6,'pointRadius':0x6,'pointBorderWidth':0x3,'pointBackgroundColor':_0x1186('0x2e'),'pointBorderColor':_0x1186('0x33'),'pointHoverRadius':0xa,'data':[0x46,0x3c,0x46,0x46,0x46]},{'label':_0x1186('0x6d'),'backgroundColor':_0x1186('0x25'),'borderColor':_0x1186('0x93'),'fill':![],'radius':0x6,'pointRadius':0x6,'pointBorderWidth':0x3,'pointBackgroundColor':_0x1186('0x34'),'pointBorderColor':_0x1186('0x93'),'pointHoverRadius':0xa,'data':[0x46,0x3c,0x3c,0x1e,0x3c]},{'label':_0x1186('0x5f'),'backgroundColor':_0x1186('0x25'),'borderColor':'Green','fill':![],'radius':0x6,'pointRadius':0x6,'pointBorderWidth':0x3,'pointBackgroundColor':_0x1186('0x2c'),'pointBorderColor':_0x1186('0xa6'),'pointHoverRadius':0xa,'data':[0x5a,0x50,0x46,0x1e,0x1e]},{'label':_0x1186('0x48'),'backgroundColor':_0x1186('0x25'),'borderColor':'Black','fill':![],'radius':0x6,'pointRadius':0x6,'pointBorderWidth':0x3,'pointBackgroundColor':'White','pointBorderColor':_0x1186('0x64'),'pointHoverRadius':0xa,'data':[0x46,0x28,0x32,0x1e,0x1e]}]},_0x197c15={'scale':{'ticks':{'beginAtZero':!![],'min':0x0,'max':0x64,'stepSize':0xa},'pointLabels':{'fontSize':0xf}},'legend':{'position':_0x1186('0x49'),'labels':{'fontSize':0xd}},'responsive':![]},_0x23a357=new Chart(skillChart,{'type':_0x1186('0x75'),'data':_0x222961,'options':_0x197c15});}function setMenuSize(){try{$(_0x1186('0x82'))[_0x1186('0x1a')]({'width':window[_0x1186('0x97')]-0x12c+'px','height':window[_0x1186('0xa8')]-0x50+'px'}),$('#table-skill')['css']({'width':0x2ee+'px'}),$(_0x1186('0x39'))['css']({'width':window['innerWidth']-0x136+'px','height':window[_0x1186('0xa8')]-0x5a+'px','overflow':'auto'});}catch(_0xd43d6e){}}var level=new Array(),level_2=new Array(),level_3=new Array(),level_4=new Array(),level_5=new Array(),d2=new Array(),d3=new Array(),d4=new Array(),d5=new Array(),d6=new Array(),datascource=new Array(),senior='20',visibleLevel=0x3,oc;function setNode(){datasource={'id':[0x1,0x2,0x3],'name':[_0x1186('0xc'),_0x1186('0x51'),_0x1186('0x47')],'title':['Mr','Dr',_0x1186('0x21')],'levels':[_0x1186('0x7f'),_0x1186('0xe'),_0x1186('0x5d')],'tel':['','',''],'email':['','',''],'english':['','',''],'ip':['','',''],'job':['','',''],'stage':['','',''],'senior':['','',''],'department':['','',''],'departmentParent':['','',''],'children':['','',''],'staffid':['','','']},oc=$(_0x1186('0x9'))[_0x1186('0x7e')]({'zoom':!![],'pan':!![],'data':datasource,'visibleLevel':0x1,'nodeContent':_0x1186('0x3a'),'nodeID':'id','createNode':function(_0x63840d,_0x46a7bf){var _0x39b4e1=$('<i>',{'class':_0x1186('0x36'),'click':function(){document['getElementById']('edit_data')['checked']==![]&&$(this)[_0x1186('0x87')](_0x1186('0x2a'))[_0x1186('0x78')]();},'mouseover':function(){},'mouseleave':function(){$(this)[_0x1186('0x87')]('.second-menu')['hide']();}}),_0x4f9029=_0x1186('0xa2')+_0x46a7bf[_0x1186('0x72')]+_0x1186('0x5b'),_0x1a37d8='<div\x20class=\x22department\x22\x20style=\x22display:none\x22>'+_0x46a7bf['department']+'</div>',_0x4b41b0='<div\x20class=\x22departmentParent\x22\x20style=\x22display:none\x22>'+_0x46a7bf[_0x1186('0x57')]+'</div>',_0x5b5254=_0x1186('0x74')+_0x46a7bf['id']+_0x1186('0x5b'),_0x4d2a44='<div\x20class=\x22tel\x22\x20style=\x22display:none\x22>'+_0x46a7bf[_0x1186('0x9c')]+_0x1186('0x5b'),_0x597ae2=_0x1186('0x4a')+_0x46a7bf[_0x1186('0x2d')]+_0x1186('0x5b'),_0x360efa=_0x1186('0xa5')+_0x46a7bf[_0x1186('0x50')]+'</div>',_0x3a4dd6=_0x1186('0x98')+_0x46a7bf['ip']+'</div>',_0x5f0026=_0x1186('0x19')+_0x46a7bf['job']+_0x1186('0x5b'),_0x1fcde1=_0x1186('0x79')+_0x46a7bf[_0x1186('0x4f')]+_0x1186('0x5b'),_0x342f73=_0x1186('0x40')+_0x46a7bf[_0x1186('0xa9')]+_0x1186('0x5b'),_0x35395b=_0x1186('0x9a')+_0x46a7bf['staffid']+_0x1186('0x5b'),_0x5752a4=_0x1186('0x1c')+_0x46a7bf['id']+_0x1186('0x4e')+dir_pims+photo_folder2+_0x46a7bf[_0x1186('0x24')]+'.jpg\x22></div>';_0x63840d[0x0]['style'][_0x1186('0x30')]=_0x1186('0x4c'),_0x63840d[0x0][_0x1186('0x60')][_0x1186('0x90')]='-3px';if(String(_0x46a7bf[_0x1186('0x3a')])['indexOf']('object')==-0x1)_0x63840d['append'](_0x39b4e1)[_0x1186('0x0')](_0x5752a4)['append'](_0x5b5254)[_0x1186('0x0')](_0x1a37d8)[_0x1186('0x0')](_0x4f9029)[_0x1186('0x0')](_0x4d2a44)[_0x1186('0x0')](_0x597ae2)['append'](_0x360efa)[_0x1186('0x0')](_0x3a4dd6)[_0x1186('0x0')](_0x5f0026)[_0x1186('0x0')](_0x1fcde1)[_0x1186('0x0')](_0x342f73)[_0x1186('0x0')](_0x35395b)[_0x1186('0x0')](_0x4b41b0);else{_0x63840d[0x0][_0x1186('0x8f')]=String(_0x63840d[0x0][_0x1186('0x8f')])[_0x1186('0x8a')](_0x1186('0x86'))[_0x1186('0x71')](0x0,0x1),_0x63840d[0x0][_0x1186('0x60')][_0x1186('0x52')]=_0x1186('0x11'),_0x63840d[0x0][_0x1186('0x60')][_0x1186('0x3')]=_0x1186('0x7b'),_0x63840d[0x0]['style'][_0x1186('0x61')]='120px',_0x63840d[0x0][_0x1186('0x60')]['marginTop']=_0x1186('0x7c'),_0x63840d[0x0][_0x1186('0x60')][_0x1186('0x3c')]=_0x1186('0x2'),_0x63840d[0x0][_0x1186('0x60')][_0x1186('0x44')]=_0x1186('0x99'),_0x63840d[0x0][_0x1186('0x60')]['boxShadow']='0\x200\x2010px\x20rgba(0,0,0,.5)';var _0x577fb7=_0x1186('0x3f')+_0x63840d[0x0][_0x1186('0x8f')]+_0x1186('0x5b'),_0x1a37d8=_0x1186('0x29'),_0x4b41b0=_0x1186('0x91')+_0x46a7bf['departmentParent']+_0x1186('0x5b');_0x63840d[_0x1186('0x0')](_0x5b5254)[_0x1186('0x0')](_0x577fb7)[_0x1186('0x0')](_0x1a37d8)[_0x1186('0x0')](_0x4b41b0);}}});}
+/******Global variable to set the tab menu action*************/
+var hrefSelector        = "",
+    el                 = "",
+    colOne             = "",
+    columnReadyCounter  = 0,
+    speedOne            = 1000,
+	target_tab			= 1,
+	columnReadyCounter  = 0;
+
+var t = 0;
+var t2 = 0;
+var t3 = 0;
+
+$( document ).ready(function() {
+	
+	 
+	
+	document.getElementById("caret-basic").addEventListener("click", function() {
+	  if(t==0){
+		  $(".active").hide();
+		  t=1;
+	  }else{
+		  $(".active").show();
+		  t=0;
+	  }		  
+	  this.classList.toggle("caret-basic-down");
+	}); 
+	 
+	
+	document.getElementById("caret2").addEventListener("click", function() {
+	  if(t2==0){
+		  $(".active2").hide();
+		  t2=1;
+	  }else{
+		  $(".active2").show();
+		  t2=0;
+	  }		  
+	  this.classList.toggle("caret-down2");
+	});
+	
+	document.getElementById("caret3").addEventListener("click", function() {
+	  if(t3==0){
+		  $(".nested3").hide();
+		  t3=1;
+	  }else{
+		  $(".nested3").show();
+		  t3=0;
+	  }		  
+	  this.classList.toggle("caret-down3");
+	});
+	 
+	 var toggler = document.getElementsByClassName("caretx");
+	  var i;
+	  for (i = 0; i < toggler.length; i++) {
+		toggler[i].addEventListener("click", function() {
+		  this.parentElement.querySelector(".nestedx").classList.toggle("active");
+		  this.classList.toggle("caret-down");
+		});
+	 }
+
+
+
+
+	
+   $('.flipItem')
+	.mouseover(
+	  function(){
+	    var $this = $(this);
+	   
+	    //$.expand($this,80,80);
+	    $this.css("zIndex",1000);    
+	
+	})
+	.mouseleave(function(){
+	  var $this = $(this);
+	  //$.collapse($this,50,50);
+	  $this.css("zIndex",900);  
+	});		
+	
+   $("#bruce")
+   .css("cursor","pointer")
+   .mouseenter(function(){
+      $("#div_bruce").show();
+   })
+   .mouseout(function(){
+      $("#div_bruce").hide();	   
+   })
+   
+   
+   /******* Tab Menu Setting ****************/
+   var allContentBoxes  = $(".content-box-menu");
+   var allTabs          = $(".tabs-menu li a");
+
+	$(".box-wrapper-menu").css({
+		"width":760+"px",
+		"height":1600+"px"
+   });
+   $("#table-skill").css({
+		"width":750+"px"
+   });
+   $(".content-box-menu,.col-one-menu col").css({
+		"width":750+"px",
+		"height":1590+"px",
+		"overflow":"auto"
+   });
+
+	
+	setMenuSize();
+
+
+    $(".tabs-menu li:first-child a, .content-box-menu:first").addClass("current");
+    $(".box-wrapper-menu .current .col").css("top",100);
+	$('.col-one-menu').css({
+      'top':-3000+'px'
+    });
+    $(".box-wrapper-menu .current .col-one-menu").css("top",0);
+	
+	
+    $("#menu_tabs").delegate(".tabs-menu a","click",function(){
+      el = $(this);
+      if((!el.hasClass("current"))&&($(":animated").length==0)){
+        allTabs.removeClass("current");
+        el.addClass("current");
+        speedOne=Math.floor(Math.random()*1000)+500;
+        colOne=$(".box-wrapper-menu .current .col-one-menu");
+        colOne.animate({
+          "top":-3000
+        },speedOne);
+
+        allContentBoxes.removeClass("current");
+        $("#"+hrefSelector).addClass("current");
+        $(".box-wrapper-menu .current .col-one-menu").animate({
+          "top":10+"px"
+        },speedOne, function(){ifReadyThenReset();});
+
+      }
+    })
+   
+   
+   $('.item')
+      .mouseenter(
+      function(){
+        var $this = $(this);
+          $.expand($this,200,230);
+          //$('.system_arrow').html("△");
+      })
+      .mouseleave(
+      function(){
+        var $this = $(this);
+        $.collapse($this,160,50);
+        //$('#system1_arrow').html("▽");
+      }
+    );
+	
+	$('.item2')
+      .mouseenter(
+      function(){
+        var $this = $(this);
+          $.expand($this,310,310);
+          //$('.system_arrow').html("△");
+      })
+      .mouseleave(
+      function(){
+        var $this = $(this);
+        $.collapse($this,160,50);
+        //$('#system1_arrow').html("▽");
+      }
+    );
+	
+	$('.menu')
+      .mouseenter(function(){ 
+          $.collapse($('.menu-current'),100,40);
+		  $('.menu-current').css({
+			"border-top-right-radius": "7px",
+			"border-bottom-right-radius": "7px",  
+			"background":"white"
+		  })
+		  $.expand($(this),130,40);
+		  $(this).css({
+			"border-top-right-radius": "20px",
+			"border-bottom-right-radius": "20px",  
+			"background":"#f0ffda"
+		  })
+		  
+      })
+      .mouseleave(function(){
+        $.collapse($(this),100,40);
+		$(this).css({
+			"border-top-right-radius": "7px",
+			"border-bottom-right-radius": "7px",  
+			"background":"white"
+		  })
+		  
+		  $.expand($('.menu-current'),130,40);
+		  $(".menu-current").css({
+			"border-top-right-radius": "20px",
+			"border-bottom-right-radius": "20px",  
+			"background":"#f0ffda"
+		  })  
+		  
+      })
+	  .click(function(){
+		  $('#menu div').removeClass("menu-current");
+		  $(this).addClass("menu-current");
+		  $('.menu-current').css({
+			"border-top-right-radius": "7px",
+			"border-bottom-right-radius": "7px",  
+			"background":"white"
+		  })
+		  
+		  $.collapse($('.menu'),100,40);
+		  $(".menu").css({
+			"border-top-right-radius": "7px",
+			"border-bottom-right-radius": "7px",  
+			"background":"white"
+		  })
+		  $.expand($(this),130,40);
+		  $(this).css({
+			"border-top-right-radius": "20px",
+			"border-bottom-right-radius": "20px",  
+			"background":"#f0ffda"
+		  })
+		  
+		  $(".menu-show").hide();
+		  $(".menu-hide").hide();
+		  $("#div-"+this.id).show();
+		  
+	  })
+	
+	/*
+	$('.menu-current')
+      .mouseenter(function(){
+          $.expand($(this),130,40);
+      })
+      .mouseleave(function(){
+		  /*
+		if($('.menu-current').width>100){
+			$.collapse($(this),100,40);
+			$('.menu').css({
+				"border-top-right-radius": "7px",
+				"border-bottom-right-radius": "7px",
+				"background":"white"
+			})
+		}
+		
+      })
+	 */ 
+	
+
+	$('#table-btn td p')
+      .mouseenter(
+      function(){
+        $(this).css("paddingTop","0px");
+      })
+      .mouseleave(
+      function(){
+        $(this).css("paddingTop","10px");
+      }
+    );
+	$('#table-btn2 td p')
+      .mouseenter(
+      function(){
+        $(this).css("paddingTop","0px");
+      })
+      .mouseleave(
+      function(){
+        $(this).css("paddingTop","10px");
+      }
+    );
+   
+   
+   window.onresize = function(event){
+    setMenuSize();
+   }
+   
+   doughnutLocation();
+   
+   setNode();
+   
+   
+   
+});
+
+function docDownload(){
+	var d = document.getElementById("doc_iframe");
+	d.style.display="block";
+	d.href = "files/履歴書・職務経歴書_20200911.pdf";
+	d.click();
+}
+
+function hrefClick(a){ //to select the tab id
+  	hrefSelector=a;
+	if(a=="one"){
+		doughnutLocation();
+	}
+	if(a=="two"){
+		radarSkill();
+	}
+};
+function ifReadyThenReset(){
+    columnReadyCounter++;
+  	if(columnReadyCounter==3){
+  		$(".col").not(".current .col").css("top",window.innerHeight-50+"px");
+  		columnReadyCounter = 0;
+  	}
+}
+
+function linkToEducation(){
+	var d = document.getElementById("doc_iframe");
+	d.style.display="block";
+	d.href = "files/Education.pdf";
+	d.click();
+}
+
+function linkToEnglishLevel(){
+	var d = document.getElementById("doc_iframe");
+	d.style.display="block";
+	d.href = "files/TOEIC.jpg";
+	d.click();
+}
+
+function linkToFaceBook(){
+	/*
+	var d = document.getElementById("doc_iframe");
+	d.style.display="block";
+	d.href = "https://en.wikipedia.org/wiki/Malaysia";
+	d.click();
+	*/
+	alert("Under Construction");
+}
+
+function linkToSaveDriving(){
+	var d = document.getElementById("doc_iframe");
+	d.style.display="block";
+	d.href = "files/DrivingResult.jpg";
+	d.click();
+}
+
+function openall(){
+	
+	var obj = document.getElementById("toggle");
+　　　　if(obj.value=="全て展開"){
+	   obj.value="全て縮小"; 
+
+	  $(".active").show();
+	  t=0;
+	  document.getElementById("caret-basic").classList.toggle("caret-basic-down");
+
+	  $(".active2").show();
+	  t2=0;	  
+	  document.getElementById("caret2").classList.toggle("caret-down2");
+
+	}else{
+		obj.value="全て展開";
+		$(".active").hide();
+		  t=1;
+		$(".active2").hide();
+		  t2=1;  
+	}
+
+}
+
+function doughnutLocation(){
+	
+	var config = {
+			type: 'doughnut',
+			data: {
+				datasets: [{
+					data: [
+						21,
+						2,
+						5,
+						2,
+						13,
+					],
+					backgroundColor: [
+						window.chartColors.grey,
+						window.chartColors.blue,
+						window.chartColors.green,
+						window.chartColors.yellow,
+						window.chartColors.red,
+					],
+					label: 'Dataset 1'
+				}],
+				labels: [
+					'ﾏﾚｰｼｱ',
+					'ｲｷﾞﾘｽ',
+					'ｼﾝｶﾞﾎﾟｰﾙ',
+					'ﾀｲ',
+					'日本'
+				]
+			},
+			options: {
+				responsive: true,
+				legend: {
+					display:false,
+					position: 'bottom',
+				},
+				title: {
+					display: false,
+					text: '在住年数'
+				},
+				animation: {
+					animateScale: true,
+					animateRotate: true
+				},
+				plugins: { ////by adding the plugin chartjs-plugin-labels.js
+				  labels: {
+					render: function (args) {
+					  return args.label +" "+ args.value+"年";
+					},
+					arc: false,
+					fontSize: 12,
+					fontColor: 'blue',
+					position: 'outside'
+				  }
+				}
+
+			}
+		};
+
+	var ctx = document.getElementById('locationChart').getContext('2d');
+
+	var myDoughnutChart = new Chart(ctx, config);
+
+}
+
+function radarSkill(){
+	
+	var marksData = {
+	  labels: ["Listening", "Speaking", "Reading", "Writing", "Typing"],
+	  datasets: [{
+		label: "英語 (日常会話レベル TOIEC 820)",
+		backgroundColor: "transparent",
+		borderColor: "rgba(200,0,0,0.6)",
+		fill: false,
+		radius: 6,
+		pointRadius: 6,
+		pointBorderWidth: 3,
+		pointBackgroundColor: "orange",
+		pointBorderColor: "rgba(200,0,0,0.6)",
+		pointHoverRadius: 10,
+		data: [70, 60, 70, 70, 70]
+	  }, {
+		label: "日本語 (日常会話レベル N2)",
+		backgroundColor: "transparent",
+		borderColor: "rgba(0,0,200,0.6)",
+		fill: false,
+		radius: 6,
+		pointRadius: 6,
+		pointBorderWidth: 3,
+		pointBackgroundColor: "cornflowerblue",
+		pointBorderColor: "rgba(0,0,200,0.6)",
+		pointHoverRadius: 10,
+		data: [70, 60, 60, 30, 60]
+	  }, {
+		label: "中国語 (日常会話レベル)",
+		backgroundColor: "transparent",
+		borderColor: "Green",
+		fill: false,
+		radius: 6,
+		pointRadius: 6,
+		pointBorderWidth: 3,
+		pointBackgroundColor: "lightgreen",
+		pointBorderColor: "Green",
+		pointHoverRadius: 10,
+		data: [90, 80, 70, 30, 30]
+	  }, {
+		label: "マレーシア語 (日常会話レベル)",
+		backgroundColor: "transparent",
+		borderColor: "Black",
+		fill: false,
+		radius: 6,
+		pointRadius: 6,
+		pointBorderWidth: 3,
+		pointBackgroundColor: "White",
+		pointBorderColor: "Black",
+		pointHoverRadius: 10,
+		data: [70, 40, 50, 30, 30]
+	  }]
+	};
+	 
+	var chartOptions = {
+	  scale: {
+		ticks: {
+		  beginAtZero: true,
+		  min: 0,
+		  max: 100,
+		  stepSize: 10
+		},
+		pointLabels: {
+		  fontSize: 15
+		}
+	  },
+	  legend: {
+		position: 'left',
+		"labels": {
+                "fontSize": 13,
+            }
+		
+	  },
+	  //responsive: false
+	};
+	var radarChart = new Chart(skillChart, {
+		type: 'radar',
+		data: marksData,
+		options: chartOptions
+	});
+
+}
+
+
+function setMenuSize(){
+	try{
+		
+		$(".box-wrapper-menu").css({
+		"width":window.innerWidth-300+"px",
+		"height":window.innerHeight-80+"px"
+	   });
+	   $("#table-skill").css({
+			"width":750+"px"
+	   });
+	   $(".content-box-menu,.col-one-menu col").css({
+			"width":window.innerWidth-310+"px",
+			"height":window.innerHeight-90+"px",
+			"overflow":"auto"
+	   });
+		
+	}catch(err){
+	}
+}
+
+var level = new Array();
+var level_2 = new Array();
+var level_3 = new Array();
+var level_4 = new Array();
+var level_5 = new Array();
+var d2 = new Array();
+var d3 = new Array();
+var d4 = new Array();
+var d5 = new Array();
+var d6 = new Array();
+var datascource = new Array();
+var senior = "20";//ceo id
+var visibleLevel = 3;
+var oc;
+function setNode(){
+	
+	datasource = {
+              'id': [1,2,3],
+              'name': ["bruce","kslim","LIM"],
+              'title': ["Mr","Dr","san"],
+              'levels':["Manager","Enginner","CEO"],
+              'tel': ["","",""],
+              'email': ["","",""],
+              'english': ["","",""],
+              'ip': ["","",""],
+              'job': ["","",""],
+              'stage': ["","",""],
+              'senior': ["","",""],
+              'department':["","",""],
+              'departmentParent':["","",""],
+              'children': ["","",""],
+              'staffid':["","",""]
+            };
+
+	
+	oc = $('#chart-container').orgchart({
+      'zoom': true,
+      'pan': true,
+      'data' : datasource,
+      'visibleLevel': 1,
+      'nodeContent': 'title',
+      'nodeID': 'id',
+      'createNode': function($node, data) {
+
+        var secondMenuIcon = $('<i>', {
+          'class': 'fa fa-info-circle second-menu-icon',
+          click: function() {
+  					if(document.getElementById("edit_data").checked==false){
+            	$(this).siblings('.second-menu').toggle();
+  					}
+          },
+          mouseover:function(){
+
+          },
+  				mouseleave:function(){
+  					$(this).siblings('.second-menu').hide();
+  				}
+        });
+
+
+
+        var level= '<div class="levels" style="display:none">'+data.levels+'</div>';
+        var department= '<div class="department" style="display:none">'+data.department+'</div>';
+        var departmentParent= '<div class="departmentParent" style="display:none">'+data.departmentParent+'</div>';
+        var id = '<div class="id" style="display:none">'+data.id+'</div>';
+  			var tel = '<div class="tel" style="display:none">'+data.tel+'</div>';
+  			var email = '<div class="email" style="display:none">'+data.email+'</div>';
+  			var english = '<div class="english" style="display:none">'+data.english+'</div>';
+  			var ip = '<div class="ip" style="display:none">'+data.ip+'</div>';
+        var job ='<div class="job" style="display:none">'+data.job+'</div>';
+        var stage ='<div class="stage" style="display:none">'+data.stage+'</div>';
+        var senior ='<div class="senior" style="display:none">'+data.senior+'</div>';
+        var staffid ='<div class="staffid" style="display:none">'+data.staffid+'</div>';
+
+        var secondMenu = '<div class="second-menu"><img id="img2_'+data.id+'" class="avatar" src="' + dir_pims+photo_folder2+data.name+'.jpg"></div>';
+
+        $node[0].style.cursor="pointer";
+  			$node[0].style.marginTop = "-3px";
+
+        if(String(data.title).indexOf("object")==-1 ){
+          $node
+          .append(secondMenuIcon)
+          .append(secondMenu)
+          .append(id)
+          .append(department)
+          .append(level)
+          .append(tel)
+          .append(email)
+          .append(english)
+          .append(ip)
+          .append(job)
+          .append(stage)
+          .append(senior)
+          .append(staffid)
+          .append(departmentParent);
+        }else{
+          $node[0].innerText = String($node[0].innerText).split("object").slice(0,1);
+          $node[0].style.border = "1px solid black";
+          $node[0].style.height = "30px";
+  				$node[0].style.width = "120px";
+  				$node[0].style.marginTop = "1px";
+  				$node[0].style.borderRadius = "10px";
+  				$node[0].style.fontWeight="bold";
+  				$node[0].style.boxShadow="0 0 10px rgba(0,0,0,.5)";
+  				var name = '<div class="title" style="display:none">'+$node[0].innerText+'</div>';
+  				var department = '<div class="department" style="display:none">object</div>';
+          var departmentParent = '<div class="departmentParent" style="display:none">'+data.departmentParent+'</div>';
+          $node.append(id).append(name).append(department).append(departmentParent);
+
+  				//$node.append(id);
+        }
+
+      }
+    });
+}
