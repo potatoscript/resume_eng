@@ -169,9 +169,32 @@
 			<td style='vertical-align:top;'>
 				<div id="menu_tabs">
 					<ul class="tabs-menu" >
-						<li><a onclick="hrefClick('one')">履歴書・職務経歴書</a></li>
-						<li><a onclick="hrefClick('two')">スキルシート</a></li>
-						<li><a onclick="hrefClick('three')">製品</a></li>
+						<li><a onclick="hrefClick('one')">
+							<table>
+								<tr>
+									<td style="padding-right:15px;padding-left:5px"><img style="height:25px;width:25px" src="images/particular.png"></td>
+									<td style="vertical-align:top;">履歴書・職務経歴</td>
+								</tr>
+							</table>		
+							</a>
+						</li>
+						<li><a onclick="hrefClick('two')">
+							<table>
+								<tr>
+									<td style="padding-right:15px;padding-left:5px"><img style="height:25px;width:25px" src="images/skill.png"></td>
+									<td style="vertical-align:top;">スキルシート</td>
+								</tr>
+							</table>
+							</a>
+						</li>
+						<li><a onclick="hrefClick('three')">
+							<table>
+								<tr>
+									<td style="padding-right:15px;padding-left:5px"><img style="height:25px;width:25px" src="images/product.png"></td>
+									<td style="vertical-align:top;">製品</td>
+								</tr>
+							</table>
+							</a></li>
 						<!--<li><a onclick="hrefClick('four')">Ｑ＆Ａ</a></li>-->
 					</ul>
 					<div class="box-wrapper-menu">
@@ -535,18 +558,30 @@
 									</tr>
 									<tr><td colspan=12 style="height:1px;border:0px solid black"></td></tr>
 									<tr>
-										<th rowspan=2>FrameWork / Library</th>
+										<th rowspan=3>FrameWork / Library</th>
 										<td>Angular</td>
 										<td><p>△</p></td>
 										<td>React</td>
 										<td><p>△</p></td>
 										<td>Potato</td>
 										<td><p>◎</p></td>
-										<td>ChartJS</td>
+										<td>JQuery.js</td>
 										<td><p>◎</p></td>
-										<td>JQuery</td>
-										<td><p>◎</p></td>
+										<td></td>
+										<td><p></p></td>
 									</tr>	
+									<tr>
+										<td>Chart.js</td>
+										<td><p>◎</p></td>
+										<td>FusionChart.js</td>
+										<td><p>〇</p></td>
+										<td>Enchant.js</td>
+										<td><p>〇</p></td>
+										<td></td>
+										<td><p></p></td>
+										<td></td>
+										<td></td>
+									</tr>
 									<tr>
 										<td>Laravel</td>
 										<td><p>-</p></td>
@@ -703,13 +738,12 @@
 															</th>
 															<td>
 																<p>□ 言語：JavaScript,PHP</p>
-																<p>□ オブジェクト表記構文: XML</p>
-																<p>□ データ登録方法: 有線バーコードリーダー</p>
-																<p>□ オブジェクト表記構文: JSON(JavaScript Object Notation)</p>
-																<p>□ ＡＪＡＸ(Asynchronous JavaScript and XML)を追加する</p>
-																<p>□ タッチスクリーンキーパッドを追加する</p>
-																<p>□ JQueryを使用する</p>
-																<p>□ グラフﾗｲﾌﾞﾗﾘ：Chart.js</p>
+																<p>□ バーコードリーダー</p>
+																<p>□ JSON(JavaScript Object Notation)</p>
+																<p>□ ＡＪＡＸ(Asynchronous JavaScript and XML)</p>
+																<p>□ タッチスクリーンキーパッド</p>
+																<p>□ JQuery.js</p>
+																<p>□ Chart.js</p>
 															</td>
 														</tr>
 													</table>	
@@ -736,7 +770,7 @@
 													<table class="table-s">
 														<tr>
 															<th>
-																please try to drag and drop me
+																<I style="font-weight:normal;margin-left:-95px">please try to drag and drop me</I>
 																<o-table-mytable
 																dragdrop='
 																	  var t="drag item ( "+potato.dragVal+" ) from ( "+ 
@@ -746,7 +780,7 @@
 																	width=300px
 																	height=300px
 																	fontSizeTH=15px
-																	fontSizeTD=18px
+																	fontSizeTD=15px
 																	fontColorTD=red
 																	header="品名,3月,4月,5月"
 																	data='[
