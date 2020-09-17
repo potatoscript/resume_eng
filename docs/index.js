@@ -289,7 +289,7 @@ $( document ).ready(function() {
 function docDownload(){
 	var d = document.getElementById("doc_iframe");
 	d.style.display="block";
-	d.href = "files/履歴書・職務経歴書_20200911.pdf";
+	d.href = "files/履歴書・職務経歴書.pdf";
 	d.click();
 }
 
