@@ -109,7 +109,7 @@ $( document ).ready(function() {
 
 
     $(".tabs-menu li:first-child a, .content-box-menu:first").addClass("current");
-    $(".box-wrapper-menu .current .col").css("top",100);
+    $(".box-wrapper-menu .current .col").css("top",10+"px");
 	$('.col-one-menu').css({
       'top':-3000+'px'
     });
@@ -118,13 +118,18 @@ $( document ).ready(function() {
 	
     $("#menu_tabs").delegate(".tabs-menu a","click",function(){
       el = $(this);
+	  
       if((!el.hasClass("current"))&&($(":animated").length==0)){
+		  
+		//to reset all page to 0 position to prevent the tabs-menu error on hiding the page while the page was scolled down
+		$(".content-box-menu").animate({ scrollTop: 0 }, "slow");
+		  
         allTabs.removeClass("current");
         el.addClass("current");
         speedOne=Math.floor(Math.random()*1000)+500;
         colOne=$(".box-wrapper-menu .current .col-one-menu");
         colOne.animate({
-          "top":-3000
+          "top":-3000+"px"
         },speedOne);
 
         allContentBoxes.removeClass("current");
@@ -479,7 +484,7 @@ function radarSkill(){
 		data: [70, 40, 50, 30, 30]
 	  }]
 	};
-	 
+	 /*
 	var chartOptions = {
 	  scale: {
 		ticks: {
@@ -501,6 +506,25 @@ function radarSkill(){
 	  },
 	  //responsive: false
 	};
+	*/
+	var chartOptions = {
+	  scale: {
+		ticks: {
+		  beginAtZero: true,
+		  min: 0,
+		  max: 100,
+		  stepSize: 10
+		},
+		pointLabels: {
+		  fontSize: 15
+		}
+	  },
+	  legend: {
+		position: 'left'
+	  },
+	  responsive: true
+	};
+	
 	var radarChart = new Chart(skillChart, {
 		type: 'radar',
 		data: marksData,

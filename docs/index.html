@@ -172,7 +172,7 @@
 						<li><a onclick="hrefClick('one')">履歴書・職務経歴書</a></li>
 						<li><a onclick="hrefClick('two')">スキルシート</a></li>
 						<li><a onclick="hrefClick('three')">製品</a></li>
-						<li><a onclick="hrefClick('four')">Ｑ＆Ａ</a></li>
+						<!--<li><a onclick="hrefClick('four')">Ｑ＆Ａ</a></li>-->
 					</ul>
 					<div class="box-wrapper-menu">
 						<div id="one" class="content-box-menu">
@@ -391,6 +391,7 @@
 						</div>
 						<div id="two" class="content-box-menu">
 							<div class="col-one-menu col">
+
 								技術経験<span style="font-size:14px">　　　　　　　<font style="font-size:17px;color:red">◎</font>：実務経験多い ／ <font style="font-size:20px;color:red">○</font>：実務経験有り ／ <font style="font-size:17px;color:red">△</font>：知識有り</span>
 							    <table id="table-skill" class="table-skill">
 									<tr>
@@ -587,12 +588,11 @@
 								</table>	
 								<br>
 								<canvas id="skillChart" width="650px" height="300px"></canvas>
+								
 							</div>
 						</div>
 						<div id="three" class="content-box-menu">
 							<div class="col-one-menu col">
-
-								<span class="span-s1">１．工場情報管理システム</span><br>
 								<div id="div_pims">
 									<table>
 										<tr>
@@ -613,7 +613,7 @@
 									<span class="hint-radius"></span>
 									<span class="hint-dot"></span>
 									<div class="hint-content do--split-children">
-									  <p style="color:red;">Production 製造</p>
+									  <p style="color:red;margin-left:-80px;">Plant 工場</p>
 									</div>
 								  </div>
 								</div>
@@ -647,49 +647,27 @@
 									</div>
 								  </div>
 								</div>
-								
-								<table style="margin-left:10px">
+								<table>
 									<tr>
+										<td id="menu" style="width:150px;vertical-align:top">
+											<div id="menu-1" class="menu menu-current">日報情報</div>
+											<div id="menu-2" class="menu" style="margin-top:60px">品質情報</div>
+											<div id="menu-3" class="menu" style="margin-top:120px">生産進捗</div>
+											<div id="menu-4" class="menu" style="margin-top:180px">棚卸情報</div>
+											<div id="menu-5" class="menu" style="margin-top:240px">日常点検</div>
+											<div id="menu-6" class="menu" style="margin-top:300px">治具情報</div>
+											<div id="menu-7" class="menu" style="margin-top:360px">組織管理</div>
+										</td>
 										<td>
-											<span class="span-s2">１．１　日報情報管理システム。</span>
-											<div class="div-s">
-												■ 第一世代：２０１０～２０１１年<br>
-												<table class="table-s">
-													<tr>
-														<th>
-															<img class="img-s" src="images/pims-ver1.png">
-														</th>
-														<td>
-															<p>□ 言語：JavaScript,PHP</p>
-															<p>□ オブジェクト表記構文: XML</p>
-															<p>□ データ登録方法: 有線バーコードリーダー</p>
-														</td>
-													</tr>
-												</table>	
-											</div>
-											<div class="div-s">
-												■ 第二世代：２０１２～２０１３年<br>
-												<table class="table-s">
-													<tr>
-														<th>
-															<img class="img-s" src="../../homepage/OKeypad.gif">
-														</th>
-														<td>
-															<p>□ 言語：JavaScript,PHP</p>
-															<p>□ オブジェクト表記構文: JSON(JavaScript Object Notation)</p>
-															<p>□ ＡＪＡＸ(Asynchronous JavaScript and XML)を追加する</p>
-															<p>□ タッチスクリーンキーパッドを追加する</p>
-															<p>□ JQuery, FusionChart.jsを使用する</p>
-														</td>
-													</tr>
-												</table>
-											</div>
-											<div class="div-s">
-												■ 第三世代：２０１４～２０１５年<br>
-												<table class="table-s">
-													<tr>
-														<th>
-															 <potato-chart-mybar
+											<div id="div-menu-1" class="menu-show">
+												<span class="span-s2">■　日報情報管理システム。</span>
+												<div class="div-s">
+													<table class="table-s" style="margin-left:-50px;">
+														<tr>
+															<th>
+																<img class="img-s" src="images/pims-ver1.png"><br>
+																<img class="img-s" src="../../homepage/OKeypad.gif"><br>
+																 <potato-chart-mybar
 																chartType=Bar
 																stacked=true
 																data='[
@@ -722,46 +700,51 @@
 
 																	click='return alert(potato.chartYvalue)'
 																  ></potato-chart-mybar>
-														</th>
-														<td>
-															<p>□ FusionChart.js→Chart.jsに変更する</p>
-														</td>
-													</tr>
-												</table>
+															</th>
+															<td>
+																<p>□ 言語：JavaScript,PHP</p>
+																<p>□ オブジェクト表記構文: XML</p>
+																<p>□ データ登録方法: 有線バーコードリーダー</p>
+																<p>□ オブジェクト表記構文: JSON(JavaScript Object Notation)</p>
+																<p>□ ＡＪＡＸ(Asynchronous JavaScript and XML)を追加する</p>
+																<p>□ タッチスクリーンキーパッドを追加する</p>
+																<p>□ JQueryを使用する</p>
+																<p>□ グラフﾗｲﾌﾞﾗﾘ：Chart.js</p>
+															</td>
+														</tr>
+													</table>	
+												</div>
 											</div>
-											<div class="div-s">
-												■ 第四世代：２０１５～２０１７年<br>
-												<table class="table-s">
-													<tr>
-														<th>
-															<img class="img-s" style="width:400px" src="images/chart-c.png">
-														</th>
-														<td>
-															<p>□ JavaScript→C#に変更する。</p>
-														</td>
-													</tr>
-												</table>
+											<div id="div-menu-2" class="menu-hide">
+												<span class="span-s2">■　品質管理情報管理システム。</span>
+												<div class="div-s">
+													<table class="table-s">
+														<tr>
+															<th>
+																<img class="img-s" style="width:400px" src="images/chart-c.png">
+															</th>
+															<td>
+																<p>□ 言語：C#</p>
+															</td>
+														</tr>
+													</table>
+												</div>
 											</div>
-											
-										</td>
-									</tr>
-									<tr><td><br><br></td></tr>
-									<tr>
-										<td>
-											<span class="span-s2">１．２　製造工程進捗表管理システム。</span>
-											<div class="div-s">
-												■ 第一世代：２０１５～２０１７年<br>
-												<table class="table-s">
-													<tr>
-														<th>
-															<o-table-mytable
+											<div id="div-menu-3" class="menu-hide">
+												<span class="span-s2">■　品質管理情報管理システム。</span>
+												<div class="div-s">
+													<table class="table-s">
+														<tr>
+															<th>
+																please try to drag and drop me
+																<o-table-mytable
 																dragdrop='
 																	  var t="drag item ( "+potato.dragVal+" ) from ( "+ 
 																	  potato.clickRow +" , "+potato.clickCol+" ) to ( "+potato.dropRow+" , "+potato.dropCol+" ) ";
 																	  document.getElementById("mytableResult").innerHTML=t;
 																	  '		 
 																	width=300px
-																	height=200px
+																	height=300px
 																	fontSizeTH=15px
 																	fontSizeTD=18px
 																	fontColorTD=red
@@ -787,92 +770,90 @@
 																	  };
 																	'
 																  /></o-table-mytable>
-																  please try to drag and drop me
+																  
 																<div id="mytableResult"></div>
-														</th>
-														<td>
-															<p>□ 言語：JavaScript,PHP</p>
-															<p>□ AJAX、JSON、JQuery</p>
-															<p>□ ドラッグアンドドロップ機能付き</p>
-														</td>
-													</tr>
-												</table>	
+															</th>
+															<td>
+																<p>□ 言語：JavaScript,PHP</p>
+																<p>□ AJAX、JSON、JQuery</p>
+																<p>□ ドラッグアンドドロップ機能付き</p>
+															</td>
+														</tr>
+													</table>
+												</div>
 											</div>
-										</td>
-									</tr>	
-									<tr><td><br><br></td></tr>
-									<tr>
-										<td>
-											<span class="span-s2">１．３　工程仕様管理システム。</span>
-											<div class="div-s">
-												■ 第一世代：２０１４～２０１６年<br>
+											<div id="div-menu-4" class="menu-hide">
+												<span class="span-s2">■　棚卸管理システム。</span>
+												<div class="div-s">
+													<table class="table-s">
+														<tr>
+															<th>
+																<img class="img-s" style="width:500px" src="images/system1-4.png">
+															</th>
+															<td>
+																<p>□ 言語：C# WinForm</p>
+															</td>
+														</tr>
+													</table>
+												</div>
+											</div>
+											<div id="div-menu-5" class="menu-hide">
+												<span class="span-s2">■　日常点検システム。</span>
+												<div class="div-s">
+													<table class="table-s">
+														<tr>
+															<th>
+																<img class="img-s" style="width:500px" src="images/system1-5.png">
+															</th>
+															<td>
+																<p>□ 言語：JavaScript with Enchant.js (animation)</p>
+															</td>
+														</tr>
+													</table>
+												</div>
+											</div>
+											<div id="div-menu-6" class="menu-hide">
+												<span class="span-s2">■　治工具情報管理システム。</span>
+												<div class="div-s">
+													<table class="table-s">
+														<tr>
+															<th>
+																
+															</th>
+															<td>
+																<p>□ 言語：Java</p>
+															</td>
+														</tr>
+													</table>
+												</div>
+											</div>
+											<div id="div-menu-7" class="menu-hide">
+												<span class="span-s2">■　組織図管理システム。</span>
+												<div class="div-s">
+													<table class="table-s">
+														<tr>
+															<th>
+																
+															</th>
+															<td>
+																<p>□ 言語：JavaScript, PHP </p>
+															</td>
+														</tr>
+													</table>
+												</div>
 											</div>
 										</td>
 									</tr>
-									<tr><td><br><br></td></tr>
-									<tr>
-										<td>
-											<span class="span-s2">１．４　棚卸管理システム。</span>
-											<div class="div-s">
-												■ 第一世代：２０１７～２０１９年　　□ 言語：C# WinForm<br>
-												<table class="table-s">
-													<tr>
-														<th>
-															<img class="img-s" style="width:500px" src="images/system1-4.png">
-														</th>
-														<td>
-															
-														</td>
-													</tr>
-												</table>
-											</div>
-										</td>
-									</tr>
-									<tr><td><br><br></td></tr>
-									<tr>
-										<td>
-											<span class="span-s2">１．５　日常点検システム。</span>
-											<div class="div-s">
-												■ 第一世代：２０１４～２０１５年　　□ 言語：JavaScript with Enchant.js (animation)<br>
-												<table class="table-s">
-													<tr>
-														<th>
-															<img class="img-s" style="width:500px" src="images/system1-5.png">
-														</th>
-														<td>
-															
-														</td>
-													</tr>
-												</table>
-											</div>
-										</td>
-									</tr>
-									<tr><td><br><br></td></tr>
-									<tr>
-										<td>
-											<span class="span-s2">１．６　品質保全システム。</span>
-											<div class="div-s">
-												■ 第一世代：２０１８～２０２０年<br>
-											</div>
-										</td>
-									</tr>
-								</table>			
-								
-								<br><br>
-								
-								
-								<span class="span-s1">２．組織図管理システム</span><br>
-								
-	
+								</table>				
 
-
-								
 							</div>
 						</div>
 						<div id="four" class="content-box-menu">
 							<div class="col-one-menu col" style="padding-left:0px;font-size:13px">
+								<!--
 								<table>
 									<tr>
+									
 										<td id="menu" style="width:150px;vertical-align:top">
 											<div id="menu-1" class="menu menu-current">転職</div>
 											<div id="menu-2" class="menu" style="margin-top:60px">技術</div>
@@ -882,6 +863,7 @@
 											<div id="menu-c" class="menu" style="margin-top:300px">C#</div>
 											<div id="menu-java" class="menu" style="margin-top:360px">Java</div>
 										</td>
+									
 										<td>
 											<div id="div-menu-1" class="menu-show">
 												<p>
@@ -1063,7 +1045,7 @@ if(_e!=-1){
 										</td>
 									</tr>
 								</table>	
-								
+								-->	
 							</div>
 						</div>	
 					</div>
