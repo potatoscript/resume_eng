@@ -280,7 +280,7 @@ $( document ).ready(function() {
    
    doughnutLocation();
    
-   
+   setOrgChartNode();
    
    
    
@@ -554,131 +554,74 @@ function setMenuSize(){
 	}
 }
 
-var level = new Array();
-var level_2 = new Array();
-var level_3 = new Array();
-var level_4 = new Array();
-var level_5 = new Array();
-var d2 = new Array();
-var d3 = new Array();
-var d4 = new Array();
-var d5 = new Array();
-var d6 = new Array();
-var datascource = new Array();
-var senior = "20";//ceo id
-var visibleLevel = 3;
-var oc;
-$("#chart-container").html("");///got to clear the container to refresh the screen for the new data entry
 
-      level = [];
-      level_2 = [];
-      level_3 = [];
-      level_4 = [];
-      d2 = [];
-      d3 = [];
-      d4 = [];
-      d5 = [];
-      datascource = [];
-setNode();
-function setNode(){
+	  
+
+function setOrgChartNode(){
 		
-	datasource = {
-              'id': [1,2,3],
-              'name': ["bruce","kslim","LIM"],
-              'title': ["Mr","Dr","san"],
-              'levels':["Manager","Enginner","CEO"],
-              'tel': ["","",""],
-              'email': ["","",""],
-              'english': ["","",""],
-              'ip': ["","",""],
-              'job': ["","",""],
-              'stage': ["","",""],
-              'senior': ["","",""],
-              'department':["","",""],
-              'departmentParent':["","",""],
-              'children': ["","",""],
-              'staffid':["","",""]
-            };
+	var datascource = {
+      'name': '事業部長',
+	  'title':'<img style="width:60px;height:80px" src="images/10.jpg">',
+      'relationship': '001',
+      'children': [
+        { 'name': '製造部長','title':'<img style="width:60px;height:80px" src="images/2.jpg">', 'relationship': '110' },
+        { 'name': '業務部長','title':'<img style="width:60px;height:80px" src="images/3.jpg">', 'relationship': '110' },
+        { 'name': '品管部長','title':'<img style="width:60px;height:80px" src="images/6.jpg">', 'relationship': '110',
+			'children': [
 
-	var oc = $('#chart-container').orgchart({
-      'zoom': true,
-      'pan': true,
-      'data' : datasource,
-      'visibleLevel': 1,
-      'nodeContent': 'title',
-      'nodeID': 'id',
-      'createNode': function() {
-		
+        {'name':'品管一課','title':'<img style="width:60px;height:80px" src="images/5.jpg">','nodeContentPro':'senior engineer','relationship':'111' },
 
-        var secondMenuIcon = $('<i>', {
-          'class': 'fa fa-info-circle second-menu-icon',
-          click: function() {
-  					if(document.getElementById("edit_data").checked==false){
-            	$(this).siblings('.second-menu').toggle();
-  					}
-          },
-          mouseover:function(){
+        {'name':'品管二課','title':'<img style="width:60px;height:80px" src="images/8.jpg">','nodeContentPro':'senior engineer','relationship':'111' }
 
-          },
-  				mouseleave:function(){
-  					$(this).siblings('.second-menu').hide();
-  				}
+      ]
+
+		}
+      ]
+    };
+
+	$('#chart-container').orgchart({
+      'data' : datascource,
+      'exportButton': true,
+	  'nodeContent':'title',
+      'exportFilename': 'SportsChart',
+      'parentNodeSymbol': 'fa-th-large',
+      'createNode': function($node, data) {
+        $node.on('click', function(event) {
+          if (!$(event.target).is('.edge')) {
+            $('#selected-node').val(data.name).data('node', $node);
+          }
         });
-
-
-
-        var level= '<div class="levels" style="display:none">'+data.levels+'</div>';
-        var department= '<div class="department" style="display:none">'+data.department+'</div>';
-        var departmentParent= '<div class="departmentParent" style="display:none">'+data.departmentParent+'</div>';
-        var id = '<div class="id" style="display:none">'+data.id+'</div>';
-  			var tel = '<div class="tel" style="display:none">'+data.tel+'</div>';
-  			var email = '<div class="email" style="display:none">'+data.email+'</div>';
-  			var english = '<div class="english" style="display:none">'+data.english+'</div>';
-  			var ip = '<div class="ip" style="display:none">'+data.ip+'</div>';
-        var job ='<div class="job" style="display:none">'+data.job+'</div>';
-        var stage ='<div class="stage" style="display:none">'+data.stage+'</div>';
-        var senior ='<div class="senior" style="display:none">'+data.senior+'</div>';
-        var staffid ='<div class="staffid" style="display:none">'+data.staffid+'</div>';
-
-        var secondMenu = '<div class="second-menu"><img id="img2_'+data.id+'" class="avatar" src="' + dir_pims+photo_folder2+data.name+'.jpg"></div>';
-
-        $node[0].style.cursor="pointer";
-  			$node[0].style.marginTop = "-3px";
-
-
-        if(String(data.title).indexOf("object")==-1 ){
-          $node
-          .append(secondMenuIcon)
-          .append(secondMenu)
-          .append(id)
-          .append(department)
-          .append(level)
-          .append(tel)
-          .append(email)
-          .append(english)
-          .append(ip)
-          .append(job)
-          .append(stage)
-          .append(senior)
-          .append(staffid)
-          .append(departmentParent);
-        }else{
-          $node[0].innerText = String($node[0].innerText).split("object").slice(0,1);
-          $node[0].style.border = "1px solid black";
-          $node[0].style.height = "30px";
-  				$node[0].style.width = "120px";
-  				$node[0].style.marginTop = "1px";
-  				$node[0].style.borderRadius = "10px";
-  				$node[0].style.fontWeight="bold";
-  				$node[0].style.boxShadow="0 0 10px rgba(0,0,0,.5)";
-  				var name = '<div class="title" style="display:none">'+$node[0].innerText+'</div>';
-  				var department = '<div class="department" style="display:none">object</div>';
-          var departmentParent = '<div class="departmentParent" style="display:none">'+data.departmentParent+'</div>';
-          $node.append(id).append(name).append(department).append(departmentParent);
-
-  				//$node.append(id);
-        }
-
+      }
+    })
+    .on('click', '.orgchart', function(event) {
+      if (!$(event.target).closest('.node').length) {
+        $('#selected-node').val('');
       }
     });
+
+    $('input[name="chart-state"]').on('click', function() {
+      $('#edit-panel, .orgchart').toggleClass('view-state');
+      if ($(this).val() === 'edit') {
+        $('.orgchart').find('tr').removeClass('hidden')
+          .find('td').removeClass('hidden')
+          .find('.node').removeClass('slide-up slide-down slide-right slide-left');
+      } else {
+        $('#btn-reset').trigger('click');
+      }
+    });
+
+    $('input[name="node-type"]').on('click', function() {
+      var $this = $(this);
+      if ($this.val() === 'parent') {
+        $('#edit-panel').addClass('edit-parent-node');
+        $('#new-nodelist').children(':gt(0)').remove();
+      } else {
+        $('#edit-panel').removeClass('edit-parent-node');
+      }
+    });
+	
+	
+	
+
+	
 }
