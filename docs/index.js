@@ -280,7 +280,7 @@ $( document ).ready(function() {
    
    doughnutLocation();
    
-   setNode();
+   
    
    
    
@@ -568,8 +568,20 @@ var datascource = new Array();
 var senior = "20";//ceo id
 var visibleLevel = 3;
 var oc;
+$("#chart-container").html("");///got to clear the container to refresh the screen for the new data entry
+
+      level = [];
+      level_2 = [];
+      level_3 = [];
+      level_4 = [];
+      d2 = [];
+      d3 = [];
+      d4 = [];
+      d5 = [];
+      datascource = [];
+setNode();
 function setNode(){
-	
+		
 	datasource = {
               'id': [1,2,3],
               'name': ["bruce","kslim","LIM"],
@@ -588,15 +600,15 @@ function setNode(){
               'staffid':["","",""]
             };
 
-	
-	oc = $('#chart-container').orgchart({
+	var oc = $('#chart-container').orgchart({
       'zoom': true,
       'pan': true,
       'data' : datasource,
       'visibleLevel': 1,
       'nodeContent': 'title',
       'nodeID': 'id',
-      'createNode': function($node, data) {
+      'createNode': function() {
+		
 
         var secondMenuIcon = $('<i>', {
           'class': 'fa fa-info-circle second-menu-icon',
@@ -632,6 +644,7 @@ function setNode(){
 
         $node[0].style.cursor="pointer";
   			$node[0].style.marginTop = "-3px";
+
 
         if(String(data.title).indexOf("object")==-1 ){
           $node
