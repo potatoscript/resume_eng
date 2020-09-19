@@ -565,7 +565,7 @@ function setOrgChartNode(){
       'relationship': '001',
       'children': [
         { 'name': '製造部長','title':'<img style="width:60px;height:80px" src="images/2.jpg">', 'relationship': '110' },
-        
+        { 'name': '業務部長','title':'<img style="width:60px;height:80px" src="images/3.jpg">', 'relationship': '110' },
         { 'name': '品管部長','title':'<img style="width:60px;height:80px" src="images/6.jpg">', 'relationship': '110',
 			'children': [
 
@@ -575,16 +575,15 @@ function setOrgChartNode(){
 
       ]
 
-		},
-{ 'name': '業務部長','title':'<img style="width:60px;height:80px" src="images/3.jpg">', 'relationship': '110' }
+		}
       ]
     };
 
 	$('#chart-container').orgchart({
       'data' : datascource,
-     
+      'exportButton': false,
 	  'nodeContent':'title',
-     
+      'exportFilename': 'SportsChart',
       'parentNodeSymbol': 'fa-th-large',
       'createNode': function($node, data) {
         $node.on('click', function(event) {
