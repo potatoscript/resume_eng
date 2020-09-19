@@ -215,7 +215,7 @@
 .orgchart .node .title {
   box-sizing: border-box;
   padding: 2px;
-  width: 130px;
+  width: 80px;
   text-align: center;
   font-size: 15px;
   font-weight: normal;
@@ -280,13 +280,13 @@
 .orgchart.l2r .node .content {
   transform: rotate(-90deg) translate(-45px, -45px) rotateY(180deg);
   transform-origin: top center;
-  width: 130px;
+  width: 100px;
 }
 
 .orgchart.r2l .node .content {
   transform: rotate(-90deg) translate(-45px, -45px);
   transform-origin: top center;
-  width: 130px;
+  width: 100px;
 }
 
 .orgchart .node .edge {
