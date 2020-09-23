@@ -11,9 +11,6 @@ var t = 0;
 var t2 = 0;
 var t3 = 0;
 
-enchant();
-var scr_width = 640;
-var scr_height=480;
 
 
 $( document ).ready(function() {
@@ -160,7 +157,14 @@ $( document ).ready(function() {
         },speedOne);
 
         allContentBoxes.removeClass("current");
-        $("#"+hrefSelector).addClass("current");
+        $("#"+hrefSelector).show().addClass("current");
+		if(hrefSelector=="one"){
+			document.getElementById("boygirl").src="index.enchant.html";
+			document.getElementById("boygirl").style.display="block";
+		}else{
+			document.getElementById("boygirl").src="empty.html";
+			document.getElementById("boygirl").style.display="none";
+		}
         $(".box-wrapper-menu .current .col-one-menu").animate({
           "top":10+"px"
         },speedOne, function(){ifReadyThenReset();});
@@ -314,6 +318,7 @@ $( document ).ready(function() {
    
    setOrgChartNode();
    
+   document.getElementById("boygirl").src="index.enchant.html";
    
    
 });
@@ -892,11 +897,13 @@ function setOrgChartNode(){
         });
       }
     })
+	/*
     .on('click', '.orgchart', function(event) {
       if (!$(event.target).closest('.node').length) {
         $('#selected-node').val('');
       }
     });
+	*/
 
     $('input[name="chart-state"]').on('click', function() {
       $('#edit-panel, .orgchart').toggleClass('view-state');

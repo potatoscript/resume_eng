@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<head>
+  <script type="text/javascript" src="../../potato.js/js/enchant.js"></script> 
+</head>
+  <body>
+
+    <script>
+		enchant();
+		window.onload = function(){
+			//game object creation;
+			var core = new Core(450,100);
+			core.fps = 10;	
+			core.overflow ="hidden";
+			//image loading	
+			core.preload("images/boy.png");			
+			core.onload = function(){
+				var label = new Label();
+				
+				label.text = "Hello World!";
+				
+				label.opacity = 1;
+				label.x = this.x-20;
+				label.y = this.y+10;
+				label.fontSize = 30;
+				label.color = 'red';
+				label.opacity = 0;
+				
+				core.rootScene.addChild(label);
+				
+				
+				var chara = new Sprite(65,65);
+				chara.image = core.assets["images/boy.png"];
+				//chara.x = 100;
+				//chara.y = 20;
+				chara.scale(0.6,0.6);
+				chara.frame=8;
+				
+				var moveleft_man01 = false;
+				var moveright_man01 = true;
+				var man01_moveleft_frame = 15;
+				var man01_moveright_frame = 18;
+				//frame loop to move the bear every frame
+				chara.addEventListener(Event.ENTER_FRAME, function() {
+
+					if(moveleft_man01==true){
+						this.x -=5;
+						this.frame = this.age % 3+man01_moveleft_frame;
+						if(this.x<10){
+							moveleft_man01=false;
+							moveright_man01=true;
+							label.opacity = 0;
+						}
+					}
+					if(moveright_man01==true){
+						this.x +=5;
+						this.frame = this.age % 3+man01_moveright_frame;
+						if(this.x>400){
+							moveright_man01=false;
+							moveleft_man01=true;
+							label.opacity = 1;
+						}
+						
+					}
+
+				}); 
+				//add the boy to the display object tree
+				core.rootScene.addChild(chara);
+			}
+			core.start();
+		}
+	</script>
+  </body>
+
+</html>
