@@ -11,18 +11,18 @@
     <script>
 		enchant();
 		var _moveright_boy=false;
-		var _movetop_boy=false;
+		var _movedown_boy=false;
 		
 		var _moveright_girl=false;
-		var _movetop_girl=false;
+		var _movedown_girl=false;
 		
-		var movetop = false;
-		var movebottom = false;
+		var moveup = false;
+		var movedown = false;
 		var moveleft = false;
 		var moveright = true;
 		
-		var movetop_girl = false;
-		var movebottom_girl = false;
+		var moveup_girl = false;
+		var movedown_girl = false;
 		var moveleft_girl = false;
 		var moveright_girl = true;
 		
@@ -31,7 +31,7 @@
 		window.onload = function(){
 			
 			//game object creation;
-			core = new Core(450,100);
+			core = new Core(450,450);
 			core.fps = 10;	
 			core.overflow ="hidden";
 			//image loading	
@@ -42,9 +42,11 @@
 				boy.image = core.assets["images/boy.png"];
 				boy.scale(0.6,0.6);
 				boy.x = 10;
-				boy.frame = 18;
+				boy.frame = 18;//init frame
 				right_frame = boy.frame;
 				left_frame = 15;
+				down_frame = 0;
+				up_frame = 21;
 
 				girl = new Sprite(32,32);
 				girl.image = core.assets["images/girl.png"];
@@ -76,42 +78,79 @@
 					label_boy.opacity = 0;
 					label_boy.x = boy.x;
 					//label_boy.text = "こにちは";
+					var speed = Math.floor((Math.random() * 5) + 1);
 					if(moveleft==true){
 						_moveright_boy=false;
-						this.x -=5;//speed
+						this.x -=speed;//speed
 						this.frame = this.age % 3+left_frame;
 						if(this.x<10){
 							moveleft=false;
+							moveup=false;
+							movedown=false;
 							moveright=true;
 						}
 					}
 					if(moveright==true){
-						
 						_moveright_boy=true;
-						this.x +=5;
+						this.x +=speed;
 						this.frame = this.age % 3+right_frame;
 						if(this.x>400){
 							moveright=false;
+							moveup=false;
+							movedown=false;
 							moveleft=true;
+						}
+					}
+					if(movedown==true){
+						_movedown_boy=true;
+						this.frame = this.age % 3+down_frame;
+						this.y +=speed;
+						
+						if(this.y>200){
+							moveright=false;
+							moveup=true;
+							movedown=false;
+							moveleft=false;
+						}
+					}
+					if(moveup==true){
+						_movedown_boy=false;
+						this.frame = this.age % 3+up_frame;
+						this.y -=speed;
+						
+						if(this.y < 1){
+							if(this.x<300){
+								moveright=true;
+								moveup=false;
+								movedown=false;
+								moveleft=false;
+							}else{
+								moveright=false;
+								moveup=false;
+								movedown=false;
+								moveleft=true;
+							}
 						}
 					}
 					if(this.intersect(girl)){
 						//stop all the movement;
 						moveright=false;
 						moveleft=false;
+						movedown=false;
+						moveup=false;
 						
 						label_boy.opacity = 1;
 
-						if(_moveright_boy==false){
+						if(_moveright_boy==false ){
 							boy.frame = boy.age % 3+left_frame;
 							setTimeout(function(){
 								moveleft=true;
 							}, 1000)
 						}
 						if(_moveright_boy==true){
-						    boy.frame = boy.age % 3+right_frame;
+							
 							setTimeout(function(){
-								moveright=true;
+								movedown=true;
 							}, 1000)
 							
 						}
@@ -124,10 +163,10 @@
 							label_girl.opacity = 1;
 							label_girl.x = girl.x;
 							   label_girl.text = "Hi";
-							   label_boy.text = "こにちは";
-							   label_boy.opacity = 1;
+							   //label_boy.text = "こにちは";
+							   //label_boy.opacity = 1;
 							setTimeout(function(){
-								moveleft_girl=true;
+								moveright_girl=true;
 							}, 1000)
 						}
 						if(_moveright_girl==true && _moveright_boy == false){
@@ -164,9 +203,10 @@
 					label_girl.opacity = 0;
 					label_girl.x = girl.x;
 					label_girl.text = "こにちは";
+					var speed = Math.floor((Math.random() * 5) + 1);
 					if(moveleft_girl==true){
 						_moveright_girl=false;
-						this.x -=3;
+						this.x -=speed;
 						this.frame = this.age % 3+left_frame_girl;
 						if(this.x<10){
 							moveleft_girl=false;
@@ -175,7 +215,7 @@
 					}
 					if(moveright_girl==true){
 						_moveright_girl=true;
-						this.x +=3;
+						this.x +=speed;
 						this.frame = this.age % 3+right_frame_girl;
 						if(this.x>400){
 							moveright_girl=false;
