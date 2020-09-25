@@ -10,68 +10,212 @@
 
     <script>
 		enchant();
+		var _moveright_boy=false;
+		var _movetop_boy=false;
+		
+		var _moveright_girl=false;
+		var _movetop_girl=false;
+		
+		var movetop = false;
+		var movebottom = false;
+		var moveleft = false;
+		var moveright = true;
+		
+		var movetop_girl = false;
+		var movebottom_girl = false;
+		var moveleft_girl = false;
+		var moveright_girl = true;
+		
+		var core,boy,girl,right_frame,left_frame,right_frame_girl,left_frame_girl,label_boy,label_girl;
+		
 		window.onload = function(){
+			
 			//game object creation;
-			var core = new Core(450,100);
+			core = new Core(450,100);
 			core.fps = 10;	
 			core.overflow ="hidden";
 			//image loading	
-			core.preload("images/boy.png");			
+			core.preload("images/boy.png","images/girl.png");			
 			core.onload = function(){
-				var label = new Label();
-				
-				label.text = "Hello World!";
-				
-				label.opacity = 1;
-				label.x = this.x-20;
-				label.y = this.y+10;
-				label.fontSize = 30;
-				label.color = 'red';
-				label.opacity = 0;
-				
-				core.rootScene.addChild(label);
-				
-				
-				var chara = new Sprite(65,65);
-				chara.image = core.assets["images/boy.png"];
-				//chara.x = 100;
-				//chara.y = 20;
-				chara.scale(0.6,0.6);
-				chara.frame=8;
-				
-				var moveleft_man01 = false;
-				var moveright_man01 = true;
-				var man01_moveleft_frame = 15;
-				var man01_moveright_frame = 18;
-				//frame loop to move the bear every frame
-				chara.addEventListener(Event.ENTER_FRAME, function() {
 
-					if(moveleft_man01==true){
-						this.x -=5;
-						this.frame = this.age % 3+man01_moveleft_frame;
-						if(this.x<10){
-							moveleft_man01=false;
-							moveright_man01=true;
-							label.opacity = 0;
-						}
-					}
-					if(moveright_man01==true){
-						this.x +=5;
-						this.frame = this.age % 3+man01_moveright_frame;
-						if(this.x>400){
-							moveright_man01=false;
-							moveleft_man01=true;
-							label.opacity = 1;
-						}
-						
-					}
+				boy = new Sprite(65,65);
+				boy.image = core.assets["images/boy.png"];
+				boy.scale(0.6,0.6);
+				boy.x = 10;
+				boy.frame = 18;
+				right_frame = boy.frame;
+				left_frame = 15;
 
-				}); 
-				//add the boy to the display object tree
-				core.rootScene.addChild(chara);
+				girl = new Sprite(32,32);
+				girl.image = core.assets["images/girl.png"];
+				girl.scale(1.2,1.2);
+				girl.x = 100;
+				girl.y =10;
+				girl.frame = 24;
+				right_frame_girl = girl.frame;
+				left_frame_girl = 15;
+
+				createBoy();
+				createGirl();
+				
 			}
 			core.start();
 		}
+
+		function createBoy(){
+
+				label_boy = new Label();
+				label_boy.color = 'blue';
+				label_boy.fontSize = "10px";
+				core.rootScene.addChild(label_boy);
+				label_boy.opacity = 0;
+				
+				label_boy.text = "こにちは";
+				//frame loop to move the bear every frame
+				boy.addEventListener(Event.ENTER_FRAME, function() {
+					label_boy.opacity = 0;
+					label_boy.x = boy.x;
+					//label_boy.text = "こにちは";
+					if(moveleft==true){
+						_moveright_boy=false;
+						this.x -=5;//speed
+						this.frame = this.age % 3+left_frame;
+						if(this.x<10){
+							moveleft=false;
+							moveright=true;
+						}
+					}
+					if(moveright==true){
+						
+						_moveright_boy=true;
+						this.x +=5;
+						this.frame = this.age % 3+right_frame;
+						if(this.x>400){
+							moveright=false;
+							moveleft=true;
+						}
+					}
+					if(this.intersect(girl)){
+						//stop all the movement;
+						moveright=false;
+						moveleft=false;
+						
+						label_boy.opacity = 1;
+
+						if(_moveright_boy==false){
+							boy.frame = boy.age % 3+left_frame;
+							setTimeout(function(){
+								moveleft=true;
+							}, 1000)
+						}
+						if(_moveright_boy==true){
+						    boy.frame = boy.age % 3+right_frame;
+							setTimeout(function(){
+								moveright=true;
+							}, 1000)
+							
+						}
+						
+						//when girl meet with the boy
+						if(_moveright_girl==true && _moveright_boy == true){
+							moveright_girl=false;
+							moveleft_girl=false;
+							girl.frame = girl.age % 3+left_frame_girl;//turn face
+							label_girl.opacity = 1;
+							label_girl.x = girl.x;
+							   label_girl.text = "｡♡";
+							   label_boy.text = "こにちは";
+							   label_boy.opacity = 1;
+							setTimeout(function(){
+								moveleft_girl=true;
+							}, 1000)
+						}
+						if(_moveright_girl==true && _moveright_boy == false){
+							moveright_girl=false;
+							moveleft_girl=false;
+							girl.frame = girl.age % 3+right_frame_girl;
+							label_girl.text = "｡♡";
+							label_boy.text = "｡♡";
+							label_boy.opacity = 1;
+							label_girl.opacity = 1;
+							label_girl.x = girl.x;
+							setTimeout(function(){
+								moveright_girl=true;
+							}, 1000)
+						}
+							
+						
+					}
+				}); 
+				//add the boy to the display object tree
+				core.rootScene.addChild(boy);
+		}
+		function createGirl(){
+
+				label_girl = new Label();
+				
+				label_girl.fontSize = "10px";
+				label_girl.color = 'red';
+				core.rootScene.addChild(label_girl);
+				label_girl.opacity = 0;
+
+				//frame loop to move the bear every frame
+				girl.addEventListener(Event.ENTER_FRAME, function() {
+					label_girl.opacity = 0;
+					label_girl.x = girl.x;
+					label_girl.text = "こにちは";
+					if(moveleft_girl==true){
+						_moveright_girl=false;
+						this.x -=3;
+						this.frame = this.age % 3+left_frame_girl;
+						if(this.x<10){
+							moveleft_girl=false;
+							moveright_girl=true;
+						}
+					}
+					if(moveright_girl==true){
+						_moveright_girl=true;
+						this.x +=3;
+						this.frame = this.age % 3+right_frame_girl;
+						if(this.x>400){
+							moveright_girl=false;
+							moveleft_girl=true;
+						}
+					}
+					/*
+					if(this.intersect(boy)){
+						if(this.x>70 && this.x<300 && _moveright_girl!=_moveright_boy){
+							moveright_girl=false;
+							moveleft_girl=false;
+							label.opacity = 1;
+							label.x = this.x;
+							
+							//label.y = this.y+10;
+							if(_moveright_girl==false){
+								this.frame = this.age % 3+left_frame_girl;
+								setTimeout(function(){
+									label.opacity = 0;
+									moveleft_girl=true;
+								}, 1000)
+							}
+							if(_moveright_girl==true){
+								this.frame = this.age % 3+right_frame_girl;
+								setTimeout(function(){
+									label.opacity = 0;
+									moveright_girl=true;
+								}, 1000)
+							}
+						}
+
+					}
+					*/
+
+				}); 
+				core.rootScene.addChild(girl);
+		}
+		
+		
+		
 	</script>
   </body>
 
