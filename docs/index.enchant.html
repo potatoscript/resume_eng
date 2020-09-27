@@ -16,17 +16,18 @@
 		var _moveright_girl=false;
 		var _movedown_girl=false;
 		
-		var moveup = false;
-		var movedown = false;
-		var moveleft = false;
-		var moveright = true;
 		
-		var moveup_girl = false;
-		var movedown_girl = false;
-		var moveleft_girl = false;
-		var moveright_girl = true;
+		var moveRight ={girl:true,boy:true,chicken:false};
+		var moveLeft ={girl:false,boy:false,chicken:false};
+		var moveUp ={girl:false,boy:false,chicken:false};
+		var moveDown ={girl:false,boy:false,chicken:false};
 		
-		var core,boy,girl,right_frame,left_frame,right_frame_girl,left_frame_girl,label_boy,label_girl;
+		var core,
+		door,
+		door2,
+		chicken,chicken_right_frame,chicken_left_frame,chicken_down_frame,chicken_up_frame,label_chicken,
+		boy,label_boy,
+		girl,right_frame,left_frame,right_frame_girl,left_frame_girl,label_girl;
 		
 		window.onload = function(){
 			
@@ -35,8 +36,31 @@
 			core.fps = 10;	
 			core.overflow ="hidden";
 			//image loading	
-			core.preload("images/boy.png","images/girl.png");			
+			core.preload("images/boy.png","images/girl.png","images/chicken.png","images/object.png");			
 			core.onload = function(){
+
+				door = new Sprite(126,141);
+				door.image = core.assets["images/object.png"];
+				door.scale(0.3,0.3);
+				door.x = -50; 
+				door.y = -40;
+				door.frame = 1;//init frame
+				
+				door2 = new Sprite(126,141);
+				door2.image = core.assets["images/object.png"];
+				door2.scale(0.3,0.3);
+				door2.x = 350; 
+				door2.y = -40;
+				door2.frame = 2;//init frame
+
+
+				chicken = new Sprite(32,32);
+				chicken.image = core.assets["images/chicken.png"];
+				chicken.scale(0.8,0.8);
+				chicken.x = 200; 
+				chicken.y = 18;
+				chicken.frame = 5;//init frame
+
 
 				boy = new Sprite(65,65);
 				boy.image = core.assets["images/boy.png"];
@@ -57,8 +81,10 @@
 				right_frame_girl = girl.frame;
 				left_frame_girl = 15;
 
+				createDoor();
 				createBoy();
 				createGirl();
+				createchicken();
 				
 			}
 			core.start();
@@ -78,87 +104,91 @@
 					label_boy.opacity = 0;
 					label_boy.x = boy.x;
 					//label_boy.text = "こにちは";
-					var speed = Math.floor((Math.random() * 5) + 1);
-					if(moveleft==true){
+					var speed = 3;//Math.floor((Math.random() * 5) + 1);
+					
+					if(moveLeft.boy==true){
 						_moveright_boy=false;
 						this.x -=speed;//speed
 						this.frame = this.age % 3+left_frame;
-						if(this.x<10){
-							moveleft=false;
-							moveup=false;
-							movedown=false;
-							moveright=true;
+						if(this.x<0){
+
+							moveUp.boy=false;
+							moveDown.boy=false;
+							moveLeft.boy=false;
+							moveRight.boy=true;
 						}
 					}
-					if(moveright==true){
+					if(moveRight.boy==true){
 						_moveright_boy=true;
 						this.x +=speed;
 						this.frame = this.age % 3+right_frame;
 						if(this.x>400){
-							moveright=false;
-							moveup=false;
-							movedown=false;
-							moveleft=true;
+							moveRight.boy=false;
+							moveUp.boy=false;
+							moveDown.boy=false;
+							moveLeft.boy=true;
 						}
 					}
-					if(movedown==true){
+					if(moveDown.boy==true){
 						_movedown_boy=true;
 						this.frame = this.age % 3+down_frame;
 						this.y +=speed;
 						
 						if(this.y>200){
-							moveright=false;
-							moveup=true;
-							movedown=false;
-							moveleft=false;
+							moveRight.boy=false;
+							moveDown.boy=false;
+							moveLeft.boy=false;
+							moveUp.boy=true;
 						}
 					}
-					if(moveup==true){
+					if(moveUp.boy==true){
 						_movedown_boy=false;
 						this.frame = this.age % 3+up_frame;
 						this.y -=speed;
 						
 						if(this.y < 1){
+							
 							if(this.x<300){
-								moveright=true;
-								moveup=false;
-								movedown=false;
-								moveleft=false;
+								moveUp.boy=false;
+								moveDown.boy=false;
+								moveLeft.boy=false;
+								moveRight.boy=true;
 							}else{
-								moveright=false;
-								moveup=false;
-								movedown=false;
-								moveleft=true;
+								moveRight.boy=false;
+								moveUp.boy=false;
+								moveDown.boy=false;
+								moveLeft.boy=true;
 							}
 						}
 					}
-					if(this.intersect(girl)){
+					/*
+					if(this.within(girl, 20)){
 						//stop all the movement;
-						moveright=false;
-						moveleft=false;
-						movedown=false;
-						moveup=false;
+						moveRight.boy=false;
+						moveLeft.boy=false;
+						moveDown.boy=false;
+						moveUp.boy=false;
 						
 						label_boy.opacity = 1;
 
 						if(_moveright_boy==false ){
 							boy.frame = boy.age % 3+left_frame;
 							setTimeout(function(){
-								moveleft=true;
+								moveLeft.boy=true;
 							}, 1000)
 						}
 						if(_moveright_boy==true){
 							
 							setTimeout(function(){
-								movedown=true;
+								moveDown.boy=true;
 							}, 1000)
 							
 						}
 						
 						//when girl meet with the boy
 						if(_moveright_girl==true && _moveright_boy == true){
-							moveright_girl=false;
-							moveleft_girl=false;
+							moveRight.girl=false;
+							moveLeft.girl=false;
 							girl.frame = girl.age % 3+left_frame_girl;//turn face
 							label_girl.opacity = 1;
 							label_girl.x = girl.x;
@@ -166,12 +196,12 @@
 							   //label_boy.text = "こにちは";
 							   //label_boy.opacity = 1;
 							setTimeout(function(){
-								moveright_girl=true;
+								moveRight.girl=true;
 							}, 1000)
 						}
 						if(_moveright_girl==true && _moveright_boy == false){
-							moveright_girl=false;
-							moveleft_girl=false;
+							moveRight.girl=false;
+							moveLeft.girl=false;
 							girl.frame = girl.age % 3+right_frame_girl;
 							label_girl.text = "Hi";
 							label_boy.text = "Hi";
@@ -179,12 +209,20 @@
 							label_girl.opacity = 1;
 							label_girl.x = girl.x;
 							setTimeout(function(){
-								moveright_girl=true;
+								moveRight.girl=true;
 							}, 1000)
 						}
 							
 						
 					}
+					*/
+					
+					
+					meetchicken(boy,"boy");
+					intoLeftDoor(boy,"boy",1000);
+					intoLeftDoor2(boy,"boy",1000);
+					
+					
 				}); 
 				//add the boy to the display object tree
 				core.rootScene.addChild(boy);
@@ -203,55 +241,131 @@
 					label_girl.opacity = 0;
 					label_girl.x = girl.x;
 					label_girl.text = "こにちは";
-					var speed = Math.floor((Math.random() * 5) + 1);
-					if(moveleft_girl==true){
+					var speed = 3;//Math.floor((Math.random() * 5) + 1);
+					if(moveLeft.girl==true){
 						_moveright_girl=false;
 						this.x -=speed;
 						this.frame = this.age % 3+left_frame_girl;
-						if(this.x<10){
-							moveleft_girl=false;
-							moveright_girl=true;
+						if(this.x<0){
+							moveLeft.girl=false;
+							moveRight.girl=true;
 						}
 					}
-					if(moveright_girl==true){
+					if(moveRight.girl==true){
 						_moveright_girl=true;
 						this.x +=speed;
 						this.frame = this.age % 3+right_frame_girl;
 						if(this.x>400){
-							moveright_girl=false;
-							moveleft_girl=true;
+							moveRight.girl=false;
+							moveLeft.girl=true;
 						}
 					}
-					/*
-					if(this.intersect(boy)){
-						if(this.x>70 && this.x<300 && _moveright_girl!=_moveright_boy){
-							moveright_girl=false;
-							moveleft_girl=false;
-							label.opacity = 1;
-							label.x = this.x;
-							
-							//label.y = this.y+10;
-							if(_moveright_girl==false){
-								this.frame = this.age % 3+left_frame_girl;
-								setTimeout(function(){
-									label.opacity = 0;
-									moveleft_girl=true;
-								}, 1000)
-							}
-							if(_moveright_girl==true){
-								this.frame = this.age % 3+right_frame_girl;
-								setTimeout(function(){
-									label.opacity = 0;
-									moveright_girl=true;
-								}, 1000)
-							}
-						}
 
-					}
-					*/
-
+					meetchicken(girl,"girl");
+					intoLeftDoor(girl,"girl",3000);
+					intoLeftDoor2(girl,"girl",5000);
+					
+					
 				}); 
 				core.rootScene.addChild(girl);
+		}
+		
+		function createchicken(){
+
+				chicken.addEventListener(Event.ENTER_FRAME, function() {
+					
+				}); 
+				core.rootScene.addChild(chicken);
+		}
+		
+		function createDoor(){
+
+				core.rootScene.addChild(door);
+				core.rootScene.addChild(door2);
+				
+		}
+		
+		function meetchicken(obj,chara){
+			if(obj.within(chicken, 10)){
+				if(moveRight[chara]==true){	
+					obj.y -=10;
+					//chicken.frame = chicken.age % 2+4;//turn face
+				}
+				if(moveLeft[chara]==true){						
+					chicken.frame = chicken.age % 2+4;//turn face
+				}
+				setTimeout(function(){
+					chicken.frame = 5;
+					if(moveRight[chara]==true)obj.y +=10;
+				},500);
+			}
+			
+		}
+		
+		function intoLeftDoor(obj,chara,time){
+		
+			if(obj.within(door, 30) && moveLeft[chara]==true){//make sure the girl is go in not out
+				door.frame = 6;//open the door
+				
+				setTimeout(function(){
+					//go inside the door
+					moveLeft[chara]=false;
+					moveRight[chara]=false;
+					moveUp[chara]=false;
+					moveDown[chara]=false;
+					obj.opacity=0;
+					
+					setTimeout(function(){
+						door.frame = 1;//door close
+						
+						setTimeout(function(){
+							door.frame = 6;//door open
+							setTimeout(function(){
+								obj.x=0;
+								moveRight[chara]=true;
+								obj.opacity=1;
+								setTimeout(function(){
+									door.frame = 1;
+								}, 500)
+							}, 500)
+						}, time)
+						
+					}, 500)
+				}, 300)
+			}
+		}
+		
+		function intoLeftDoor2(obj,chara,time){
+		
+			if(obj.within(door2, 30) && moveRight[chara]==true){//make sure the girl is go in not out
+				door2.frame = 8;//open the door
+				
+				setTimeout(function(){
+					//go inside the door
+					moveLeft[chara]=false;
+					moveRight[chara]=false;
+					moveUp[chara]=false;
+					moveDown[chara]=false;
+					obj.opacity=0;
+					
+					setTimeout(function(){
+						door2.frame = 2;//door close
+						
+						setTimeout(function(){
+							door2.frame = 8;//door open
+							setTimeout(function(){
+								obj.x=390;
+								moveLeft[chara]=true;
+								obj.opacity=1;
+								setTimeout(function(){
+									door2.frame = 2;
+								}, 500)
+							}, 500)
+						}, time)
+						
+					}, 500)
+				}, 300)
+			}
 		}
 		
 		
