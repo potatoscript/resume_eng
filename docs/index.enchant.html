@@ -17,17 +17,23 @@
 		var _movedown_girl=false;
 		
 		
-		var moveRight ={girl:true,boy:true,chicken:false};
-		var moveLeft ={girl:false,boy:false,chicken:false};
-		var moveUp ={girl:false,boy:false,chicken:false};
-		var moveDown ={girl:false,boy:false,chicken:false};
+		var moveRight 	=	{girl:true,		boy:true,	boy2:false,	chicken:false};
+		var moveLeft 	=	{girl:false,	boy:false,	boy2:true,	chicken:false};
+		var moveUp 		=	{girl:false,	boy:false,	boy2:false,	chicken:false};
+		var moveDown 	=	{girl:false,	boy:false,	boy2:false,	chicken:false};
+		var frameRight  =	{girl:24,		boy:21,		boy2:18};
+		var frameLeft  	=	{girl:15,		boy:12,		boy2:9};
+		var frameUp  	=	{girl:33,		boy:30,		boy2:27};
+		var frameDown  	=	{girl:6,		boy:3,		boy2:0};
 		
 		var core,
-		door,
-		door2,
-		chicken,chicken_right_frame,chicken_left_frame,chicken_down_frame,chicken_up_frame,label_chicken,
+		doorLeft,
+		doorRight,
+		doorLeft2,
+		doorRight2,
+		chicken,label_chicken,
 		boy,label_boy,
-		girl,right_frame,left_frame,right_frame_girl,left_frame_girl,label_girl;
+		girl,label_girl;
 		
 		window.onload = function(){
 			
@@ -36,22 +42,36 @@
 			core.fps = 10;	
 			core.overflow ="hidden";
 			//image loading	
-			core.preload("images/boy.png","images/girl.png","images/chicken.png","images/object.png");			
+			core.preload("images/girl.png","images/chicken.png","images/object.png");			
 			core.onload = function(){
 
-				door = new Sprite(126,141);
-				door.image = core.assets["images/object.png"];
-				door.scale(0.3,0.3);
-				door.x = -50; 
-				door.y = -40;
-				door.frame = 1;//init frame
+				doorLeft = new Sprite(126,141);
+				doorLeft.image = core.assets["images/object.png"];
+				doorLeft.scale(0.3,0.3);
+				doorLeft.x = -50; 
+				doorLeft.y = -40;
+				doorLeft.frame = 1;//init frame
 				
-				door2 = new Sprite(126,141);
-				door2.image = core.assets["images/object.png"];
-				door2.scale(0.3,0.3);
-				door2.x = 350; 
-				door2.y = -40;
-				door2.frame = 2;//init frame
+				doorRight = new Sprite(126,141);
+				doorRight.image = core.assets["images/object.png"];
+				doorRight.scale(0.3,0.3);
+				doorRight.x = 350; 
+				doorRight.y = -40;
+				doorRight.frame = 2;//init frame
+				
+				doorLeft2 = new Sprite(126,141);
+				doorLeft2.image = core.assets["images/object.png"];
+				doorLeft2.scale(0.3,0.3);
+				doorLeft2.x = -50; 
+				doorLeft2.y = 10;
+				doorLeft2.frame = 1;//init frame
+				
+				doorRight2 = new Sprite(126,141);
+				doorRight2.image = core.assets["images/object.png"];
+				doorRight2.scale(0.3,0.3);
+				doorRight2.x = 350; 
+				doorRight2.y = 10;
+				doorRight2.frame = 2;//init frame
 
 
 				chicken = new Sprite(32,32);
@@ -62,28 +82,31 @@
 				chicken.frame = 5;//init frame
 
 
-				boy = new Sprite(65,65);
-				boy.image = core.assets["images/boy.png"];
-				boy.scale(0.6,0.6);
+				boy = new Sprite(32,32);
+				boy.image = core.assets["images/girl.png"];
+				boy.scale(1.2,1.2);
 				boy.x = 10;
-				boy.frame = 18;//init frame
-				right_frame = boy.frame;
-				left_frame = 15;
-				down_frame = 0;
-				up_frame = 21;
+				boy.y =10;
+				boy.frame = frameLeft.boy;//init frame
 
 				girl = new Sprite(32,32);
 				girl.image = core.assets["images/girl.png"];
 				girl.scale(1.2,1.2);
 				girl.x = 100;
 				girl.y =10;
-				girl.frame = 24;
-				right_frame_girl = girl.frame;
-				left_frame_girl = 15;
+				girl.frame = frameLeft.girl;
+				
+				boy2 = new Sprite(32,32);
+				boy2.image = core.assets["images/girl.png"];
+				boy2.scale(1.2,1.2);
+				boy2.x = 400;
+				boy2.y =60;
+				boy2.frame = frameRight.girl;
 
 				createDoor();
 				createBoy();
 				createGirl();
+				createBoy2();
 				createchicken();
 				
 			}
@@ -109,7 +132,7 @@
 					if(moveLeft.boy==true){
 						_moveright_boy=false;
 						this.x -=speed;//speed
-						this.frame = this.age % 3+left_frame;
+						this.frame = this.age % 3+frameLeft.boy;
 						if(this.x<0){
 
 							moveUp.boy=false;
@@ -121,7 +144,7 @@
 					if(moveRight.boy==true){
 						_moveright_boy=true;
 						this.x +=speed;
-						this.frame = this.age % 3+right_frame;
+						this.frame = this.age % 3+frameRight.boy;
 						if(this.x>400){
 							moveRight.boy=false;
 							moveUp.boy=false;
@@ -131,7 +154,7 @@
 					}
 					if(moveDown.boy==true){
 						_movedown_boy=true;
-						this.frame = this.age % 3+down_frame;
+						this.frame = this.age % 3+frameDown.boy;
 						this.y +=speed;
 						
 						if(this.y>200){
@@ -143,7 +166,7 @@
 					}
 					if(moveUp.boy==true){
 						_movedown_boy=false;
-						this.frame = this.age % 3+up_frame;
+						this.frame = this.age % 3+frameUp.boy;
 						this.y -=speed;
 						
 						if(this.y < 1){
@@ -220,7 +243,10 @@
 					
 					meetchicken(boy,"boy");
 					intoLeftDoor(boy,"boy",1000);
+					intoRightdoor(boy,"boy",1000);
 					intoLeftDoor2(boy,"boy",1000);
+					intoRightdoor2(boy,"boy",1000);
+					meetboy2(boy,"boy");
 					
 					
 				}); 
@@ -228,9 +254,7 @@
 				core.rootScene.addChild(boy);
 		}
 		function createGirl(){
-
 				label_girl = new Label();
-				
 				label_girl.fontSize = "10px";
 				label_girl.color = 'red';
 				core.rootScene.addChild(label_girl);
@@ -245,7 +269,7 @@
 					if(moveLeft.girl==true){
 						_moveright_girl=false;
 						this.x -=speed;
-						this.frame = this.age % 3+left_frame_girl;
+						this.frame = this.age % 3+frameLeft.girl;
 						if(this.x<0){
 							moveLeft.girl=false;
 							moveRight.girl=true;
@@ -254,7 +278,7 @@
 					if(moveRight.girl==true){
 						_moveright_girl=true;
 						this.x +=speed;
-						this.frame = this.age % 3+right_frame_girl;
+						this.frame = this.age % 3+frameRight.girl;
 						if(this.x>400){
 							moveRight.girl=false;
 							moveLeft.girl=true;
@@ -263,12 +287,41 @@
 
 					meetchicken(girl,"girl");
 					intoLeftDoor(girl,"girl",3000);
-					intoLeftDoor2(girl,"girl",5000);
+					intoRightdoor(girl,"girl",5000);
+					intoLeftDoor2(girl,"girl",3000);
+					intoRightdoor2(girl,"girl",5000);
 					
 					
 				}); 
 				core.rootScene.addChild(girl);
 		}
+		
+		
+		function createBoy2(){
+
+				boy2.addEventListener(Event.ENTER_FRAME, function() {
+					var speed = 3;
+					if(moveLeft.boy2==true){
+						this.x -=speed;
+						this.frame = this.age % 3+frameLeft.boy2;
+						if(this.x<0){
+							moveLeft.boy2=false;
+							moveRight.boy2=true;
+						}
+					}
+					if(moveRight.boy2==true){
+						this.x +=speed;
+						this.frame = this.age % 3+frameRight.boy2;
+						if(this.x>400){
+							moveRight.boy2=false;
+							moveLeft.boy2=true;
+						}
+					}
+					
+				}); 
+				core.rootScene.addChild(boy2);
+		}
+		
 		
 		function createchicken(){
 
@@ -280,8 +333,10 @@
 		
 		function createDoor(){
 
-				core.rootScene.addChild(door);
-				core.rootScene.addChild(door2);
+				core.rootScene.addChild(doorLeft);
+				core.rootScene.addChild(doorRight);
+				core.rootScene.addChild(doorLeft2);
+				core.rootScene.addChild(doorRight2);
 				
 		}
 		
@@ -302,13 +357,39 @@
 			
 		}
 		
+		function meetboy2(obj,chara){
+			if(obj.within(boy2, 20)){
+				//stop all the movement;
+				moveRight[chara]=false;
+				moveLeft[chara]=false;
+				moveDown[chara]=false;
+				moveUp[chara]=false;
+				
+				//label_boy.opacity = 1;
+
+				if(moveLeft["boy2"]==true ){
+					//obj.frame = obj.age % 3+frameLeft[chara];
+					//setTimeout(function(){
+						moveLeft[chara]=true;
+					//}, 1000)
+				}
+				if(moveRight["boy2"]==true){
+					//obj.frame = obj.age % 3+frameRight[chara];
+					//setTimeout(function(){
+						moveRight[chara]=true;
+					//}, 1000)
+					
+				}
+			}
+		}
+		
 		function intoLeftDoor(obj,chara,time){
 		
-			if(obj.within(door, 30) && moveLeft[chara]==true){//make sure the girl is go in not out
-				door.frame = 6;//open the door
+			if(obj.within(doorLeft, 30) && moveLeft[chara]==true){//make sure the girl is go in not out
+				doorLeft.frame = 6;//open the doorLeft
 				
 				setTimeout(function(){
-					//go inside the door
+					//go inside the doorLeft
 					moveLeft[chara]=false;
 					moveRight[chara]=false;
 					moveUp[chara]=false;
@@ -316,16 +397,51 @@
 					obj.opacity=0;
 					
 					setTimeout(function(){
-						door.frame = 1;//door close
+						doorLeft.frame = 1;//doorLeft close
 						
 						setTimeout(function(){
-							door.frame = 6;//door open
+							doorLeft2.frame = 6;//doorLeft open
 							setTimeout(function(){
 								obj.x=0;
 								moveRight[chara]=true;
+								obj.y=60;
 								obj.opacity=1;
 								setTimeout(function(){
-									door.frame = 1;
+									doorLeft2.frame = 1;
+								}, 500)
+							}, 500)
+						}, time)
+						
+					}, 500)
+				}, 300)
+			}
+		}
+		
+		function intoRightdoor(obj,chara,time){
+		
+			if(obj.within(doorRight, 30) && moveRight[chara]==true){//make sure the girl is go in not out
+				doorRight.frame = 8;//open the doorLeft
+				
+				setTimeout(function(){
+					//go inside the doorLeft
+					moveLeft[chara]=false;
+					moveRight[chara]=false;
+					moveUp[chara]=false;
+					moveDown[chara]=false;
+					obj.opacity=0;
+					
+					setTimeout(function(){
+						doorRight.frame = 2;//doorLeft close
+						
+						setTimeout(function(){
+							doorRight2.frame = 8;//doorLeft open
+							setTimeout(function(){
+								obj.x=390;
+								obj.y=60;
+								moveLeft[chara]=true;
+								obj.opacity=1;
+								setTimeout(function(){
+									doorRight2.frame = 2;
 								}, 500)
 							}, 500)
 						}, time)
@@ -337,11 +453,11 @@
 		
 		function intoLeftDoor2(obj,chara,time){
 		
-			if(obj.within(door2, 30) && moveRight[chara]==true){//make sure the girl is go in not out
-				door2.frame = 8;//open the door
+			if(obj.within(doorLeft2, 30) && moveLeft[chara]==true){//make sure the girl is go in not out
+				doorLeft2.frame = 6;//open the doorLeft
 				
 				setTimeout(function(){
-					//go inside the door
+					//go inside the doorLeft
 					moveLeft[chara]=false;
 					moveRight[chara]=false;
 					moveUp[chara]=false;
@@ -349,16 +465,51 @@
 					obj.opacity=0;
 					
 					setTimeout(function(){
-						door2.frame = 2;//door close
+						doorLeft2.frame = 1;//doorLeft close
 						
 						setTimeout(function(){
-							door2.frame = 8;//door open
+							doorLeft.frame = 6;//doorLeft open
+							setTimeout(function(){
+								obj.x=0;
+								moveRight[chara]=true;
+								obj.y=10;
+								obj.opacity=1;
+								setTimeout(function(){
+									doorLeft.frame = 1;
+								}, 500)
+							}, 500)
+						}, time)
+						
+					}, 500)
+				}, 300)
+			}
+		}
+		
+		function intoRightdoor2(obj,chara,time){
+		
+			if(obj.within(doorRight2, 30) && moveRight[chara]==true){//make sure the girl is go in not out
+				doorRight2.frame = 8;//open the doorLeft
+				
+				setTimeout(function(){
+					//go inside the doorLeft
+					moveLeft[chara]=false;
+					moveRight[chara]=false;
+					moveUp[chara]=false;
+					moveDown[chara]=false;
+					obj.opacity=0;
+					
+					setTimeout(function(){
+						doorRight2.frame = 2;//doorLeft close
+						
+						setTimeout(function(){
+							doorRight.frame = 8;//doorLeft open
 							setTimeout(function(){
 								obj.x=390;
+								obj.y=10;
 								moveLeft[chara]=true;
 								obj.opacity=1;
 								setTimeout(function(){
-									door2.frame = 2;
+									doorRight.frame = 2;
 								}, 500)
 							}, 500)
 						}, time)
