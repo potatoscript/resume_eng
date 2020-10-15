@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="../../potato.js/css/jquery-ui.css"/>
   <link rel="stylesheet" href="../../potato.js/css/potato.css"/>
   <link rel="stylesheet" href="jquery.orgchart.css"/>
-  
+
   <link rel="stylesheet" href="index.css"/>
   <script type="text/javascript" src="../../potato.js/js/enchant.js"></script>
   <script type="text/javascript" src="../../potato.js/js/Chart.bundle.js"></script>
@@ -14,12 +14,12 @@
   <script type="text/javascript" src="../../potato.js/js/jquery-3.4.1.js"></script>
   <script type="text/javascript" src="../../potato.js/js/jquery-ui.js"></script>
   <script type="text/javascript" src="../../potato.js/js/angular.js"></script>
-  <script type="text/javascript" src="../../potato.js/js/potato.1.5.0.js"></script>	
-  <script type="text/javascript" src="chartjs-plugin-labels.js"></script>			
-  <script type="text/javascript" src="jquery.mousewheel.js"></script>	
-  <script type="text/javascript" src="jquery.orgchart.js"></script>	
-  <!--<script type="text/javascript" src="jquery.panzoom.js"></script>-->	
-  <script type="text/javascript" src="index.js"></script>	
+  <script type="text/javascript" src="../../potato.js/js/potato.1.5.0.js"></script>
+  <script type="text/javascript" src="chartjs-plugin-labels.js"></script>
+  <script type="text/javascript" src="jquery.mousewheel.js"></script>
+  <script type="text/javascript" src="jquery.orgchart.js"></script>
+  <!--<script type="text/javascript" src="jquery.panzoom.js"></script>-->
+  <script type="text/javascript" src="index.js"></script>
 </head>
   <body>
 
@@ -33,8 +33,8 @@
 							  <div class="front flipItem">
 								<img class="spotlight" aria-busy="true" style="width: 160px; height:200px;" alt=""  src="images/bruce1.jpg">
 								<p style="font-size:13px;margin-top:-5px">2010年～2020年 日本</p>
-							  </div>	
-							  <div class="back flipItem">	
+							  </div>
+							  <div class="back flipItem">
 								<img class="spotlight" aria-busy="true" style="width: 130px; height:200px;" alt=""  src="images/bruce2.jpg">
 								<p style="font-size:13px;margin-top:-5px">2020年4月～ ｼﾝｶﾞﾎﾟｰﾙ</p>
 							  </div>
@@ -43,8 +43,8 @@
 						</td>
 					</tr>
 				</table>
-				<table id="table-btn">	
-					<tr>	
+				<table id="table-btn">
+					<tr>
 						<td>
 							<p style="padding-top:10px">
 							<o-button-pdf
@@ -59,6 +59,7 @@
 							></o-button-pdf>
 							<a id="doc_iframe" target="_blank"></a>
 						</td>
+            <!--
 						<td>
 							<p style="padding-top:10px">
 							<o-button-line
@@ -75,11 +76,12 @@
 										document.getElementById('div_lineOn').style.display='block';
 									}else{
 										document.getElementById('div_lineOff').style.display='block';
-										document.getElementById('div_lineOn').style.display='none';							 
+										document.getElementById('div_lineOn').style.display='none';
 									}
 								"
 							></o-button-pdf>
 						</td>
+          -->
 						<td>
 							<p style="padding-top:10px">
 							<o-button-education
@@ -93,24 +95,7 @@
 								onclick="linkToEducation()"
 							></o-button-education>
 						</td>
-						<td>
-							<p style="padding-top:10px">
-							<o-button-facebook
-								hoverId = "btn-hover"
-								hoverText="More about me　"
-								image = "images/facebook.png 25 30"
-								width = "45px"
-								height= "40px"
-								paddingLeft="5px"
-								fontSize="13px"
-								onclick="linkToFaceBook()"
-							></o-button-facebook>
-						</td>
-					</tr>
-				</table>
-				<table id="table-btn2" style="margin-top:-15px">		
-					<tr>
-						<td>
+            <td>
 							<p style="padding-top:10px">
 							<o-button-savedriving
 								hoverId = "btn-hover"
@@ -136,6 +121,27 @@
 								onclick="linkToEnglishLevel()"
 							></o-button-englishlevel>
 						</td>
+            <!--
+						<td>
+							<p style="padding-top:10px">
+							<o-button-facebook
+								hoverId = "btn-hover"
+								hoverText="More about me　"
+								image = "images/facebook.png 25 30"
+								width = "45px"
+								height= "40px"
+								paddingLeft="5px"
+								fontSize="13px"
+								onclick="linkToFaceBook()"
+							></o-button-facebook>
+						</td>
+          -->
+					</tr>
+				</table>
+        <!--
+				<table id="table-btn2" style="margin-top:-15px">
+					<tr>
+
 						<td>
 							<p style="padding-top:10px">
 							<o-button-dummy2
@@ -156,6 +162,7 @@
 						</td>
 					</tr>
 				</table>
+      -->
 				<div id="div_lineOff" style="margin-top:10px;color:blue;margin-top:5px;font-family:arial;font-size:13px;width:230px">
 					<p>現職は約２０年間在籍しております。</p>
 					<p>最初の１０年間は機械・製品設計開発を担当していましたが、</p>
@@ -163,7 +170,7 @@
 					<p>自分で作ったJavaScriptライブラリ<br>
 					<a href="http://potatoscript.github.io/homepage" target="_blank">http://potatoscript.github.io/homepage</a>
 					</p>
-				</div>	
+				</div>
 				<br>
 				<iframe width="220" height="110" frameborder="0" allowfullscreen
 					src="https://www.youtube.com/embed/XrzNLFtjt8M?autoplay=1&mute=1">
@@ -181,7 +188,7 @@
 									<td style="padding-right:15px;padding-left:5px"><img style="height:25px;width:25px" src="images/particular.png"></td>
 									<td style="vertical-align:top;">履歴書・職務経歴</td>
 								</tr>
-							</table>		
+							</table>
 							</a>
 						</li>
 						<li><a onclick="hrefClick('two')">
@@ -217,7 +224,7 @@
 																<th>氏名 ：</th><td>LIM　KS （ﾘﾑ　ｷｬﾝｾﾝ）</td>
 															</tr>
 															<tr>
-																<th>年齢 ：</th><td>43歳</td>
+																<th>年齢 ：</th><td>44歳</td>
 															</tr>
 															<tr>
 																<th>国際 ：</th><td><a target="_blank" href="https://en.wikipedia.org/wiki/Malaysia">ﾏﾚｰｼｱ</a>（今ｼﾝｶﾞﾎﾟｰﾙに在住）</td>
@@ -229,11 +236,13 @@
 																<th>会社 ：</th><td>車部品製造業者(在職正社員)</td>
 															</tr>
 															<tr>
-																<th>メール ：</th><td><font class="blinkFont">limksmail@yahoo.co.jp</font></td>
+																<th>メール ：</th><td><font class="blinkFontxx">limksmail@yahoo.co.jp</font></td>
 															</tr>
+                              <!--
 															<tr>
 																<th>Skype ID ：</th><td><font class="blinkFont">live:.cid.131a836ac04cfbc4</font></td>
 															</tr>
+                            -->
 														</table>
 													</td>
 													<td>
@@ -242,7 +251,7 @@
 												</tr>
 											</table>
 										</ul>
-								   </li>	
+								   </li>
 								   <li><br><span id="caret2" class="caret2">最終学歴:</span>
 										<ul class="active2">
 											<table id="table_education" class="table-basic">
@@ -259,8 +268,8 @@
 													<th>使用ツール：</th><td>ANSYS、MATLAB、AutoCAD、Microsoft Word・Excel・PowerPoint</td>
 												</tr>
 											</table>
-										</ul>	
-									</li>	   
+										</ul>
+									</li>
 									<li><br><span id="caret3" class="caret3">職務経歴：</span>
 										<ul class="nested3">
 											<span class="caretx">2000 年 4 月～2004 年： ｼﾝｶﾞﾎﾟｰﾙ</span>
@@ -275,7 +284,7 @@
 														</tr>
 														<tr>
 															<td>■ 使用ツール：AutoCAD、Inventor、solidEdge、Excel VBA、ANSYS</td>
-															
+
 														</tr>
 														<tr>
 															<td>■ Working Group 人数：20人（工場作業員200人）</td>
@@ -291,7 +300,7 @@
 										</ul>
 										<ul class="nested3">
 											<span class="caretx">2005 年 6 月～2007 年： 日本</span>
-												<ul class="nestedx"> 
+												<ul class="nestedx">
 													<table class="table-basic">
 														<tr>
 															<td>■ 日本拠点に出向して、３年間製品設計・開発を研修してきました。</td>
@@ -417,12 +426,12 @@
 												</ul>
 										</ul>
 								  </li>
-								  
+
 								</ul>
-								
-								
+
+
 								<iframe id="boygirl" scrolling="no" style="overflow:hidden;border:0px;height:600px;width:600px" src="empty.html"></iframe>
-								
+
 							</div>
 						</div>
 						<div id="two" style="display:none" class="content-box-menu">
@@ -442,7 +451,7 @@
 										<td><p>△</p></td>
 										<td>CadCam</td>
 										<td><p>△</p></td>
-									</tr>	
+									</tr>
 									<tr><td colspan=12 style="height:1px;border:0px solid black"></td></tr>
 									<tr>
 										<th rowspan=2>ＯＳ</th>
@@ -456,7 +465,7 @@
 										<td><p>-</p></td>
 										<td>Linux</td>
 										<td><p>-</p></td>
-									</tr>	
+									</tr>
 									<tr>
 										<td>Mac</td>
 										<td><p>-</p></td>
@@ -482,7 +491,7 @@
 										<td><p>-</p></td>
 										<td></td>
 										<td><p></p></td>
-									</tr>	
+									</tr>
 									<tr>
 										<td>C++</td>
 										<td><p>△</p></td>
@@ -494,7 +503,7 @@
 										<td><p>◎</p></td>
 										<td></td>
 										<td></td>
-									</tr>	
+									</tr>
 									<tr>
 										<td>Go言語</td>
 										<td><p>-</p></td>
@@ -506,7 +515,7 @@
 										<td><p>◎</p></td>
 										<td></td>
 										<td></td>
-									</tr>	
+									</tr>
 									<tr>
 										<td>COBOL</td>
 										<td><p>-</p></td>
@@ -556,7 +565,7 @@
 										<td><p>-</p></td>
 										<td>Access</td>
 										<td><p>〇</p></td>
-									</tr>	
+									</tr>
 									<tr>
 										<td>Oracle</td>
 										<td><p>-</p></td>
@@ -582,7 +591,7 @@
 										<td><p>◎</p></td>
 										<td></td>
 										<td><p></p></td>
-									</tr>	
+									</tr>
 									<tr>
 										<td>Chart.js</td>
 										<td><p>◎</p></td>
@@ -620,7 +629,7 @@
 										<td><p>-</p></td>
 										<td>Lighttpd</td>
 										<td><p>-</p></td>
-									</tr>	
+									</tr>
 									<tr>
 										<td>Node.js</td>
 										<td><p>△</p></td>
@@ -633,10 +642,10 @@
 										<td></td>
 										<td></td>
 									</tr>
-								</table>	
+								</table>
 								<br>
 								<canvas id="skillChart" width="650px" height="300px"></canvas>
-								
+
 							</div>
 						</div>
 						<div id="three" style="display:none" class="content-box-menu">
@@ -649,13 +658,13 @@
 												<h1 data-text="P I M S">P I M S</h1>
 											</td>
 											<td style="padding-left:60px;vertical-align:top;font-size:15px">
-											    <font style="color:blue" >目的：</font><br>	
-												生産進捗や品質状況等の情報<br>	
-												を的確に把握することができる<br>	
-												システムをつくる。<br>	
+											    <font style="color:blue" >目的：</font><br>
+												生産進捗や品質状況等の情報<br>
+												を的確に把握することができる<br>
+												システムをつくる。<br>
 											</td>
 										</tr>
-									</table>		
+									</table>
 								</div>
 								<div class="item-hints">
 								  <div class="hint" data-position="4"><!-- is-hint -->
@@ -666,7 +675,7 @@
 									</div>
 								  </div>
 								</div>
-								
+
 								<div class="item-hints-i">
 								  <div class="hint" data-position="4"><!-- is-hint -->
 									<span class="hint-radius"></span>
@@ -676,7 +685,7 @@
 									</div>
 								  </div>
 								</div>
-								
+
 								<div class="item-hints-m">
 								  <div class="hint" data-position="4"><!-- is-hint -->
 									<span class="hint-radius"></span>
@@ -686,7 +695,7 @@
 									</div>
 								  </div>
 								</div>
-								
+
 								<div class="item-hints-s">
 								  <div class="hint" data-position="4"><!-- is-hint -->
 									<span class="hint-radius"></span>
@@ -696,14 +705,14 @@
 									</div>
 								  </div>
 								</div>
-								
-								
+
+
 								<!--
-								<iframe style="margin-left:100px;border:0px;width:500px;" src="javaScriptCodeStructure.html"></iframe>	
+								<iframe style="margin-left:100px;border:0px;width:500px;" src="javaScriptCodeStructure.html"></iframe>
 								<br><br>
 								-->
-								
-								
+
+
 								<table>
 									<tr>
 										<td id="menu" style="width:150px;vertical-align:top">
@@ -731,7 +740,7 @@
 																	["2018年","1","3","4","8"],
 																	["2019年","2","5","7","14"],
 																	["2020年","3","1","4","8"]
-																]'		      
+																]'
 																	border="0px solid black"
 
 																	colorIndex="#e3ff7f,#a1a4ff,yellow,orange,green,grey"
@@ -739,8 +748,8 @@
 																xLabelData=menu1,menu2,menu3
 																xLabelAngle=10
 																	yAxesLabel=""
-																	
-																
+
+
 																dataLabel="製造1課,製造2課,製造３課"
 																		labelFontSize=18
 																		label2FontSize=1
@@ -768,7 +777,7 @@
 																<p>□ Chart.js</p>
 															</td>
 														</tr>
-													</table>	
+													</table>
 												</div>
 											</div>
 											<div id="div-menu-2" class="menu-hide">
@@ -795,10 +804,10 @@
 																<I style="font-weight:normal;margin-left:-95px">please try to drag and drop me</I>
 																<o-table-mytable
 																dragdrop='
-																	  var t="drag item ( "+potato.dragVal+" ) from ( "+ 
+																	  var t="drag item ( "+potato.dragVal+" ) from ( "+
 																	  potato.clickRow +" , "+potato.clickCol+" ) to ( "+potato.dropRow+" , "+potato.dropCol+" ) ";
 																	  document.getElementById("mytableResult").innerHTML=t;
-																	  '		 
+																	  '
 																	width=300px
 																	height=300px
 																	fontSizeTH=15px
@@ -826,7 +835,7 @@
 																	  };
 																	'
 																  /></o-table-mytable>
-																  
+
 																<div id="mytableResult"></div>
 															</th>
 															<td>
@@ -866,7 +875,7 @@
 															</td>
 														</tr>
 													</table>
-													
+
 												</div>
 											</div>
 											<div id="div-menu-6" class="menu-hide">
@@ -875,7 +884,7 @@
 													<table class="table-s">
 														<tr>
 															<th>
-																
+
 															</th>
 															<td>
 																<p>□ 言語：Java</p>
@@ -898,7 +907,7 @@
 														<tr>
 															<td>
 																<div id="chart-container"></div>
-																
+
 															</td>
 														</tr>
 													</table>
@@ -907,7 +916,7 @@
 
 										</td>
 									</tr>
-								</table>				
+								</table>
 
 							</div>
 						</div>
@@ -916,7 +925,7 @@
 								<!--
 								<table>
 									<tr>
-									
+
 										<td id="menu" style="width:150px;vertical-align:top">
 											<div id="menu-1" class="menu menu-current">転職</div>
 											<div id="menu-2" class="menu" style="margin-top:60px">技術</div>
@@ -926,7 +935,7 @@
 											<div id="menu-c" class="menu" style="margin-top:300px">C#</div>
 											<div id="menu-java" class="menu" style="margin-top:360px">Java</div>
 										</td>
-									
+
 										<td>
 											<div id="div-menu-1" class="menu-show">
 												<p>
@@ -942,7 +951,7 @@
 												<span class="span-q">問２．どうして日本で転職していますか。</span><br>
 												<font style="color:blue">答２．はい、僕は学校時代から日本のＩＴ技術に興味も持ち。（ゲーム）<br>
 												<span style="padding-left:40px">そして将来ﾌﾟﾛｸﾞﾗﾐﾝｸﾞスキルを向上したいので日本に転職活動をしています。<br>
-												
+
 												</font>
 												</p>
 												<br>
@@ -981,16 +990,16 @@
 												</font>
 												</p>
 											</div>
-											
+
 											<div id="div-menu-2" class="menu-hide">
 												<span style="font-size:16px;" class="span-q">
 													Q1. Print number from 1 to 100 with following conditions<br>
-													<font style="padding-left:30px">■ Print "Fizz" if divisible by 3  
+													<font style="padding-left:30px">■ Print "Fizz" if divisible by 3
 												</span>
 												<br>
 												<p style="font-size:16px;font-family:arial">A1. Use recursion method</p>
 												<code>
-													<textarea 
+													<textarea
 													style="
 															font-size:15px;
 															border:0px;
@@ -1016,16 +1025,16 @@ oneTo100(1);
 													</textarea>
 												</code>
 												<br><br>
-												
+
 												<span style="font-size:16px;" class="span-q">
 													Q2. Print the string base on the following conditions
-													<p style="padding-left:30px">■ add "d" if its end at "e"</p> 
+													<p style="padding-left:30px">■ add "d" if its end at "e"</p>
 													<p style="padding-left:30px">■ add "ied" if its end wit vowels</p>
-													<p style="padding-left:30px">■ else add "ed" </p> 		
+													<p style="padding-left:30px">■ else add "ed" </p>
 												</span>
 												<p style="font-size:16px;font-family:arial">A2.</p>
 												<code>
-													<textarea 
+													<textarea
 													style="
 															font-size:15px;
 															border:0px;
@@ -1051,43 +1060,43 @@ if(_e!=-1){
   str=str+"ed";
 }
 													</textarea>
-												</code>												
+												</code>
 												<br><br>
-												
-												
+
+
 											</div>
-											
+
 											<div id="div-menu-javascript" class="menu-hide">
 												<p>
 												JavaScript 工事中
 												</p>
 											</div>
-											
+
 											<div id="div-menu-php" class="menu-hide">
 												<p>
 												PHP 工事中
 												</p>
 											</div>
-											
+
 											<div id="div-menu-sql" class="menu-hide">
 												<p>
 												SQL 工事中
 												</p>
 											</div>
-											
+
 											<div id="div-menu-c" class="menu-hide">
 												<p>
 												C# 工事中
 												</p>
 											</div>
-											
+
 											<div id="div-menu-java" class="menu-hide">
 												<span style="font-size:16px;" class="span-q">
-													Q1. How to connect to PostgreSQL database JDBC		
+													Q1. How to connect to PostgreSQL database JDBC
 												</span>
 												<p style="font-size:16px;font-family:arial">A1.</p>
 												<code>
-													<textarea 
+													<textarea
 													style="
 															font-size:15px;
 															border:0px;
@@ -1099,28 +1108,28 @@ if(_e!=-1){
 1. Download PostgreSQL JDBC driver at https://jdbc.postgresql.org/download.html
 2. Move the downloaded jar file to the project folder
    ①Right click project name→②properties→③Java Build Path
-   ② 
+   ②
 													</textarea>
-												</code>												
+												</code>
 												<br><br>
 											</div>
-											
+
 										</td>
 									</tr>
-								</table>	
-								-->	
+								</table>
+								-->
 							</div>
-						</div>	
+						</div>
 					</div>
 				</div>
-				
+
 			</td>
 		</tr>
 	</table>
 
 
 	<div id="btn-hover"></div>
-	
+
 	<div style="display:none">
 
           <input type="text" id="parent-node" class="parent-node-group">
@@ -1129,11 +1138,11 @@ if(_e!=-1){
           </ul>
           <input type="text" id="child-node">
      </div>
-	
-	
-  </body>
-  
-  
 
-  
+
+  </body>
+
+
+
+
 </html>
