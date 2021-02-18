@@ -576,14 +576,14 @@ function setMenuSize(){
 		
 		$(".box-wrapper-menu").css({
 		"width":window.innerWidth-300+"px",
-		"height":window.innerHeight-70+"px"
+		"height":window.innerHeight-50+"px"
 	   });
 	   $("#table-skill").css({
 			"width":750+"px"
 	   });
 	   $(".content-box-menu,.col-one-menu col").css({
 			"width":window.innerWidth-310+"px",
-			"height":window.innerHeight-70+"px",
+			"height":window.innerHeight-60+"px",
 			"overflow":"auto"
 	   });
 		
